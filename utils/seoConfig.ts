@@ -15,7 +15,7 @@ export const seoConfig = {
 		width: 1200,
 		height: 630
 	},
-	siteName: "Astro PWA Starter", // Change this to your website's name,
+	siteName: "WoW Trade", // Change this to your website's name,
 	twitter: {
 		card: "summary_large_image"
 	}
