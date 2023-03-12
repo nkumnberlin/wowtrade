@@ -1,5 +1,8 @@
 ---
 import Layout from "../components/global/Layout/Layout.astro"
+import isAuthenticated from "../../utils/isAuthenticated"
+const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
+if (validSession) return Astro.redirect("/orders/view")
 ---
 
 <Layout title="Authenticate your Account">
@@ -12,7 +15,7 @@ import Layout from "../components/global/Layout/Layout.astro"
 			</div>
 			<a
 				href="http://localhost:3000/login"
-				class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
+				class="flex flex-col rounded-2xl border border-gray-500 p-6 text-center transition duration-300 ease-in-out hover:border-blue-500 hover:bg-blue-500 hover:text-white focus:border-blue-500 focus:bg-blue-500"
 			>
 				<span class="text-xl font-medium">📖 Authenticate</span>
 			</a>

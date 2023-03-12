@@ -1,0 +1,65 @@
+---
+import isAuthenticated from "@util/isAuthenticated"
+const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
+---
+
+<nav class="bg-gray-800">
+	<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+		<div class="relative flex h-16 items-center justify-between">
+			<div class="flex justify-center sm:items-stretch sm:justify-start">
+				<div class="ml-6 sm:block">
+					<div class="flex flex-row space-x-4">
+						<>
+							<a
+								href="/"
+								class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+								>Home</a
+							>
+							{
+								validSession ? (
+									<>
+										<a
+											href="/authenticated/characters"
+											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+										>
+											Characters
+										</a>
+
+										<a
+											href="/authenticated/orders/create"
+											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+										>
+											Create Listing
+										</a>
+
+										<a
+											href="/authenticated/orders/view"
+											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+										>
+											See your Listings
+										</a>
+									</>
+								) : (
+									<>
+										<a
+											href="/orders/view"
+											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+										>
+											See Crafting Orders
+										</a>
+										<a
+											href="/authenticate"
+											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+										>
+											Authenticate
+										</a>
+									</>
+								)
+							}
+						</>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

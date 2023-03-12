@@ -7,6 +7,7 @@ import "@style/tailwind.css"
 
 // Helper imports
 import { seoConfig } from "@util/seoConfig"
+import { Header } from "@component/global"
 
 // Props
 export interface Props {
@@ -163,6 +164,7 @@ const {
 	</head>
 	<body class="min-h-screen flex flex-col w-full overflow-x-hidden">
 		<main class="flex flex-1 flex-col h-[100%] w-full">
+			<Header />
 			<slot />
 		</main>
 

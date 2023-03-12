@@ -1,0 +1,21 @@
+---
+import Layout from "../components/global/Layout/Layout.astro"
+import isAuthenticated from "../../utils/isAuthenticated"
+if (isAuthenticated(Astro.request.headers.get("cookie"))) {
+	return Astro.redirect("/authenticated/characters")
+}
+---
+
+<Layout title="Redirect Auth">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			<div class="space-y-2 text-center">
+				<h1 class="text-4xl font-semibold">
+					Authentification went wrong, try again
+				</h1>
+			</div>
+		</div>
+	</section>
+</Layout>

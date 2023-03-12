@@ -1,0 +1,15 @@
+---
+import Layout from "../../components/global/Layout/Layout.astro"
+const response = await fetch("http://localhost:3000/authenticated/characters")
+console.log(response)
+---
+
+<Layout title="Authenticate your Account">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			<p>AUTHI</p>
+		</div>
+	</section>
+</Layout>
