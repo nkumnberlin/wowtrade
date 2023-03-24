@@ -1,0 +1,27 @@
+---
+import {
+	getCharacters,
+	getProfessionsToCharacter
+} from "../../../../../../../api"
+import Layout from "../../../../../../../components/global/Layout/Layout.astro"
+import Characters from "../../../../../../../components/react/characters"
+import Professions from "../../../../../../../components/react/professions"
+const { server, name } = Astro.params
+const cookie = Astro.cookies.get("wow-trade-session").value
+const characters = await getCharacters(cookie)
+const professions = await getProfessionsToCharacter(cookie, name, server, "eu")
+---
+
+<Layout title="Authenticate your Account">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			links soll char liste sein -- recherche, wie koennen bisherige calls
+			reused werden? State?
+			<Characters characters={characters} client:visible />
+			rechts in zukunft liste professions zu cahracter
+			<Professions />
+		</div>
+	</section>
+</Layout>

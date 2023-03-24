@@ -1,0 +1,17 @@
+---
+import Layout from "../../../components/global/Layout/Layout.astro"
+import { getCharacters } from "../../../api"
+import Characters from "../../../components/react/characters"
+const cookie = Astro.cookies.get("wow-trade-session").value
+const characters = await getCharacters(cookie)
+---
+
+<Layout title="Authenticate your Account">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			<Characters characters={characters} client:visible />
+		</div>
+	</section>
+</Layout>

@@ -4,8 +4,8 @@ interface IClient {
 	url: string
 }
 async function GET({ cookie, url }: IClient) {
-	console.log(`cookie`, cookie)
-	return await fetch(`http://localhost:3000${url}`, {
+	console.log("url", url)
+	return await fetch(url, {
 		method: "GET",
 		headers: {
 			Cookie: `wow-trade-session=${cookie}`

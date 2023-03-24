@@ -1,4 +1,4 @@
-import React, { Dispatch } from "react"
+import React, { Dispatch, useEffect, useState } from "react"
 import { ICharacter } from "../../../interfaces/ICharacters"
 import Styles from "./styles.module.css"
 
@@ -6,7 +6,14 @@ interface ICharacters {
 	characters: ICharacter[]
 	setSelectedCharacter: Dispatch<React.SetStateAction<ICharacter>>
 }
-const Characters = ({ characters, setSelectedCharacter }: ICharacters) => {
+const Characters = ({ characters }: ICharacters) => {
+	const [selectedCharacter, setSelectedCharacter] = useState<ICharacter | null>(
+		null
+	)
+	useEffect(() => {
+		if (selectedCharacter === null) return
+		window.location.href = `/authenticated/characters/professions/eu/${selectedCharacter.realm.name.en_GB}/${selectedCharacter.name}`
+	}, [selectedCharacter])
 	return (
 		<table>
 			<tbody>
@@ -28,7 +35,6 @@ const Characters = ({ characters, setSelectedCharacter }: ICharacters) => {
 						<td>{character.realm.name.en_GB}</td>
 						<td>
 							<button
-								data-characters-button
 								className={Styles.selectButton}
 								type="button"
 								id={character.name}
