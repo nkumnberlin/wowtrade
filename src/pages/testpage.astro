@@ -1,0 +1,22 @@
+---
+const response = await fetch("http://localhost:3000/authenticated").then(
+	(res) => res.json()
+)
+import { Layout } from "@globals"
+import Characters from "../components/react/characters/Characters"
+---
+
+<Layout title="Astro PWA Starter">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			<div class="space-y-2 text-center">
+				<h1 class="text-4xl font-semibold">Testpage</h1>
+				<p>message {response.data}</p>
+				<p>below is characters</p>
+				<Characters client:visible />
+			</div>
+		</div>
+	</section>
+</Layout>

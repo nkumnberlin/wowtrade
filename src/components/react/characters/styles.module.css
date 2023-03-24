@@ -1,0 +1,11 @@
+.tableHeading{
+	text-align: left;
+}
+
+.selectButton{
+	color: darkgray;
+	border: 1px solid black;
+	border-radius: 2px;
+	padding: 2px;
+	width: 100px;
+}

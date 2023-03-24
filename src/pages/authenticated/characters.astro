@@ -1,7 +1,12 @@
 ---
 import Layout from "../../components/global/Layout/Layout.astro"
-const response = await fetch("http://localhost:3000/authenticated/characters")
-console.log(response)
+import { getCharacters } from "../../api"
+import CharacterHandler from "../../components/react/handler/CharacterHandler"
+import Professions from "../../components/react/professions"
+
+const cookie = Astro.cookies.get("wow-trade-session").value
+const characters = await getCharacters(cookie)
+console.log("____ ", characters, " ___ xcookie ", cookie)
 ---
 
 <Layout title="Authenticate your Account">
@@ -9,7 +14,7 @@ console.log(response)
 		<div
 			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
 		>
-			<p>AUTHI</p>
+			<CharacterHandler characters={characters} cookie={cookie} />
 		</div>
 	</section>
 </Layout>
