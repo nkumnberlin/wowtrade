@@ -1,0 +1,519 @@
+[
+	{
+		"profession": {
+			"key": {
+				"href": "https://eu.api.blizzard.com/data/wow/profession/202?namespace=static-10.0.7_48520-eu"
+			},
+			"name": "Engineering",
+			"id": 202
+		},
+		"tiers": [
+			{
+				"skill_points": 1,
+				"max_skill_points": 300,
+				"tier": {
+					"name": "Classic Engineering",
+					"id": 2506
+				},
+				"known_recipes": [
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/2413?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Rough Blasting Powder",
+						"id": 2413
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/2414?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Rough Dynamite",
+						"id": 2414
+					}
+				]
+			},
+			{
+				"skill_points": 34,
+				"max_skill_points": 100,
+				"tier": {
+					"name": "Dragon Isles Engineering",
+					"id": 2827
+				},
+				"known_recipes": [
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47736?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Recraft Equipment",
+						"id": 47736
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47621?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Bronze Fireflight",
+						"id": 47621
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47488?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Haphazardly Tethered Wires",
+						"id": 47488
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47504?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Creature Combustion Canister",
+						"id": 47504
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47415?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Neural Silencer Mk3",
+						"id": 47415
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47420?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Gyroscopic Kaleidoscope",
+						"id": 47420
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47421?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Tinker: Plane Displacer",
+						"id": 47421
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47424?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Brainwave Amplifier",
+						"id": 47424
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47425?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Encased Samophlange",
+						"id": 47425
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47426?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Spring-Loaded Draconium Fabric Cutters",
+						"id": 47426
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47427?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Lapidary's Draconium Clamps",
+						"id": 47427
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47429?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Bottomless Stonecrust Ore Satchel",
+						"id": 47429
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47430?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Delver's Helmet",
+						"id": 47430
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47436?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Sentry's Stabilized Specs",
+						"id": 47436
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47437?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Deadline Deadeyes",
+						"id": 47437
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47438?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Milestone Magnifiers",
+						"id": 47438
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47439?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Quality-Assured Optics",
+						"id": 47439
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47442?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Reinforced Machine Chassis",
+						"id": 47442
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47443?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Arclight Capacitor",
+						"id": 47443
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47444?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Greased-Up Gears",
+						"id": 47444
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47445?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Everburning Blasting Powder",
+						"id": 47445
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47446?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Shock-Spring Coil",
+						"id": 47446
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47447?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Handful of Serevite Bolts",
+						"id": 47447
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47474?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Opening",
+						"id": 47474
+					}
+				]
+			}
+		]
+	},
+	{
+		"profession": {
+			"key": {
+				"href": "https://eu.api.blizzard.com/data/wow/profession/164?namespace=static-10.0.7_48520-eu"
+			},
+			"name": "Blacksmithing",
+			"id": 164
+		},
+		"tiers": [
+			{
+				"skill_points": 1,
+				"max_skill_points": 300,
+				"tier": {
+					"name": "Classic Blacksmithing",
+					"id": 2477
+				},
+				"known_recipes": [
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/1631?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Rough Sharpening Stone",
+						"id": 1631
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/1634?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Copper Bracers",
+						"id": 1634
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/1798?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Rough Weightstone",
+						"id": 1798
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/6636?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Rough Copper Vest",
+						"id": 6636
+					}
+				]
+			},
+			{
+				"skill_points": 66,
+				"max_skill_points": 100,
+				"tier": {
+					"name": "Dragon Isles Blacksmithing",
+					"id": 2822
+				},
+				"known_recipes": [
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46647?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Primal Molten Alloy",
+						"id": 46647
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46675?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Unstable Frostfire Belt",
+						"id": 46675
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46682?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Plate Chestguard",
+						"id": 46682
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46683?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Plate Boots",
+						"id": 46683
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46684?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Plate Bracers",
+						"id": 46684
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46691?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Primal Molten Greatbelt",
+						"id": 46691
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46693?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Axe",
+						"id": 46693
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46694?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Sword",
+						"id": 46694
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46695?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Great Mace",
+						"id": 46695
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46696?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Stiletto",
+						"id": 46696
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46697?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Dirk",
+						"id": 46697
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46698?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Knuckles",
+						"id": 46698
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46872?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Primal Whetstone",
+						"id": 46872
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46875?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Primal Weightstone",
+						"id": 46875
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47653?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Recraft Equipment",
+						"id": 47653
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46826?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Frostfire Alloy",
+						"id": 46826
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46829?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Serevite Repair Hammer",
+						"id": 46829
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46836?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Blacksmith's Hammer",
+						"id": 46836
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46841?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Sickle",
+						"id": 46841
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46843?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Leatherworker's Knife",
+						"id": 46843
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46845?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Pickaxe",
+						"id": 46845
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46847?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Skinning Knife",
+						"id": 46847
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46849?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Needle Set",
+						"id": 46849
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46851?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Blacksmith's Toolbox",
+						"id": 46851
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46854?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Leatherworker's Toolset",
+						"id": 46854
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46858?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Illustrious Insight",
+						"id": 46858
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/46859?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Serevite Skeleton Key",
+						"id": 46859
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47472?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Opening",
+						"id": 47472
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47937?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Defender",
+						"id": 47937
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47938?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Draconium Great Axe",
+						"id": 47938
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47971?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Expert Clasp",
+						"id": 47971
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47972?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Expert Gauntlets",
+						"id": 47972
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47973?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Expert Greaves",
+						"id": 47973
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47974?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Expert Helm",
+						"id": 47974
+					},
+					{
+						"key": {
+							"href": "https://eu.api.blizzard.com/data/wow/recipe/47975?namespace=static-10.0.7_48520-eu"
+						},
+						"name": "Explorer's Expert Spaulders",
+						"id": 47975
+					}
+				]
+			}
+		]
+	}
+]

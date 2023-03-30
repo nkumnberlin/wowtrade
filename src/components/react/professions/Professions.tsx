@@ -9,7 +9,9 @@ const Professions = ({ professionToCharacter }: IProfessions) => {
 
 	console.log("data", professionToCharacter)
 
-	return <div>hier wird was tolles {JSON.stringify(professionToCharacter)}</div>
+	return (
+		<div>hier wird was tolles {JSON?.stringify(professionToCharacter)}</div>
+	)
 }
 
 export default Professions

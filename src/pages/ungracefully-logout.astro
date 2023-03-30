@@ -1,6 +1,5 @@
 ---
 import Layout from "../components/global/Layout/Layout.astro"
-await fetch("http://localhost:3000/logout")
 ---
 
 <Layout title="Authenticate your Account">
@@ -14,7 +13,8 @@ await fetch("http://localhost:3000/logout")
 </Layout>
 
 <script>
+	// dosent work jet
 	const name = "wow-trade-session"
-	document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;"
-	console.log("cookie deleted")
+	window.document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+	console.log("cookie deleted", window.document.cookie)
 </script>

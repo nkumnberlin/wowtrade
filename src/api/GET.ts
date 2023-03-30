@@ -10,7 +10,7 @@ async function GET({ cookie, url }: IClient) {
 		headers: {
 			Cookie: `wow-trade-session=${cookie}`
 		}
-	}).then((res) => res.json())
+	}).then((res) => res?.json())
 }
 
 export default GET

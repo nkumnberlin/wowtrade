@@ -8,8 +8,15 @@ import Characters from "../../../../../../../components/react/characters"
 import Professions from "../../../../../../../components/react/professions"
 const { server, name } = Astro.params
 const cookie = Astro.cookies.get("wow-trade-session").value
-const characters = await getCharacters(cookie)
-const professions = await getProfessionsToCharacter(cookie, name, server, "eu")
+// global abgespeichert werden ? view reused from previous render? :thinking:
+let characters, professions
+try {
+	characters = await getCharacters(cookie)
+	professions = await getProfessionsToCharacter(cookie, name, server, "eu")
+} catch (e) {
+	console.log("fetch failed", e)
+}
+console.log(professions)
 ---
 
 <Layout title="Authenticate your Account">
@@ -21,7 +28,7 @@ const professions = await getProfessionsToCharacter(cookie, name, server, "eu")
 			reused werden? State?
 			<Characters characters={characters} client:visible />
 			rechts in zukunft liste professions zu cahracter
-			<Professions />
+			<Professions professionToCharacter={professions} client:visible />
 		</div>
 	</section>
 </Layout>
