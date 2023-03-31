@@ -2,30 +2,22 @@ import {
 	IDragonFlightProfessions,
 	KnownRecipe
 } from "../../../interfaces/IProfessions"
-import professions from "@component/react/professions/index"
 import Styles from "./styles.module.css"
-import { useState } from "react"
+import React, { useState } from "react"
 interface IProfessions {
 	professionToCharacter: IDragonFlightProfessions[]
 }
 
 const Professions = ({ professionToCharacter }: IProfessions) => {
 	const [selectedProfession, setProfession] = useState<string | null>(null)
-
+	const [selectedItem, setSelectedItem] = useState<{
+		itemId: number
+		name: string
+	} | null>(null)
 	const professionData = professionToCharacter?.find(
 		({ profession }) => profession?.name === selectedProfession
 	)
-	console.log(
-		"professiondata",
-		professionData,
-		"selectedprof",
-		selectedProfession,
-		"professiondata",
-		professionData?.tiers?.skill_points,
-		professionData?.tiers?.max_skill_points,
-		professionData?.tiers?.tier.name,
-		professionData?.tiers?.known_recipes.length
-	)
+
 	return (
 		<>
 			Choose a profession:
@@ -52,20 +44,52 @@ const Professions = ({ professionToCharacter }: IProfessions) => {
 							<>Current Tier = {professionData.tiers.tier.name}</>
 							<p>Known Recipes = {professionData.tiers.known_recipes.length}</p>
 							<div className={Styles.itemContainer}>
-								{professionData.tiers.known_recipes.map(({ name, itemId }) => (
-									<a
-										href={`https://wowhead.com/item=${itemId}`}
-										className={`q=epic`}
-									>
-										<label className={Styles.item}>{name}</label>
-									</a>
-								))}
+								<table>
+									<tbody>
+										<tr className={Styles.tableHeading}>
+											<th>Item:</th>
+										</tr>
+
+										{professionData.tiers.known_recipes.map(
+											({ name, itemId }) => (
+												<tr key={itemId} style={{ marginBottom: "1rem" }}>
+													<td>
+														<a
+															href={`https://wowhead.com/item=${itemId}`}
+															className={Styles.wowHeadItem}
+														>
+															<label className={Styles.item}>{name}</label>
+														</a>
+													</td>
+													<td>
+														<button
+															className={Styles.selectButton}
+															type="button"
+															id={name}
+															onClick={() => setSelectedItem({ itemId, name })}
+														>
+															Select
+														</button>
+													</td>
+												</tr>
+											)
+										)}
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				)}
+				{selectedItem && (
+					<div>
+						<p>
+							{" "}
+							cool, you want to craft ${selectedItem.name}, this should be a
+							modal? or a new page?
+						</p>
+					</div>
+				)}
 			</>
-			{/*<div>hier wird was tolles {JSON?.stringify(professionToCharacter)}</div>*/}
 		</>
 	)
 }

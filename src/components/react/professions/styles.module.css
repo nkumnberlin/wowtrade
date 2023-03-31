@@ -1,9 +1,9 @@
 .selectButton{
-	color: darkgray;
 	border: 1px solid black;
 	border-radius: 2px;
 	padding: 2px;
-	width: 100px;
+	width: fit-content;
+	margin: 0.5rem;
 }
 
 .itemContainer{
@@ -12,11 +12,18 @@
 }
 
 .item{
-	margin: 0.5rem;
 	-webkit-box-shadow: 3px 3px 10px 3px #dddddd;
 	-moz-box-shadow: 3px 3px 10px 3px #dddddd;
 	box-shadow: 3px 3px 10px 3px #dddddd;
 	border-radius: 0.5rem;
 	padding: 0.25rem;
+}
+
+.wowHeadItem{
+	cursor: pointer;
+}
+
+.tableHeading{
+	text-align: left;
 }
 
