@@ -1,7 +1,3 @@
-.tableHeading{
-	text-align: left;
-}
-
 .selectButton{
 	color: darkgray;
 	border: 1px solid black;
@@ -9,3 +5,18 @@
 	padding: 2px;
 	width: 100px;
 }
+
+.itemContainer{
+	margin: 1rem;
+	padding: 0.5rem;
+}
+
+.item{
+	margin: 0.5rem;
+	-webkit-box-shadow: 3px 3px 10px 3px #dddddd;
+	-moz-box-shadow: 3px 3px 10px 3px #dddddd;
+	box-shadow: 3px 3px 10px 3px #dddddd;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+}
+
