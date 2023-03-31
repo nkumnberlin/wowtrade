@@ -3,26 +3,41 @@ import {
 	KnownRecipe
 } from "../../../interfaces/IProfessions"
 import Styles from "./styles.module.css"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import Modal from "@component/react/modal"
+import { Modal as FlowModal } from "flowbite"
+import { IItem } from "../../../interfaces/IItem"
+import WoWHeadLink from "@component/react/wowHeadLink"
 interface IProfessions {
 	professionToCharacter: IDragonFlightProfessions[]
 }
 
 const Professions = ({ professionToCharacter }: IProfessions) => {
+	const modalRef = useRef<HTMLElement | null>(null)
+	const modal = new FlowModal(modalRef.current)
+
 	const [selectedProfession, setProfession] = useState<string | null>(null)
-	const [selectedItem, setSelectedItem] = useState<{
-		itemId: number
-		name: string
-	} | null>(null)
+	const [selectedItem, setSelectedItem] = useState<IItem | null>(null)
 	const professionData = professionToCharacter?.find(
 		({ profession }) => profession?.name === selectedProfession
 	)
+
+	useEffect(() => {
+		if (!selectedItem) return
+		if (!modalRef.current) return
+		modal.toggle()
+	}, [selectedItem])
+	const onClose = () => {
+		setSelectedItem(null)
+		modal.toggle()
+	}
 
 	return (
 		<>
 			Choose a profession:
 			{professionToCharacter.map(({ profession }) => (
 				<button
+					key={profession.name}
 					className={Styles.selectButton}
 					type={"button"}
 					onClick={() => setProfession(profession.name)}
@@ -54,16 +69,13 @@ const Professions = ({ professionToCharacter }: IProfessions) => {
 											({ name, itemId }) => (
 												<tr key={itemId} style={{ marginBottom: "1rem" }}>
 													<td>
-														<a
-															href={`https://wowhead.com/item=${itemId}`}
-															className={Styles.wowHeadItem}
-														>
+														<WoWHeadLink itemId={itemId}>
 															<label className={Styles.item}>{name}</label>
-														</a>
+														</WoWHeadLink>
 													</td>
 													<td>
 														<button
-															className={Styles.selectButton}
+															className="ml-2 block rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 															type="button"
 															id={name}
 															onClick={() => setSelectedItem({ itemId, name })}
@@ -80,15 +92,7 @@ const Professions = ({ professionToCharacter }: IProfessions) => {
 						</div>
 					</div>
 				)}
-				{selectedItem && (
-					<div>
-						<p>
-							{" "}
-							cool, you want to craft ${selectedItem.name}, this should be a
-							modal? or a new page?
-						</p>
-					</div>
-				)}
+				<Modal onClose={onClose} ref={modalRef} item={selectedItem} />
 			</>
 		</>
 	)
