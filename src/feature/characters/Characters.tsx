@@ -1,5 +1,5 @@
 import React, { Dispatch, useEffect, useState } from "react"
-import { ICharacter } from "../../../../interfaces/ICharacters"
+import { ICharacter } from "../../interfaces/ICharacters"
 import Styles from "./styles.module.css"
 
 interface ICharacters {

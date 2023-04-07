@@ -4,7 +4,7 @@ import style from "./styles.module.css"
 
 type TExpectedItemQuality = "a" | "b" | "c" | "d" | "e"
 
-const ExpectedItemQuality = () => {
+const Quality = () => {
 	const [toggleDropdown, setToggleDropdown] = useState(false)
 	const [selection, setSelection] = useState<TExpectedItemQuality | null>(null)
 	const items: TExpectedItemQuality[] = ["a", "b", "c", "d", "e"]
@@ -34,4 +34,4 @@ const ExpectedItemQuality = () => {
 	)
 }
 
-export default ExpectedItemQuality
+export default Quality

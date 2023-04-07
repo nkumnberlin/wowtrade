@@ -1,8 +1,8 @@
 import React from "react"
-import Styles from "@component/react/feature/professions/styles.module.css"
+import Styles from "../styles.module.css"
 import WoWHeadLink from "@component/react/components/wowHeadLink"
-import { IDragonFlightProfessions } from "../../../../../interfaces/IProfessions"
-import { IItem } from "../../../../../interfaces/IItem"
+import { IDragonFlightProfessions } from "../../../interfaces/IProfessions"
+import { IItem } from "../../../interfaces/IItem"
 
 interface IListProfessionCrafts {
 	selectedProfession: string
@@ -44,7 +44,7 @@ const ListProfessionCrafts = ({
 											className="ml-2 block rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 											type="button"
 											id={name}
-											onClick={() => setSelectedItem({ itemId, name })}
+											onClick={() => setSelectedItem({ itemId: itemId, name })}
 										>
 											Select
 										</button>

@@ -1,5 +1,49 @@
 ---
+import { postCreateListing } from "../../../api"
 import Layout from "../../../components/global/Layout/Layout.astro"
+import { ICreateListing } from "../../../interfaces/ICreateListing"
+const cookie = Astro.cookies.get("wow-trade-session").value
+console.log("dulli", Astro.url.searchParams.get("quality"))
+
+const createListing = {
+	commission: {
+		gold: Astro.url.searchParams.get("gold"),
+		silver: Astro.url.searchParams.get("silver")
+	},
+	item: {
+		id_crafted_item: Astro.url.searchParams.get("id_crafted_item"),
+		item_name: Astro.url.searchParams.get("item_name")
+	},
+	listingDuration: Astro.url.searchParams.get("duration"),
+	multicraftPercentage: Astro.url.searchParams.get("multicraftPercentage"),
+	quality: Astro.url.searchParams.get("quality"),
+	difficulty: Astro.url.searchParams.get("difficulty"),
+	qualityProcChance: Astro.url.searchParams.get("qualityProcChance"),
+	qualifiedCharacterName: Astro.url.searchParams.get("qualifiedCharacterName"),
+	profession: Astro.url.searchParams.get("profession")
+}
+let isSuccessfullCreated = false
+try {
+	isSuccessfullCreated = await postCreateListing({
+		cookie,
+		data: createListing
+	})
+} catch (e) {
+	console.log("fetch failed", e)
+}
+console.log("RETURN ", isSuccessfullCreated)
+if (isSuccessfullCreated) {
+	Astro.redirect("/authenticated/orders/view")
+}
+//on success redirect to view
 ---
 
-<Layout title="Create Listing" />
+<Layout title="Create order">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			test
+		</div>
+	</section>
+</Layout>

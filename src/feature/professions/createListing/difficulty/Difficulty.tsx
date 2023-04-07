@@ -4,10 +4,10 @@ import style from "./styles.module.css"
 
 type TItemDifficulty = "1" | "2" | "3"
 
-const ItemDifficulty = () => {
+const Difficulty = () => {
 	const [toggleDropdown, setToggleDropdown] = useState(false)
 	const [selection, setSelection] = useState<TItemDifficulty | null>(null)
-	const items: TItemDifficulty[] = ["1", "2", "3"]
+	const items = ["1", "2", "3"]
 	if (selection) {
 		const url = new URL(window.location.href)
 		url.searchParams.set("difficulty", selection)
@@ -34,4 +34,4 @@ const ItemDifficulty = () => {
 	)
 }
 
-export default ItemDifficulty
+export default Difficulty
