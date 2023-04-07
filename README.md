@@ -92,7 +92,7 @@ Doing a directory-based approach and named export is good for two reasons:
 When you want to use `<HelloWorld />`, you can import it using our handy-dandy import aliases:
 
 ```ts
-import { HelloWorld } from "@component/HelloWorld"
+import { HelloWorld } from "@partials/HelloWorld"
 ```
 
 Again, we'll talk about import aliasing in more detail in a bit!
@@ -195,14 +195,14 @@ One the best features of astro-pwa-starter is its extensive list of import alias
 For those unfamiliar with import aliases, they make working with components and external assets much easier. Instead of having to directly reference an asset like such:
 
 ```ts
-import { MyComponent } from "../../components/MyComponent"
+import { MyComponent } from "../../partials/MyComponent"
 import SomeImage from "../../assets/img/some-image.png"
 ```
 
 You instead can do something more streamlined:
 
 ```ts
-import { MyComponent } from "@component/MyComponent"
+import { MyComponent } from "@partials/MyComponent"
 import SomeImage from "@img/some-image.png"
 ```
 

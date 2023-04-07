@@ -1,6 +1,6 @@
 import React from "react"
-import WoWHeadLink from "@component/react/wowHeadLink"
-import { IItem } from "../../../interfaces/IItem"
+import WoWHeadLink from "@component/react/components/wowHeadLink"
+import { IItem } from "../../../../../interfaces/IItem"
 
 const Header = (item: IItem) => {
 	return (

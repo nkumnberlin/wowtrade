@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../components/global/Layout/Layout.astro"
 import { getCharacters } from "../../../api"
-import Characters from "../../../components/react/characters"
+import Characters from "../../../components/react/feature/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
 const characters = await getCharacters(cookie)
 ---

@@ -1,17 +1,16 @@
 import React, { forwardRef } from "react"
-import { IItem } from "../../../interfaces/IItem"
-import WoWHeadLink from "@component/react/wowHeadLink"
-import Styles from "@component/react/professions/styles.module.css"
-import Header from "@component/react/modal/header"
-import Body from "@component/react/modal/body"
-import Footer from "@component/react/modal/footer"
+import { IItem } from "../../../../interfaces/IItem"
+import Header from "@component/react/components/modal/partials/header"
+import Body from "@component/react/components/modal/partials/body"
+import Footer from "@component/react/components/modal/partials/footer"
 
 interface IModal {
 	onClose: () => void
 	item: IItem
+	children: React.ReactNode
 }
 //{ onOpen, onClose, modalId }: IModal)
-const Modal = forwardRef(({ onClose, item }: IModal, ref) => {
+const Modal = forwardRef(({ onClose, item, children }: IModal, ref) => {
 	return (
 		<div
 			tabIndex={-1}
@@ -23,7 +22,7 @@ const Modal = forwardRef(({ onClose, item }: IModal, ref) => {
 			<div className="relative h-full w-full max-w-2xl md:h-auto">
 				<div className="relative rounded-lg bg-white shadow dark:bg-gray-700">
 					<Header {...item} />
-					<Body />
+					<Body>{children}</Body>
 					<Footer onClose={onClose} />
 				</div>
 			</div>

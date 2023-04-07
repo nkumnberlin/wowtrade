@@ -4,9 +4,9 @@ import {
 	getProfessionsToCharacter
 } from "../../../../../../../api"
 import Layout from "../../../../../../../components/global/Layout/Layout.astro"
-import Characters from "../../../../../../../components/react/characters"
-import Modal from "../../../../../../../components/react/modal"
-import Professions from "../../../../../../../components/react/professions"
+import Characters from "../../../../../../../components/react/feature/characters"
+import Modal from "../../../../../../../components/react/components/modal"
+import Professions from "../../../../../../../components/react/feature/professions"
 const { server, name } = Astro.params
 const cookie = Astro.cookies.get("wow-trade-session").value
 // global abgespeichert werden ? view reused from previous render? :thinking:
