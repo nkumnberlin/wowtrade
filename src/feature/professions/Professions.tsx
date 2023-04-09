@@ -12,20 +12,11 @@ import QualityProcChance from "./createListing/qualityProcChance"
 import ListingDuration from "./createListing/listingDuration"
 import Commission from "./createListing/commission"
 import Multicraft from "./createListing/multicraft"
+import { postCreateListing } from "../../api"
 interface IProfessions {
 	professionToCharacter: IDragonFlightProfessions[]
 	qualifiedCharacterName: string
 }
-enum SupportedViews {
-	quality = "quality",
-	difficulty = "difficulty"
-}
-
-// todo > wizard
-const ModalViews = new Map<SupportedViews, FunctionComponent>([
-	[SupportedViews.quality, ExpectedItemQuality],
-	[SupportedViews.difficulty, ItemDifficulty]
-])
 
 const Professions = ({
 	professionToCharacter,
@@ -46,27 +37,52 @@ const Professions = ({
 		modal.toggle()
 	}, [selectedItem])
 
+	useEffect(() => {
+		const url = new URL(window.location.href)
+		const existingProfession = url.searchParams.get("profession")
+		if (existingProfession) {
+			setProfession(existingProfession)
+		}
+	}, [])
+
 	const onClose = () => {
 		setSelectedItem(null)
-		// http://localhost:3005/authenticated/characters/professions/eu/Thrall/Reco%C3%ADl?quality=d&difficulty=3&gold=234&silver=33&qualityProcChance=34&duration=12
 		modal.toggle()
 		const url = new URL(window.location.href)
-		console.log(url.searchParams.keys())
+		url.searchParams.delete("quality")
+		url.searchParams.delete("difficulty")
+		url.searchParams.delete("gold")
+		url.searchParams.delete("silver")
+		url.searchParams.delete("qualityProcChance")
+		url.searchParams.delete("multicraftPercentage")
+		url.searchParams.delete("duration")
+		window.history.replaceState(null, "", url)
 	}
-	const createListing = () => {
+
+	const createListing = async () => {
 		const url = new URL(window.location.href)
 		url.searchParams.set("qualifiedCharacterName", qualifiedCharacterName)
 		url.searchParams.set("id_crafted_item", String(selectedItem.itemId))
-		url.searchParams.set("profession", selectedProfession)
 		url.searchParams.set("item_name", selectedItem.name)
+		url.searchParams.set(
+			"currentSkill",
+			String(professionData.tiers.skill_points)
+		)
 		window.location.href = `/authenticated/orders/create${url.search}`
+	}
+
+	const selectProfession = (profession: string) => {
+		setProfession(profession)
+		const url = new URL(window.location.href)
+		url.searchParams.set("profession", profession)
+		window.history.replaceState(null, "", url)
 	}
 
 	return (
 		<>
 			<ListProfessions
 				professionToCharacter={professionToCharacter}
-				setProfession={setProfession}
+				setProfession={selectProfession}
 			/>
 			{selectedProfession && (
 				<ListProfessionCrafts

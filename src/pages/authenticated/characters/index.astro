@@ -3,7 +3,12 @@ import Layout from "../../../components/global/Layout/Layout.astro"
 import { getCharacters } from "../../../api"
 import Characters from "../../../feature/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
-const characters = await getCharacters(cookie)
+let characters
+try {
+	characters = await getCharacters(cookie)
+} catch (e) {
+	console.log("e", e)
+}
 ---
 
 <Layout title="Authenticate your Account">

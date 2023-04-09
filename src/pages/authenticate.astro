@@ -2,7 +2,7 @@
 import Layout from "../components/global/Layout/Layout.astro"
 import isAuthenticated from "../../utils/isAuthenticated"
 const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
-if (validSession) return Astro.redirect("/orders/view")
+if (validSession) return Astro.redirect("authenticated/orders/view")
 ---
 
 <Layout title="Authenticate your Account">

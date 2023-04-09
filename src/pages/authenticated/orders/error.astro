@@ -1,0 +1,16 @@
+---
+import Layout from "../../../components/global/Layout/Layout.astro"
+const { message } = Astro.props
+---
+
+<Layout title="Create order">
+	<section class="p-6 flex-1 flex flex-col justify-between">
+		<div
+			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
+		>
+			<p>Error while creating the order. Sad.</p>
+			<br />
+			{message}
+		</div>
+	</section>
+</Layout>

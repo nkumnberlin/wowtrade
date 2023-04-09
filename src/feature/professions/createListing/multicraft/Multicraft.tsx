@@ -5,7 +5,7 @@ const Multicraft = () => {
 	const [multicraft, setMulticraft] = useState<number>(undefined)
 	if (multicraft) {
 		const url = new URL(window.location.href)
-		url.searchParams.set("multicraft", String(multicraft))
+		url.searchParams.set("multicraftPercentage", String(multicraft))
 		window.history.replaceState(null, "", url)
 	}
 

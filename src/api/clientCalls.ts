@@ -35,5 +35,5 @@ export async function postCreateListing({ cookie, data }: IPostCreateListing) {
 		cookie,
 		data,
 		url: createListing.href
-	})
+	}).then((res) => res.json())
 }

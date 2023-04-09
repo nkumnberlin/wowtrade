@@ -1,9 +1,8 @@
 ---
 import { postCreateListing } from "../../../api"
 import Layout from "../../../components/global/Layout/Layout.astro"
-import { ICreateListing } from "../../../interfaces/ICreateListing"
+import Error from "./error.astro"
 const cookie = Astro.cookies.get("wow-trade-session").value
-console.log("dulli", Astro.url.searchParams.get("quality"))
 
 const createListing = {
 	commission: {
@@ -20,20 +19,20 @@ const createListing = {
 	difficulty: Astro.url.searchParams.get("difficulty"),
 	qualityProcChance: Astro.url.searchParams.get("qualityProcChance"),
 	qualifiedCharacterName: Astro.url.searchParams.get("qualifiedCharacterName"),
-	profession: Astro.url.searchParams.get("profession")
+	profession: Astro.url.searchParams.get("profession"),
+	currentSkill: Astro.url.searchParams.get("currentSkill")
 }
-let isSuccessfullCreated = false
+let response = null
 try {
-	isSuccessfullCreated = await postCreateListing({
+	response = await postCreateListing({
 		cookie,
 		data: createListing
 	})
 } catch (e) {
 	console.log("fetch failed", e)
 }
-console.log("RETURN ", isSuccessfullCreated)
-if (isSuccessfullCreated) {
-	Astro.redirect("/authenticated/orders/view")
+if (response.acknowledged) {
+	return Astro.redirect("/authenticated/orders/view")
 }
 //on success redirect to view
 ---
@@ -43,7 +42,7 @@ if (isSuccessfullCreated) {
 		<div
 			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
 		>
-			test
+			{response.message ?? <Error message={response.message} />}
 		</div>
 	</section>
 </Layout>
