@@ -1,8 +1,13 @@
+const ORDERS = {
+	viewLast5: "/order",
+	viewAuth: "/authenticated/order",
+	create: "/authenticated/order"
+}
 const ROUTES = {
 	base: "http://localhost:3000",
 	characters: "/authenticated/characters",
 	professions: "/authenticated/character/professions",
-	createOrder: "/authenticated/order"
+	...ORDERS
 }
 
 export default ROUTES

@@ -1,16 +1,17 @@
 import React, { useState } from "react"
 import { Dropdown } from "@component/react/components/dropdown"
 import style from "./styles.module.css"
+import Label from "@component/react/components/label"
 
-type TListingDuration = "6" | "12" | "24"
+type TExpectedItemQuality = "a" | "b" | "c" | "d" | "e"
 
-const ListingDuration = () => {
+const Quality = () => {
 	const [toggleDropdown, setToggleDropdown] = useState(false)
-	const [selection, setSelection] = useState<TListingDuration | null>(null)
-	const items = ["6", "12", "24"]
+	const [selection, setSelection] = useState<TExpectedItemQuality | null>(null)
+	const items: TExpectedItemQuality[] = ["a", "b", "c", "d", "e"]
 	if (selection) {
 		const url = new URL(window.location.href)
-		url.searchParams.set("duration", selection)
+		url.searchParams.set("quality", selection)
 		window.history.replaceState(null, "", url)
 	}
 	const handleSelection = (val) => {
@@ -20,20 +21,19 @@ const ListingDuration = () => {
 
 	return (
 		<>
+			<Label>Select a Quality</Label>
 			<Dropdown
 				toggleDropdown={() => setToggleDropdown(!toggleDropdown)}
 				hideDropdown={toggleDropdown}
 				items={items}
-				description={"Listing Duration of your Order"}
+				description={"Quality"}
 				setSelection={handleSelection}
 			/>
 			{selection && (
-				<p className={style.selectedItem}>
-					Selected Duration: {selection} hours
-				</p>
+				<p className={style.selectedItem}>Selected Quality: {selection}</p>
 			)}
 		</>
 	)
 }
 
-export default ListingDuration
+export default Quality

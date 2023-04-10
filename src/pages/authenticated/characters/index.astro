@@ -1,6 +1,6 @@
 ---
 import Layout from "../../../components/global/Layout/Layout.astro"
-import { getCharacters } from "../../../api"
+import { getCharacters } from "../../../api/Character"
 import Characters from "../../../feature/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
 let characters

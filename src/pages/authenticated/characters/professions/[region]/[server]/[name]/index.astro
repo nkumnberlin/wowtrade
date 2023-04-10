@@ -1,8 +1,6 @@
 ---
-import {
-	getCharacters,
-	getProfessionsToCharacter
-} from "../../../../../../../api"
+import { professionsToCharacter } from "../../../../../../../api/Professions"
+import { getCharacters } from "../../../../../../../api/Character"
 import Layout from "../../../../../../../components/global/Layout/Layout.astro"
 import Characters from "../../../../../../../feature/characters"
 import Professions from "../../../../../../../feature/professions"
@@ -12,7 +10,7 @@ const cookie = Astro.cookies.get("wow-trade-session").value
 let characters, professions
 try {
 	characters = await getCharacters(cookie)
-	professions = await getProfessionsToCharacter(cookie, name, server, "eu")
+	professions = await professionsToCharacter(cookie, name, server, "eu")
 } catch (e) {
 	console.log("fetch failed", e)
 }

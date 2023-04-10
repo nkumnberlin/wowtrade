@@ -22,16 +22,8 @@ const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
 											href="/authenticated/characters"
 											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 										>
-											Characters
-										</a>
-
-										<a
-											href="/authenticated/orders/create"
-											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-										>
 											Create Listing
 										</a>
-
 										<a
 											href="/authenticated/orders/view"
 											class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"

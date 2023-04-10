@@ -1,5 +1,9 @@
 ---
 import Layout from "../../../components/global/Layout/Layout.astro"
+import Last5Order from "../../../feature/orders/view/public"
+import OrdersToAccount from "../../../feature/orders/view/auth"
+import { getLast5Orders, createOrder } from "../../../api/Order"
+const orders = await getLast5Orders()
 ---
 
 <Layout title="See Listing">
@@ -7,5 +11,10 @@ import Layout from "../../../components/global/Layout/Layout.astro"
 		hier stuff aus DB zugegehoerig zu user
 
 		<div>brauchen die folgende info: bnet id dazu infos anzeigen</div>
+		Public:
+		<Last5Order orders={orders} />
+
+		AUTH:
+		<OrdersToAccount orders={orders} />
 	</div>
 </Layout>

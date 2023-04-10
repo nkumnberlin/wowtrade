@@ -1,10 +1,9 @@
 ---
-import { postCreateListing } from "../../../api"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Error from "./error.astro"
 const cookie = Astro.cookies.get("wow-trade-session").value
-
-const createListing = {
+import { createOrder } from "../../../api/Order"
+const createListingData = {
 	commission: {
 		gold: Astro.url.searchParams.get("gold"),
 		silver: Astro.url.searchParams.get("silver")
@@ -24,14 +23,15 @@ const createListing = {
 }
 let response = null
 try {
-	response = await postCreateListing({
+	console.log("wie oft kommt diese nachricht?")
+	response = await createOrder({
 		cookie,
-		data: createListing
+		data: createListingData
 	})
 } catch (e) {
 	console.log("fetch failed", e)
 }
-if (response.acknowledged) {
+if (response?.acknowledged) {
 	return Astro.redirect("/authenticated/orders/view")
 }
 //on success redirect to view

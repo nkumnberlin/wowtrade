@@ -1,7 +1,13 @@
 ---
+import { getLast5Orders } from "../../api"
+
 import Layout from "../../components/global/Layout/Layout.astro"
+import Last5Order from "../../feature/orders/view/public"
+const orders = await getLast5Orders()
+console.log("oooorders", orders)
 ---
 
 <Layout title="See Listing">
 	<div>hier stuff aus DB</div>
+	<Last5Order orders={orders} />
 </Layout>
