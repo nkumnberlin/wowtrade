@@ -1,0 +1,27 @@
+---
+import { ordersToItem } from "../../../api/services/Order"
+import Layout from "../../../components/global/Layout/Layout.astro"
+import BrowseProfessions from "../../../feature/professions/browse"
+import { browseProfessions } from "../../../api/services/Professions"
+const itemID = Astro.url.searchParams.get("itemID")
+let response = null
+let professions = null
+console.log("ITEM ID ", itemID, Astro.url.searchParams.get("itemID"))
+try {
+	if (itemID) {
+		console.log(itemID, " ___ ALLO")
+		response = await ordersToItem(itemID)
+	}
+	professions = await browseProfessions()
+} catch (e) {
+	console.log("error while fetching item to recipe")
+}
+console.log("response", response)
+---
+
+<Layout title="See Listing">
+	<p>List of professions</p>
+	<BrowseProfessions professions={professions.data} client:visible />
+
+	<div>HALLO {response && JSON.stringify(response)}</div>
+</Layout>

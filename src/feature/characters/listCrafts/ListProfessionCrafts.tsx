@@ -1,5 +1,5 @@
 import React from "react"
-import Styles from "../styles.module.css"
+import Styles from "../../professions/styles.module.css"
 import WoWHeadLink from "@component/react/components/wowHeadLink"
 import { IDragonFlightProfessions } from "../../../interfaces/IProfessions"
 import { IItem } from "../../../interfaces/IItem"

@@ -1,12 +1,18 @@
-import GET from "./GET"
-import ROUTES from "./ENDPOINTS"
-import { ICreateListing } from "../interfaces/ICreateListing"
-import POST from "./POST"
-import DELETE from "./DELETE"
+import GET from "../methods/GET"
+import ROUTES from "../ENDPOINTS"
+import { ICreateListing } from "../../interfaces/ICreateListing"
+import POST from "../methods/POST"
+import DELETE from "../methods/DELETE"
 
 export async function getLast5Orders() {
 	const url = new URL(ROUTES.base + ROUTES.viewLast5).href
 	return GET({ url: url })
+}
+
+export async function ordersToItem(itemId: string) {
+	const url = new URL(ROUTES.base + ROUTES.order)
+	url.searchParams.set("id_crafted_item", itemId)
+	return GET({ url: url.href })
 }
 
 interface ICreateOrder {

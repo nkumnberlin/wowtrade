@@ -1,9 +1,9 @@
 ---
-import { deleteOrder } from "../../../api/Order"
+import { deleteOrder } from "../../../api/services/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Last5Order from "../../../feature/orders/view/public"
 import OrdersToAccount from "../../../feature/orders/view/auth"
-import { getLast5Orders, getOrdersToUser } from "../../../api/Order"
+import { getLast5Orders, getOrdersToUser } from "../../../api/services/Order"
 let orders, ordersToUser
 try {
 	orders = await getLast5Orders()

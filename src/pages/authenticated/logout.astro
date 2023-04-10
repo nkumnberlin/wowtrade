@@ -1,0 +1,16 @@
+---
+import Layout from "../../components/global/Layout/Layout.astro"
+const logout = await fetch("http://localhost:3000/logout")
+let message = "Something went wrong while logout!"
+console.log("logout", logout)
+if (logout.status === 201) {
+	Astro.request.headers.delete("cookie")
+	console.log(Astro.request.headers)
+
+	message = "Goodbye! Until later :)"
+}
+---
+
+<Layout title="See Listing">
+	<div>{message}!</div>
+</Layout>
