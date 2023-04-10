@@ -1,9 +1,26 @@
 ---
+import { deleteOrder } from "../../../api/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Last5Order from "../../../feature/orders/view/public"
 import OrdersToAccount from "../../../feature/orders/view/auth"
-import { getLast5Orders, createOrder } from "../../../api/Order"
-const orders = await getLast5Orders()
+import { getLast5Orders, getOrdersToUser } from "../../../api/Order"
+let orders, ordersToUser
+try {
+	orders = await getLast5Orders()
+	const cookie = Astro.cookies.get("wow-trade-session").value
+	ordersToUser = await getOrdersToUser({ cookie })
+
+	const id = Astro.url.searchParams.get("id")
+	if (id !== null) {
+		const isSuccessful = await deleteOrder({ cookie, id_crafted_item: id })
+		if (isSuccessful.status === 201) {
+			orders = await getLast5Orders()
+			ordersToUser = await getOrdersToUser({ cookie })
+		}
+	}
+} catch (e) {
+	console.log("error while fetching data")
+}
 ---
 
 <Layout title="See Listing">
@@ -15,6 +32,18 @@ const orders = await getLast5Orders()
 		<Last5Order orders={orders} />
 
 		AUTH:
-		<OrdersToAccount orders={orders} />
+		<OrdersToAccount orders={ordersToUser} />
 	</div>
 </Layout>
+
+<script>
+	const buttons = document.querySelectorAll("button")
+	const selectItemToDelete = (ev) => {
+		const url = new URL(window.location.href)
+		url.searchParams.set("id", ev.target.id)
+		window.location.href = url.href
+	}
+	buttons.forEach((button) =>
+		button.addEventListener("click", selectItemToDelete)
+	)
+</script>

@@ -3,6 +3,7 @@ import { Listing } from "../../../../interfaces/IViewListings"
 import Styles from "../../../characters/styles.module.css"
 
 const Last5Order = ({ orders }: { orders: Listing[] }) => {
+	if (!orders) return
 	return (
 		<table>
 			<tbody>

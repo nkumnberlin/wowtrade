@@ -3,6 +3,7 @@ import { Listing } from "../../../../interfaces/IViewListings"
 import Styles from "../../../characters/styles.module.css"
 
 const OrdersToAccount = ({ orders }: { orders: Listing[] }) => {
+	if (!orders) return
 	return (
 		<table>
 			<tbody>
@@ -29,10 +30,9 @@ const OrdersToAccount = ({ orders }: { orders: Listing[] }) => {
 							<button
 								className={Styles.selectButton}
 								type="button"
-								id={order._id}
-								onClick={() => console.log("delete!")}
+								id={String(order.item.id_crafted_item)}
 							>
-								Select
+								Delete order
 							</button>
 						</td>
 					</tr>

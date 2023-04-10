@@ -1,7 +1,8 @@
 const ORDERS = {
 	viewLast5: "/order",
 	viewAuth: "/authenticated/order",
-	create: "/authenticated/order"
+	create: "/authenticated/order",
+	delete: "/authenticated/order"
 }
 const ROUTES = {
 	base: "http://localhost:3000",
