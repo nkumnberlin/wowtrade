@@ -90,27 +90,24 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 	}
 
 	return (
-		<div>
-			{professions.map((profession) => (
-				<p
-					className={"cursor-pointer"}
-					key={profession.id}
-					onClick={() =>
-						setProfessionHandler({
-							...professionHandler,
-							profession
-						})
-					}
-				>
-					{profession.name.replace("Dragon Isles ", "")}
-				</p>
-			))}
-			{professionHandler.profession && (
-				<div>selected: {professionHandler.profession.name}</div>
-			)}
-			<br />
-
-			<div>
+		<div className="flex flex-row">
+			<div className="basis-1/3">
+				{professions.map((profession) => (
+					<p
+						className={"cursor-pointer"}
+						key={profession.id}
+						onClick={() =>
+							setProfessionHandler({
+								...professionHandler,
+								profession
+							})
+						}
+					>
+						{profession.name.replace("Dragon Isles ", "")}
+					</p>
+				))}
+			</div>
+			<div className="basis-1/3">
 				{professionHandler.profession &&
 					professionHandler.profession.categories.map((category) => (
 						<p
@@ -127,11 +124,7 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 						</p>
 					))}
 			</div>
-			{professionHandler.category && (
-				<div>selected: {professionHandler.category.name}</div>
-			)}
-			<br />
-			<div>
+			<div className="basis-1/3">
 				{professionHandler.category &&
 					professionHandler.category.recipes.map((recipe) => (
 						<p

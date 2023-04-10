@@ -2,7 +2,7 @@ import React from "react"
 import { Listing } from "../../../../interfaces/IViewListings"
 import Styles from "../../../characters/styles.module.css"
 
-const Last5Order = ({ orders }: { orders: Listing[] }) => {
+const ViewOrder = ({ orders }: { orders: Listing[] }) => {
 	if (!orders) return
 	return (
 		<table>
@@ -24,12 +24,20 @@ const Last5Order = ({ orders }: { orders: Listing[] }) => {
 						<td>{order.listingDuration}</td>
 						<td>{order.commission.gold}g</td>
 						<td>{order.commission.silver}s</td>
-						<td>{order.qualifiedCharacterName}</td>
+						<td>
+							<button
+								className={Styles.selectButton}
+								type="button"
+								value={order.qualifiedCharacterName}
+								data-copy={order.qualifiedCharacterName}
+							>
+								{order.qualifiedCharacterName}
+							</button>
+						</td>
 					</tr>
 				))}
 			</tbody>
 		</table>
 	)
 }
-
-export default Last5Order
+export default ViewOrder

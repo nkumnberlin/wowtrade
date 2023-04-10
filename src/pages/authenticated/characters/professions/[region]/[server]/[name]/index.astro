@@ -30,19 +30,18 @@ try {
 ></script>
 
 <Layout title="Authenticate your Account">
-	<section class="p-6 flex-1 flex flex-col justify-between">
-		<div
-			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
-		>
-			links soll char liste sein -- recherche, wie koennen bisherige calls
-			reused werden? State?
-			<Characters characters={characters} client:visible />
-			rechts in zukunft liste professions zu cahracter
+	<div class="flex flex-row">
+		<div class="basis-1/3">
+			<Characters characters={characters} />
+		</div>
+		<div class="basis-2/3">
 			<Professions
 				professionToCharacter={professions}
 				qualifiedCharacterName={`${name}-${server}`}
-				client:only
+				client:load
 			/>
 		</div>
-	</section>
+	</div>
+
+	<script src="../../../../handleSelectCharacter.ts"></script>
 </Layout>

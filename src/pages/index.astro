@@ -1,5 +1,16 @@
 ---
+import { getLast5Orders } from "../api/services/Order"
+import { getLast5Orders } from "../api/services/Order"
 import Layout from "../components/global/Layout/Layout.astro"
+import Last5Order from "../feature/orders/view/public"
+import Label from "../components/react/components/label"
+let orders
+
+try {
+	orders = await getLast5Orders()
+} catch (e) {
+	console.log("error while fetching data")
+}
 ---
 
 <Layout title="Astro PWA Starter">
@@ -10,6 +21,8 @@ import Layout from "../components/global/Layout/Layout.astro"
 			<div class="space-y-2 text-center">
 				<h1 class="text-4xl font-semibold">WoW Trade</h1>
 			</div>
+			<Label>Last 5 created Listings</Label>
+			<Last5Order orders={orders} />
 			<div>
 				<ul class="grid md:grid-cols-2 gap-4 place-items-center">
 					<li>
@@ -35,3 +48,5 @@ import Layout from "../components/global/Layout/Layout.astro"
 		</div>
 	</section>
 </Layout>
+
+<script src="./copyToClipboard.ts"></script>

@@ -36,8 +36,9 @@ const Characters = ({ characters }: ICharacters) => {
 							<button
 								className={Styles.selectButton}
 								type="button"
+								data-realm={character.realm.name.en_GB}
+								data-name={character.name}
 								id={character.name}
-								onClick={() => setSelectedCharacter(character)}
 							>
 								Select
 							</button>

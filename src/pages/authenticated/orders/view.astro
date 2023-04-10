@@ -4,9 +4,8 @@ import Layout from "../../../components/global/Layout/Layout.astro"
 import Last5Order from "../../../feature/orders/view/public"
 import OrdersToAccount from "../../../feature/orders/view/auth"
 import { getLast5Orders, getOrdersToUser } from "../../../api/services/Order"
-let orders, ordersToUser
+let ordersToUser
 try {
-	orders = await getLast5Orders()
 	const cookie = Astro.cookies.get("wow-trade-session").value
 	ordersToUser = await getOrdersToUser({ cookie })
 
@@ -14,7 +13,6 @@ try {
 	if (id !== null) {
 		const isSuccessful = await deleteOrder({ cookie, id_crafted_item: id })
 		if (isSuccessful.status === 201) {
-			orders = await getLast5Orders()
 			ordersToUser = await getOrdersToUser({ cookie })
 		}
 	}
@@ -25,13 +23,7 @@ try {
 
 <Layout title="See Listing">
 	<div>
-		hier stuff aus DB zugegehoerig zu user
-
-		<div>brauchen die folgende info: bnet id dazu infos anzeigen</div>
-		Public:
-		<Last5Order orders={orders} />
-
-		AUTH:
+		Your Orders:
 		<OrdersToAccount orders={ordersToUser} />
 	</div>
 </Layout>

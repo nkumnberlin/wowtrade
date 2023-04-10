@@ -2,11 +2,11 @@
 import { getLast5Orders } from "../../api/services/Order"
 
 import Layout from "../../components/global/Layout/Layout.astro"
-import Last5Order from "../../feature/orders/view/public"
+import ViewOrder from "../../feature/orders/view/public"
 const orders = await getLast5Orders()
 ---
 
 <Layout title="See Listing">
 	<div>hier stuff aus DB</div>
-	<Last5Order orders={orders} />
+	<ViewOrder orders={orders} />
 </Layout>

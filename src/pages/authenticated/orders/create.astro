@@ -23,6 +23,7 @@ const createListingData = {
 }
 let response = null
 try {
+	console.log("es geht ab create order")
 	response = await createOrder({
 		cookie,
 		data: createListingData
