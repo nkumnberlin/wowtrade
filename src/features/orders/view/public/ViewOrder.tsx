@@ -17,7 +17,7 @@ const ViewOrder = ({ orders }: { orders: Listing[] }) => {
 					<th>Character Name:</th>
 				</tr>
 				{orders.map((order) => (
-					<tr>
+					<tr key={order._id}>
 						<td>{order.item.item_name}</td>
 						<td>{order.quality}</td>
 						<td>{order.difficulty}</td>

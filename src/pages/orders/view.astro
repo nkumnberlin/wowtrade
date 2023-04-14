@@ -2,7 +2,7 @@
 import { getLast5Orders } from "../../api/services/Order"
 
 import Layout from "../../components/global/Layout/Layout.astro"
-import ViewOrder from "../../features/orders/view/public"
+import { ViewOrder } from "../../features/orders/view/public"
 const orders = await getLast5Orders()
 ---
 

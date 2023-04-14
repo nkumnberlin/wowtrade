@@ -1,2 +1,3 @@
 import ViewOrder from "./ViewOrder"
-export default ViewOrder
+import Orders from "./Orders"
+export { ViewOrder, Orders }

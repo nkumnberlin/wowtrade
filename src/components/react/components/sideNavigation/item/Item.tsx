@@ -1,21 +1,23 @@
 import React, { useState } from "react"
-import { IItem } from "@component/react/components/drawer/interfaces"
-import SubItem from "@component/react/components/drawer/subItem"
+import { IItem } from "@component/react/components/sideNavigation/interfaces"
+import SubItem from "@component/react/components/sideNavigation/subItem"
 
 const Item = ({
 	subItems,
 	icon,
 	description,
 	firstLayerHandler,
-	secondLayerHandler
+	secondLayerHandler,
+	showSubItems,
+	setShowSubItems
 }: IItem) => {
-	const [showSubItems, setShowSubItems] = useState<boolean>(false)
-
 	return (
 		<li>
 			<button
 				onClick={() => {
-					setShowSubItems(!showSubItems)
+					setShowSubItems((prev) => {
+						return prev === description ? "" : description
+					})
 					firstLayerHandler(description)
 				}}
 				type="button"

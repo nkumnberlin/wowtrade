@@ -4,12 +4,22 @@ import {
 	ProfessionSkillTree,
 	KnownRecipe
 } from "../../../interfaces/IProfessionList"
-import Drawer from "@component/react/components/drawer"
-import { IItem } from "@component/react/components/drawer/interfaces"
-import { Drawer as FlowBiteDrawer, DrawerInterface } from "flowbite"
+import SideNavigation from "src/components/react/components/sideNavigation"
+import {
+	IItem,
+	ISecondRowData
+} from "@component/react/components/sideNavigation/interfaces"
+import { ordersToItem } from "../../../api/services/Order"
+import { Orders } from "../../orders/view/public"
+import { Listing } from "../../../interfaces/IViewListings"
 
 interface IBrowseProfessions {
 	professions: ProfessionSkillTree[]
+}
+
+function fetchItemsToSelection(id: number) {
+	if (!id) return
+	return ordersToItem(String(id))
 }
 const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 	const [professionHandler, setProfessionHandler] = useState<{
@@ -21,27 +31,31 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 		category: null,
 		recipe: null
 	})
-	const drawerRef = useRef<HTMLDivElement>(null)
-	let drawer: DrawerInterface | null = null
+	const [orders, setOrders] = useState<Listing[] | null>(null)
+
+	const drawerItemsCallback = useCallback(() => {
+		return professions
+			?.map((profession) => {
+				if (!profession.categories.length) return null
+				const professionName = profession?.name?.replace("Dragon Isles ", "")
+				return {
+					icon: professionName,
+					description: professionName,
+					subItems: profession.categories.map((category) => ({
+						description: category.name
+					}))
+				}
+			})
+			.filter((item) => item !== null)
+			.sort((a, b) => (a.description > b.description ? 1 : -1)) as IItem[]
+	}, [professions])
 
 	useEffect(() => {
-		if (!drawerRef.current) return
-		drawer = new FlowBiteDrawer(drawerRef.current)
-	}, [drawerRef.current])
-
-	useEffect(() => {
-		const { profession, category } = professionHandler
-		if (profession) {
-			const url = new URL(window.location.href)
-			url.searchParams.set("profession", profession.name)
-			window.history.replaceState(null, "", url)
-		}
-		if (category) {
-			const url = new URL(window.location.href)
-			url.searchParams.set("category", category.name)
-			window.history.replaceState(null, "", url)
-		}
-	}, [professionHandler])
+		if (!professionHandler.recipe) return
+		fetchItemsToSelection(professionHandler.recipe.id_crafted_item).then(
+			(res) => setOrders(res.data)
+		)
+	}, [professionHandler.recipe])
 
 	useEffect(() => {
 		const url = new URL(window.location.href)
@@ -73,6 +87,9 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 			_profession.name.includes(selectedProfession)
 		)
 		profession.name = profession.name.replace("Dragon Isles ", "")
+		const url = new URL(window.location.href)
+		url.searchParams.set("profession", profession.name)
+		window.history.replaceState(null, "", url)
 		setProfessionHandler({
 			...professionHandler,
 			profession
@@ -83,59 +100,49 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 		const category = professionHandler.profession.categories.find(
 			(category) => selectedCategory === category.name
 		)
+		const url = new URL(window.location.href)
+		url.searchParams.set("category", category.name)
+		window.history.replaceState(null, "", url)
 		setProfessionHandler({
 			...professionHandler,
 			category
 		})
 	}
-	const toggleDrawer = () => {
-		if (!drawer) return
-		drawer.toggle()
-	}
 
-	const selectRecipe = (selectedRecipe: string) => {
-		// const selectRecipe = (recipe: KnownRecipe) => {
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("itemID", String(recipe.id_crafted_item))
-		// // window.history.replaceState(null, "", url)
-		// window.location.href = url.href
+	const selectRecipe = (selectedRecipe: ISecondRowData) => {
+		const recipe = professionHandler.category.recipes.find(
+			(recipe) => selectedRecipe.label === recipe.name
+		)
+		const url = new URL(window.location.href)
+		url.searchParams.set("itemID", String(recipe.id_crafted_item))
+		window.history.replaceState(null, "", url)
+		setProfessionHandler({
+			...professionHandler,
+			recipe
+		})
 	}
-
-	const drawerItemsCallback = useCallback(() => {
-		return professions
-			?.map((profession) => {
-				if (!profession.categories.length) return null
-				const professionName = profession?.name?.replace("Dragon Isles ", "")
-				return {
-					icon: professionName,
-					description: professionName,
-					subItems: profession.categories.map((category) => ({
-						description: category.name
-					}))
-				}
-			})
-			.filter((item) => item !== null)
-			.sort((a, b) => (a.description > b.description ? 1 : -1)) as IItem[]
-	}, [professions])
 
 	return (
-		<>
-			<Drawer
-				toggleDrawer={toggleDrawer}
-				ref={drawerRef}
-				buttonLabel={"Select a Profession"}
-				items={drawerItemsCallback()}
-				firstLayerHandler={handleProfessionSelect}
-				secondLayerHandler={handleCategorySelect}
-				secondRowData={professionHandler?.category?.recipes
-					.map((recipe) => ({
-						label: recipe.name,
-						id: recipe.id_crafted_item
-					}))
-					.sort((a, b) => (a.label > b.label ? 1 : -1))}
-				secondRowHandler={(val) => console.log("val ", val)}
-			/>
-		</>
+		<div className="flex flex-row">
+			<div className="basis-1/3">
+				<SideNavigation
+					buttonLabel={"Select a Profession"}
+					items={drawerItemsCallback()}
+					firstLayerHandler={handleProfessionSelect}
+					secondLayerHandler={handleCategorySelect}
+					secondRowData={professionHandler?.category?.recipes
+						.map((recipe) => ({
+							label: recipe.name,
+							id: recipe.id_crafted_item
+						}))
+						.sort((a, b) => (a.label > b.label ? 1 : -1))}
+					secondRowHandler={selectRecipe}
+				/>
+			</div>
+			<div className="basis-2/3">
+				<Orders orders={orders} />
+			</div>
+		</div>
 	)
 }
 

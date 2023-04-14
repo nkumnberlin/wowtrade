@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Dispatch } from "react"
 
 export interface ISubItem
 	extends Omit<Handler, "firstLayerHandler" | "secondRowHandler"> {
@@ -11,15 +11,16 @@ export interface IItem extends Omit<Handler, "secondRowHandler"> {
 	subItems: ISubItem[]
 	icon: string
 	description: string
+	showSubItems: boolean
+	setShowSubItems: Dispatch<React.SetStateAction<string>>
 }
-interface ISecondRowData {
+export interface ISecondRowData {
 	id: number
 	label: string
 }
 
-export interface IDrawer extends Handler {
+export interface ISideNavigation extends Handler {
 	items: IItem[]
-	toggleDrawer: () => void
 	buttonLabel: string
 	secondRowData?: ISecondRowData[]
 }

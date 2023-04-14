@@ -1,5 +1,5 @@
 import React from "react"
-import { ISubItem } from "@component/react/components/drawer/interfaces"
+import { ISubItem } from "@component/react/components/sideNavigation/interfaces"
 
 const SubItem = ({ href, description, secondLayerHandler }: ISubItem) => {
 	return (
