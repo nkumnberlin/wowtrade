@@ -1,7 +1,7 @@
 ---
 import Layout from "../../../components/global/Layout/Layout.astro"
 import { getCharacters } from "../../../api/services/Character"
-import Characters from "../../../feature/characters"
+import Characters from "../../../features/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
 let characters
 try {
@@ -19,4 +19,4 @@ try {
 	</div>
 </Layout>
 
-<script src="./handleSelectCharacter.js"></script>
+<script src="./handleSelectCharacter.ts"></script>

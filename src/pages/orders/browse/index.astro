@@ -1,8 +1,8 @@
 ---
 import { ordersToItem } from "../../../api/services/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
-import BrowseProfessions from "../../../feature/professions/browse"
-import ViewOrder from "../../../feature/orders/view/public"
+import BrowseProfessions from "../../../features/professions/browse"
+import ViewOrder from "../../../features/orders/view/public"
 import { browseProfessions } from "../../../api/services/Professions"
 const itemID = Astro.url.searchParams.get("itemID")
 let response = null
