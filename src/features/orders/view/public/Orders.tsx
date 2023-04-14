@@ -5,9 +5,9 @@ const Orders = ({ orders }: { orders: Listing[] }) => {
 	if (!orders) return
 
 	return (
-		<div className="flex flex-row">
+		<div className="m-4 flex flex-row">
 			{orders.map((order) => (
-				<div className="h-96 w-96 basis-1/4 bg-gray-200 drop-shadow-lg">
+				<div className="h-48 w-48 basis-1/4 rounded bg-white p-2 drop-shadow-lg">
 					{order.item.item_name}
 				</div>
 			))}

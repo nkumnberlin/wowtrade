@@ -15,7 +15,7 @@ const SideNavigation = ({
 	const close = "Close"
 
 	return (
-		<div className="w-${200} overflow-y-auto bg-white p-4">
+		<div className="w-200 overflow-y-auto bg-white p-4">
 			<h5 className="text-base font-semibold uppercase text-gray-500 dark:text-gray-400">
 				{label}
 			</h5>
@@ -39,8 +39,8 @@ const SideNavigation = ({
 				<span className="sr-only">{close}</span>
 			</button>
 			<div className={"flex flex-row"}>
-				<div className={"overflow-y-auto py-4"}>
-					<ul className="space-y-2 font-medium">
+				<div className={" py-4"}>
+					<ul className="space-y-2  font-medium">
 						{items &&
 							items.map(({ description, subItems }) => (
 								<Item

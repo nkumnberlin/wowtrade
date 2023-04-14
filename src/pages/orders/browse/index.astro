@@ -1,5 +1,5 @@
 ---
-import Layout from "../../../components/global/Layout/Layout.astro"
+import Browse from "../../../components/global/Layout/Browse.astro"
 import BrowseProfessions from "../../../features/professions/browse"
 import { browseProfessions } from "../../../api/services/Professions"
 const itemID = Astro.url.searchParams.get("itemID")
@@ -12,10 +12,10 @@ try {
 }
 ---
 
-<Layout title="See Listing">
+<Browse title="See Listing">
 	<div>
 		<BrowseProfessions professions={professions.data} client:load />
 	</div>
-</Layout>
+</Browse>
 
 <script src="../../copyToClipboard.ts"></script>

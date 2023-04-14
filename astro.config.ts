@@ -14,6 +14,9 @@ import node from "@astrojs/node"
 // https://astro.build/config
 export default defineConfig({
 	site: seoConfig.baseURL,
+	experimental: {
+		assets: true
+	},
 	output: "server",
 	server: {
 		port: 3005

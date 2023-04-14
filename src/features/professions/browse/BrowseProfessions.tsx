@@ -65,8 +65,8 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 			url.searchParams.get("itemID")
 		]
 
-		const selectedProfession = professions.find(
-			(profession) => profession.name === prevProfession
+		const selectedProfession = professions.find((profession) =>
+			profession.name.includes(prevProfession)
 		)
 		const selectedCategory = selectedProfession?.categories.find(
 			(category) => category.name === prevCategory
@@ -123,8 +123,8 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 	}
 
 	return (
-		<div className="flex flex-row">
-			<div className="basis-1/3">
+		<div className="flex h-full flex-row">
+			<div>
 				<SideNavigation
 					buttonLabel={"Select a Profession"}
 					items={drawerItemsCallback()}
@@ -139,7 +139,7 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 					secondRowHandler={selectRecipe}
 				/>
 			</div>
-			<div className="basis-2/3">
+			<div className="w-screen bg-gray-200">
 				<Orders orders={orders} />
 			</div>
 		</div>

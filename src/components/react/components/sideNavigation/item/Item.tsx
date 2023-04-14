@@ -23,7 +23,7 @@ const Item = ({
 				type="button"
 				className={`${
 					showSubItems ? "active" : ""
-				} group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700`}
+				} group flex w-auto w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700`}
 				aria-controls="dropdown-example"
 				data-collapse-toggle="dropdown-example"
 			>

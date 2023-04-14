@@ -1,3 +1,4 @@
+const endpoint = import.meta.env.API_ENDPOINT
 const ORDERS = {
 	viewLast5: "/viewLast5",
 	order: "/order",
@@ -10,7 +11,7 @@ const PROFESSIONS = {
 	professionsToCharacter: "/authenticated/character/professions"
 }
 const ROUTES = {
-	base: "http://localhost:3000",
+	base: endpoint,
 	characters: "/authenticated/characters",
 	...ORDERS,
 	...PROFESSIONS
