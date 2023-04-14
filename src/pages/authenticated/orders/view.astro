@@ -1,7 +1,7 @@
 ---
 import { deleteOrder } from "../../../api/services/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
-import Last5Order from "../../../features/orders/view/public"
+import { Last5Order } from "../../../features/orders/view/public"
 import OrdersToAccount from "../../../features/orders/view/auth"
 import { getLast5Orders, getOrdersToUser } from "../../../api/services/Order"
 let ordersToUser
