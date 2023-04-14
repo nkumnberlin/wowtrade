@@ -17,14 +17,15 @@ try {
 } catch (e) {
 	console.log("error while fetching item to recipe")
 }
-console.log("response", response)
 ---
 
 <Layout title="See Listing">
+	{
+		professions?.data && (
+			<BrowseProfessions professions={professions.data} client:load />
+		)
+	}
 	<div class="flex flex-row">
-		<div class="basis-2/4">
-			<BrowseProfessions professions={professions.data} client:visible />
-		</div>
 		<div class="basis-2/4">
 			{response?.data.length ? <ViewOrder orders={response.data} /> : null}
 		</div>

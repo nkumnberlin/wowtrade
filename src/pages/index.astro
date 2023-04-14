@@ -3,6 +3,7 @@ import { getLast5Orders } from "../api/services/Order"
 import Layout from "../components/global/Layout/Layout.astro"
 import Last5Order from "../features/orders/view/public"
 import Label from "../components/react/components/label"
+import Drawer from "../components/react/components/drawer"
 let orders
 
 try {
@@ -21,6 +22,7 @@ try {
 				<h1 class="text-4xl font-semibold">WoW Trade</h1>
 			</div>
 			<Label>Last 5 created Listings</Label>
+			<Drawer client:load />
 			<Last5Order orders={orders} />
 			<div>
 				<ul class="grid md:grid-cols-2 gap-4 place-items-center">
