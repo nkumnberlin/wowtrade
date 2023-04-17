@@ -7,8 +7,8 @@ import { VitePWA } from "vite-plugin-pwa" // Helper imports
 
 import { manifest, seoConfig } from "./utils/seoConfig"
 import react from "@astrojs/react"
-// import vercel from "@astrojs/vercel/serverless" // https://astro.build/config
-import vercelStatic from "@astrojs/vercel/static"
+import vercel from "@astrojs/vercel/serverless" // https://astro.build/config
+// import vercelStatic from "@astrojs/vercel/static"
 import node from "@astrojs/node"
 
 // https://astro.build/config
@@ -17,7 +17,7 @@ export default defineConfig({
 	experimental: {
 		assets: true
 	},
-	output: "static",
+	output: "server",
 	server: {
 		port: 3005
 	},
@@ -49,5 +49,5 @@ export default defineConfig({
 			})
 		]
 	},
-	adapter: vercelStatic()
+	adapter: vercel()
 })
