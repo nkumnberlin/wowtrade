@@ -1,8 +1,5 @@
 const env = import.meta.env
-let endpoint = env.API_ENDPOINT
-if (env.DEV) {
-	endpoint = env.PUBLIC_API_ENDPOINT
-}
+const publicAPIEndpoint = env.PUBLIC_API_ENDPOINT
 
 const ORDERS = {
 	viewLast5: "/viewLast5",
@@ -16,7 +13,7 @@ const PROFESSIONS = {
 	professionsToCharacter: "/authenticated/character/professions"
 }
 const ROUTES = {
-	base: endpoint,
+	base: publicAPIEndpoint,
 	characters: "/authenticated/characters",
 	...ORDERS,
 	...PROFESSIONS
