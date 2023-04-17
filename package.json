@@ -33,7 +33,9 @@
 		"@astrojs/vercel": "^3.2.0",
 		"@types/react-dom": "^18.0.6",
 		"flowbite": "^1.6.4",
+		"pnpm": "^8.2.0",
 		"react": "^18.0.0",
-		"react-dom": "^18.0.0"
+		"react-dom": "^18.0.0",
+		"vercel": "^28.18.5"
 	}
 }

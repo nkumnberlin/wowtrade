@@ -6,5 +6,5 @@ const handleClick = (ev) => {
 }
 
 //id*='someId'
-const buttons = document.querySelectorAll("[data-realm]")
-buttons.forEach((button) => button.addEventListener("click", handleClick))
+const dataButtons = window.document.querySelectorAll("[data-realm]")
+dataButtons.forEach((button) => button.addEventListener("click", handleClick))

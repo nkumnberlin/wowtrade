@@ -29,7 +29,7 @@ try {
 </Layout>
 
 <script>
-	const buttons = document.querySelectorAll("button")
+	const buttons = window.document.querySelectorAll("button")
 	const selectItemToDelete = (ev) => {
 		const url = new URL(window.location.href)
 		url.searchParams.set("id", ev.target.id)
