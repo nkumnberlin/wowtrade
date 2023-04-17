@@ -17,7 +17,7 @@ export default defineConfig({
 	experimental: {
 		assets: true
 	},
-	output: "server",
+	output: "static",
 	server: {
 		port: 3005
 	},
