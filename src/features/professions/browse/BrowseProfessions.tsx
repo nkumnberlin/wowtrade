@@ -58,68 +58,68 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 	}, [professionHandler.recipe])
 
 	useEffect(() => {
-		// const url = new URL(window.location.href)
-		// const [prevProfession, prevCategory, prevItemID] = [
-		// 	url.searchParams.get("profession"),
-		// 	url.searchParams.get("category"),
-		// 	url.searchParams.get("itemID")
-		// ]
-		//
-		// const selectedProfession = professions.find((profession) =>
-		// 	profession.name.includes(prevProfession)
-		// )
-		// const selectedCategory = selectedProfession?.categories.find(
-		// 	(category) => category.name === prevCategory
-		// )
-		// const selectedRecipe = selectedCategory?.recipes.find(
-		// 	(recipe) => recipe.id_crafted_item === parseInt(prevItemID, 10)
-		// )
-		// return setProfessionHandler({
-		// 	...professionHandler,
-		// 	profession: selectedProfession ?? professionHandler.profession,
-		// 	category: selectedCategory ?? professionHandler.category,
-		// 	recipe: selectedRecipe ?? professionHandler.recipe
-		// })
+		const url = new URL(window.location.href)
+		const [prevProfession, prevCategory, prevItemID] = [
+			url.searchParams.get("profession"),
+			url.searchParams.get("category"),
+			url.searchParams.get("itemID")
+		]
+
+		const selectedProfession = professions.find((profession) =>
+			profession.name.includes(prevProfession)
+		)
+		const selectedCategory = selectedProfession?.categories.find(
+			(category) => category.name === prevCategory
+		)
+		const selectedRecipe = selectedCategory?.recipes.find(
+			(recipe) => recipe.id_crafted_item === parseInt(prevItemID, 10)
+		)
+		return setProfessionHandler({
+			...professionHandler,
+			profession: selectedProfession ?? professionHandler.profession,
+			category: selectedCategory ?? professionHandler.category,
+			recipe: selectedRecipe ?? professionHandler.recipe
+		})
 	}, [])
 
 	const handleProfessionSelect = (selectedProfession: string) => {
 		const profession = professions.find((_profession) =>
 			_profession.name.includes(selectedProfession)
 		)
-		// profession.name = profession.name.replace("Dragon Isles ", "")
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("profession", profession.name)
-		// window.history.replaceState(null, "", url)
-		// setProfessionHandler({
-		// 	...professionHandler,
-		// 	profession
-		// })
+		profession.name = profession.name.replace("Dragon Isles ", "")
+		const url = new URL(window.location.href)
+		url.searchParams.set("profession", profession.name)
+		window.history.replaceState(null, "", url)
+		setProfessionHandler({
+			...professionHandler,
+			profession
+		})
 	}
 
 	const handleCategorySelect = (selectedCategory: string) => {
 		const category = professionHandler.profession.categories.find(
 			(category) => selectedCategory === category.name
 		)
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("category", category.name)
-		// window.history.replaceState(null, "", url)
-		// setProfessionHandler({
-		// 	...professionHandler,
-		// 	category
-		// })
+		const url = new URL(window.location.href)
+		url.searchParams.set("category", category.name)
+		window.history.replaceState(null, "", url)
+		setProfessionHandler({
+			...professionHandler,
+			category
+		})
 	}
 
 	const selectRecipe = (selectedRecipe: ISecondRowData) => {
 		const recipe = professionHandler.category.recipes.find(
 			(recipe) => selectedRecipe.label === recipe.name
 		)
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("itemID", String(recipe.id_crafted_item))
-		// window.history.replaceState(null, "", url)
-		// setProfessionHandler({
-		// 	...professionHandler,
-		// 	recipe
-		// })
+		const url = new URL(window.location.href)
+		url.searchParams.set("itemID", String(recipe.id_crafted_item))
+		window.history.replaceState(null, "", url)
+		setProfessionHandler({
+			...professionHandler,
+			recipe
+		})
 	}
 
 	return (

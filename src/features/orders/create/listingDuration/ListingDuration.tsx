@@ -10,9 +10,9 @@ const ListingDuration = () => {
 	const [selection, setSelection] = useState<TListingDuration | null>(null)
 	const items = ["6", "12", "24"]
 	if (selection) {
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("duration", selection)
-		// window.history.replaceState(null, "", url)
+		const url = new URL(window.location.href)
+		url.searchParams.set("duration", selection)
+		window.history.replaceState(null, "", url)
 	}
 	const handleSelection = (val) => {
 		setSelection(val.target.outerText)

@@ -10,9 +10,9 @@ const Difficulty = () => {
 	const [selection, setSelection] = useState<TItemDifficulty | null>(null)
 	const items = ["1", "2", "3"]
 	if (selection) {
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("difficulty", selection)
-		// window.history.replaceState(null, "", url)
+		const url = new URL(window.location.href)
+		url.searchParams.set("difficulty", selection)
+		window.history.replaceState(null, "", url)
 	}
 	const handleSelection = (val) => {
 		setSelection(val.target.outerText)

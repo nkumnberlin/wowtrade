@@ -4,9 +4,9 @@ import style from "./styles.module.css"
 const Multicraft = () => {
 	const [multicraft, setMulticraft] = useState<number>(undefined)
 	if (multicraft) {
-		// const url = new URL(window.location.href)
-		// url.searchParams.set("multicraftPercentage", String(multicraft))
-		// window.history.replaceState(null, "", url)
+		const url = new URL(window.location.href)
+		url.searchParams.set("multicraftPercentage", String(multicraft))
+		window.history.replaceState(null, "", url)
 	}
 
 	return (

@@ -12,7 +12,7 @@ const Characters = ({ characters }: ICharacters) => {
 	)
 	useEffect(() => {
 		if (selectedCharacter !== null) {
-			// window.location.href = `/authenticated/characters/professions/eu/${selectedCharacter.realm.name.en_GB}/${selectedCharacter.name}`
+			window.location.href = `/authenticated/characters/professions/eu/${selectedCharacter.realm.name.en_GB}/${selectedCharacter.name}`
 		}
 	}, [selectedCharacter])
 
