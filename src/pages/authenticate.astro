@@ -1,8 +1,9 @@
 ---
 import Layout from "../components/global/Layout/Layout.astro"
 import isAuthenticated from "../../utils/isAuthenticated"
-const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
-if (validSession) return Astro.redirect("authenticated/orders/view")
+const cookie = Astro.cookies.get("wow-trade-session").value
+const validSession = isAuthenticated(cookie);
+if (validSession) return Astro.redirect("authenticated/orders/view");
 ---
 
 <Layout title="Authenticate your Account">

@@ -1,12 +1,12 @@
 ---
 import Layout from "../../components/global/Layout/Layout.astro"
-const logout = await fetch("http://localhost:3000/logout")
+const logout = await fetch("http://localhost:3000/logout", {
+	credentials: "include",
+})
 let message = "Something went wrong while logout!"
 console.log("logout", logout)
-if (logout.status === 201) {
-	Astro.request.headers.delete("cookie")
-	console.log(Astro.request.headers)
-
+if (logout.status === 200) {
+	Astro.cookies.set("wow-trade-session", "", {maxAge: 2, path: "/"});
 	message = "Goodbye! Until later :)"
 }
 ---

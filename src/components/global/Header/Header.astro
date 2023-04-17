@@ -1,6 +1,6 @@
 ---
 import isAuthenticated from "@util/isAuthenticated"
-const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
+const validSession = isAuthenticated(Astro.cookies.get("wow-trade-session").value)
 ---
 
 <nav class="bg-gray-800">
@@ -13,7 +13,7 @@ const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
 							<a
 								href="/"
 								class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-								>Home</a
+							>Home</a
 							>
 							{
 								validSession ? (
