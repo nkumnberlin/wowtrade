@@ -1,4 +1,9 @@
-const endpoint = import.meta.env.API_ENDPOINT
+const env = import.meta.env
+let endpoint = env.API_ENDPOINT
+if (env.DEV) {
+	endpoint = env.PUBLIC_API_ENDPOINT
+}
+
 const ORDERS = {
 	viewLast5: "/viewLast5",
 	order: "/order",

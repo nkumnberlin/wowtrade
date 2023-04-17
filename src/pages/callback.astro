@@ -1,7 +1,7 @@
 ---
 import Layout from "../components/global/Layout/Layout.astro"
 import isAuthenticated from "../../utils/isAuthenticated"
-console.log("aasdasd", Astro.request)
+console.log("aasdasd", Astro.request.headers)
 if (isAuthenticated(Astro.request.headers.get("cookie"))) {
 	return Astro.redirect("/authenticated/characters")
 }

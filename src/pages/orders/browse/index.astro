@@ -13,9 +13,7 @@ try {
 ---
 
 <Browse title="See Listing">
-	<div>
-		<BrowseProfessions professions={professions.data} client:load />
-	</div>
+	<BrowseProfessions professions={professions?.data} client:load />
 </Browse>
 
 <script src="../../copyToClipboard.ts"></script>
