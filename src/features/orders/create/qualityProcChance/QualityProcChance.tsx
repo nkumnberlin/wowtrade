@@ -5,9 +5,9 @@ const QualityProcChance = () => {
 		""
 	)
 	if (qualityProcChance) {
-		const url = new URL(window.location.href)
-		url.searchParams.set("qualityProcChance", String(qualityProcChance))
-		window.history.replaceState(null, "", url)
+		// const url = new URL(window.location.href)
+		// url.searchParams.set("qualityProcChance", String(qualityProcChance))
+		// window.history.replaceState(null, "", url)
 	}
 
 	return (

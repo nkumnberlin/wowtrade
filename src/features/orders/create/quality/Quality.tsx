@@ -10,9 +10,9 @@ const Quality = () => {
 	const [selection, setSelection] = useState<TExpectedItemQuality | null>(null)
 	const items: TExpectedItemQuality[] = ["a", "b", "c", "d", "e"]
 	if (selection) {
-		const url = new URL(window.location.href)
-		url.searchParams.set("quality", selection)
-		window.history.replaceState(null, "", url)
+		// const url = new URL(window.location.href)
+		// url.searchParams.set("quality", selection)
+		// window.history.replaceState(null, "", url)
 	}
 	const handleSelection = (val) => {
 		setSelection(val.target.outerText)

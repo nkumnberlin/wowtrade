@@ -3,16 +3,16 @@ import Input from "@component/react/components/input"
 const Commission = () => {
 	const [gold, setGold] = useState<number | string>("")
 	if (gold) {
-		const url = new URL(window.location.href)
-		url.searchParams.set("gold", String(gold))
-		window.history.replaceState(null, "", url)
+		// const url = new URL(window.location.href)
+		// url.searchParams.set("gold", String(gold))
+		// window.history.replaceState(null, "", url)
 	}
 
 	const [silver, setSilver] = useState<number | string>("")
 	if (silver) {
-		const url = new URL(window.location.href)
-		url.searchParams.set("silver", String(silver))
-		window.history.replaceState(null, "", url)
+		// const url = new URL(window.location.href)
+		// url.searchParams.set("silver", String(silver))
+		// window.history.replaceState(null, "", url)
 	}
 
 	return (

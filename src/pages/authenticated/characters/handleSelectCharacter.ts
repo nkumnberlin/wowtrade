@@ -3,7 +3,7 @@ const handleClick = (ev) => {
 	const realm = ev.target.dataset.realm
 	const name = ev.target.dataset.name
 	// @ts-ignore
-	window.location.href = `/authenticated/characters/professions/eu/${realm}/${name}`
+	// window.location.href = `/authenticated/characters/professions/eu/${realm}/${name}`
 }
 
 //id*='someId'
