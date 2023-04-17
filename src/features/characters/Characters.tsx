@@ -10,9 +10,12 @@ const Characters = ({ characters }: ICharacters) => {
 	const [selectedCharacter, setSelectedCharacter] = useState<ICharacter | null>(
 		null
 	)
-	if (selectedCharacter !== null) {
-		window.location.href = `/authenticated/characters/professions/eu/${selectedCharacter.realm.name.en_GB}/${selectedCharacter.name}`
-	}
+	useEffect(() => {
+		if (selectedCharacter !== null) {
+			window.location.href = `/authenticated/characters/professions/eu/${selectedCharacter.realm.name.en_GB}/${selectedCharacter.name}`
+		}
+	}, [selectedCharacter])
+
 	return (
 		<table>
 			<tbody>
