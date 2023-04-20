@@ -1,6 +1,8 @@
 ---
 import Layout from "../../components/global/Layout/Layout.astro"
-const logout = await fetch("http://localhost:3000/logout")
+const env = import.meta.env
+const publicAPIEndpoint = env.PUBLIC_API_ENDPOINT
+const logout = await fetch(`${publicAPIEndpoint}/logout`)
 let message = "Something went wrong while logout!"
 console.log("logout", logout)
 if (logout.status === 201) {
