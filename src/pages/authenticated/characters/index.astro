@@ -3,6 +3,7 @@ import Layout from "../../../components/global/Layout/Layout.astro"
 import { getCharacters } from "../../../api/services/Character"
 import Characters from "../../../features/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
+const { pathname } = Astro.url
 let characters
 try {
 	characters = await getCharacters(cookie)
@@ -19,4 +20,16 @@ try {
 	</div>
 </Layout>
 
-<script src="./handleSelectCharacter.ts"></script>
+<script is:inline>
+	const handleClick = (ev) => {
+		const realm = ev.target.dataset.realm
+		const name = ev.target.dataset.name
+		// @ts-ignore
+		window.location.href = `/authenticated/characters/professions/eu/${realm}/${name}`
+	}
+	console.log("load")
+
+	const dataButtons = window?.document?.querySelectorAll("[data-realm]")
+	console.log("clicks?", dataButtons)
+	dataButtons.forEach((button) => button.addEventListener("click", handleClick))
+</script>

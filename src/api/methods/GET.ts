@@ -4,7 +4,7 @@ interface IClient {
 	url: string
 }
 async function GET({ cookie, url }: IClient) {
-	console.log("url", url)
+	console.log("url", url, "und  ", cookie)
 	if (cookie) {
 		return await fetch(url, {
 			method: "GET",
