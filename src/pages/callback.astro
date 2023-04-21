@@ -2,7 +2,7 @@
 import Layout from "../components/global/Layout/Layout.astro"
 import isAuthenticated from "../../utils/isAuthenticated"
 console.log("aasdasd", Astro.request.headers)
-if (isAuthenticated(Astro.request.headers.get("cookie"))) {
+if (isAuthenticated(Astro.cookies.get("wow-trade-session").value)) {
 	return Astro.redirect("/authenticated/characters")
 }
 ---

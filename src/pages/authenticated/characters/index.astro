@@ -27,9 +27,6 @@ try {
 		// @ts-ignore
 		window.location.href = `/authenticated/characters/professions/eu/${realm}/${name}`
 	}
-	console.log("load")
-
 	const dataButtons = window?.document?.querySelectorAll("[data-realm]")
-	console.log("clicks?", dataButtons)
 	dataButtons.forEach((button) => button.addEventListener("click", handleClick))
 </script>

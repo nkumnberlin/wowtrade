@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import Input from "@component/react/components/input"
-import style from "./styles.module.css"
 const Multicraft = () => {
-	const [multicraft, setMulticraft] = useState<number>(undefined)
+	const [multicraft, setMulticraft] = useState<number | string>("")
 	if (multicraft) {
 		const url = new URL(window.location.href)
 		url.searchParams.set("multicraftPercentage", String(multicraft))
