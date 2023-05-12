@@ -2,14 +2,10 @@
 import { getProfessionSkillTrees } from "./index.json"
 import Browse from "../../../components/global/Layout/Browse.astro"
 import BrowseProfessions from "../../../features/professions/browse"
-import { browseProfessions } from "../../../external/services/Professions"
 
-const itemID = Astro.url.searchParams.get("itemID")
-// import mockProfessions from "./professions.json"
 let professions = null
-console.log("ITEM ID ", itemID, Astro.url.searchParams.get("itemID"))
 try {
-	professions = getProfessionSkillTrees()
+	professions = await getProfessionSkillTrees()
 } catch (e) {
 	console.log("error while fetching item to recipe")
 }
@@ -29,7 +25,7 @@ try {
 ></script>
 
 <Browse title="See Listing">
-	<BrowseProfessions professions={professions?.data} client:only="react" />
+	<BrowseProfessions professions={professions} client:only="react" />
 </Browse>
 
 <script is:inline>

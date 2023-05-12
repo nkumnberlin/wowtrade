@@ -84,5 +84,6 @@ const professionMap: {
 // }
 
 export const getAllProfessionSkillTrees = async () => {
-	return getProfessionsCollection().find().toArray()
+	const professions = await getProfessionsCollection()
+	return professions.find().toArray()
 }
