@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Item from "@component/react/components/sideNavigation/item"
 import { ISideNavigation } from "@component/react/components/sideNavigation/interfaces"
+import WoWHeadLink from "@component/react/components/wowHeadLink"
+import Styles from "../../../../features/professions/styles.module.css"
 
 const SideNavigation = ({
 	items,
@@ -21,7 +23,7 @@ const SideNavigation = ({
 			</h5>
 			<button
 				type="button"
-				className="absolute top-2.5 right-2.5 inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+				className="absolute right-2.5 top-2.5 inline-flex items-center rounded-lg bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
 			>
 				<svg
 					aria-hidden="false"
@@ -59,13 +61,14 @@ const SideNavigation = ({
 				<div className="overflow-y-auto py-4 ">
 					{secondRowData &&
 						secondRowData.map((item) => (
-							<p
-								key={item.id}
-								onClick={() => secondRowHandler(item)}
-								className="cursor-pointer space-y-2 py-2 pl-5"
-							>
-								{item.label}
-							</p>
+							<WoWHeadLink itemId={item.id} key={item.id}>
+								<p
+									onClick={() => secondRowHandler(item)}
+									className="cursor-pointer space-y-2 py-2 pl-5"
+								>
+									{item.label}
+								</p>
+							</WoWHeadLink>
 						))}
 				</div>
 			</div>

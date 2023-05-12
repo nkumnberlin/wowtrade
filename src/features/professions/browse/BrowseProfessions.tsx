@@ -9,7 +9,7 @@ import {
 	IItem,
 	ISecondRowData
 } from "@component/react/components/sideNavigation/interfaces"
-import { ordersToItem } from "../../../api/services/Order"
+import { ordersToItem } from "../../../external/services/Order"
 import { Orders } from "../../orders/view/public"
 import { Listing } from "../../../interfaces/IViewListings"
 
@@ -102,6 +102,7 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 		)
 		const url = new URL(window.location.href)
 		url.searchParams.set("category", category.name)
+		category.parent = professionHandler.profession.name
 		window.history.replaceState(null, "", url)
 		setProfessionHandler({
 			...professionHandler,
@@ -123,22 +124,24 @@ const BrowseProfessions = ({ professions }: IBrowseProfessions) => {
 	}
 
 	return (
-		<div className="flex h-full flex-row">
-			<div>
-				<SideNavigation
-					buttonLabel={"Select a Profession"}
-					items={drawerItemsCallback()}
-					firstLayerHandler={handleProfessionSelect}
-					secondLayerHandler={handleCategorySelect}
-					secondRowData={professionHandler?.category?.recipes
+		<div className="flex h-screen max-h-screen min-w-fit flex-row">
+			<SideNavigation
+				buttonLabel={"Select a Profession"}
+				items={drawerItemsCallback()}
+				firstLayerHandler={handleProfessionSelect}
+				secondLayerHandler={handleCategorySelect}
+				secondRowData={
+					professionHandler?.category?.parent ===
+						professionHandler?.profession?.name &&
+					professionHandler?.category?.recipes
 						.map((recipe) => ({
 							label: recipe.name,
 							id: recipe.id_crafted_item
 						}))
-						.sort((a, b) => (a.label > b.label ? 1 : -1))}
-					secondRowHandler={selectRecipe}
-				/>
-			</div>
+						.sort((a, b) => (a.label > b.label ? 1 : -1))
+				}
+				secondRowHandler={selectRecipe}
+			/>
 			<div className="w-screen bg-gray-200">
 				<Orders orders={orders} />
 			</div>

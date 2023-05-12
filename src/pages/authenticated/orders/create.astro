@@ -2,7 +2,7 @@
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Error from "./error.astro"
 const cookie = Astro.cookies.get("wow-trade-session").value
-import { createOrder } from "../../../api/services/Order"
+import { createOrder } from "../../../external/services/Order"
 const createListingData = {
 	commission: {
 		gold: Astro.url.searchParams.get("gold"),

@@ -1,0 +1,3716 @@
+{
+	"status": 200,
+	"data": [
+		{
+			"_id": "643049db9fde90a696fc459e",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/202/skill-tier/2827?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2827,
+			"name": "Dragon Isles Engineering",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Devices",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47414?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Atomic Recalibrator",
+							"id": 47414,
+							"id_crafted_item": 198173
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47415?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Neural Silencer Mk3",
+							"id": 47415,
+							"id_crafted_item": 198247
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47451?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Element-Infused Rocket Helmet",
+							"id": 47451,
+							"id_crafted_item": 192443
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47452?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Giggle Goggles",
+							"id": 47452,
+							"id_crafted_item": 198227
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47453?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Environmental Emulator",
+							"id": 47453,
+							"id_crafted_item": 198206
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47454?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Centralized Precipitation Emitter",
+							"id": 47454,
+							"id_crafted_item": 198264
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47496?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Portable Alchemist's Lab Bench",
+							"id": 47496,
+							"id_crafted_item": 198265
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47497?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Portable Tinker's Workbench",
+							"id": 47497,
+							"id_crafted_item": 198268
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47681?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Zapthrottle Soul Inhaler",
+							"id": 47681,
+							"id_crafted_item": 199414
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47997?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Tinker Removal Kit",
+							"id": 47997,
+							"id_crafted_item": 202087
+						}
+					]
+				},
+				{
+					"name": "Fireworks",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47418?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Red Fireflight",
+							"id": 47418,
+							"id_crafted_item": 198223
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47419?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Blue Fireflight",
+							"id": 47419,
+							"id_crafted_item": 198222
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47499?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Green Fireflight",
+							"id": 47499,
+							"id_crafted_item": 198224
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47507?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bundle of Fireworks",
+							"id": 47507,
+							"id_crafted_item": 198172
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47620?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Black Fireflight",
+							"id": 47620,
+							"id_crafted_item": 198549
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47621?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bronze Fireflight",
+							"id": 47621,
+							"id_crafted_item": 198550
+						}
+					]
+				},
+				{
+					"name": "Profession Equipment",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47422?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Brainwave Amplifier",
+							"id": 47422,
+							"id_crafted_item": 198205
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47423?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Encased Samophlange",
+							"id": 47423,
+							"id_crafted_item": 198246
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47424?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Brainwave Amplifier",
+							"id": 47424,
+							"id_crafted_item": 198204
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47425?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Encased Samophlange",
+							"id": 47425,
+							"id_crafted_item": 198245
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47426?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Spring-Loaded Draconium Fabric Cutters",
+							"id": 47426,
+							"id_crafted_item": 194125
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47427?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Lapidary's Draconium Clamps",
+							"id": 47427,
+							"id_crafted_item": 198234
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47428?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Fisherfriend",
+							"id": 47428,
+							"id_crafted_item": 198225
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47429?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bottomless Stonecrust Ore Satchel",
+							"id": 47429,
+							"id_crafted_item": 198262
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47430?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Delver's Helmet",
+							"id": 47430,
+							"id_crafted_item": 198243
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47492?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Lapidary's Khaz'gorite Clamps",
+							"id": 47492,
+							"id_crafted_item": 198235
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47493?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Delver's Helmet",
+							"id": 47493,
+							"id_crafted_item": 198244
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47494?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Spring-Loaded Khaz'gorite Fabric Cutters",
+							"id": 47494,
+							"id_crafted_item": 194126
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47495?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bottomless Mireslush Ore Satchel",
+							"id": 47495,
+							"id_crafted_item": 198263
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47505?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Fisherfriend",
+							"id": 47505,
+							"id_crafted_item": 198226
+						}
+					]
+				},
+				{
+					"name": "Goggles",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47431?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Battle-Ready Binoculars",
+							"id": 47431,
+							"id_crafted_item": 198326
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47432?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Oscillating Wilderness Opticals",
+							"id": 47432,
+							"id_crafted_item": 198325
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47433?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Peripheral Vision Projectors",
+							"id": 47433,
+							"id_crafted_item": 198324
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47434?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Lightweight Ocular Lenses",
+							"id": 47434,
+							"id_crafted_item": 198323
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47436?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sentry's Stabilized Specs",
+							"id": 47436,
+							"id_crafted_item": 198331
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47437?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Deadline Deadeyes",
+							"id": 47437,
+							"id_crafted_item": 198330
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47438?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Milestone Magnifiers",
+							"id": 47438,
+							"id_crafted_item": 198329
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47439?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Quality-Assured Optics",
+							"id": 47439,
+							"id_crafted_item": 198328
+						}
+					]
+				},
+				{
+					"name": "Weapons",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47513?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Ol' Smoky",
+							"id": 47513,
+							"id_crafted_item": 198335
+						}
+					]
+				},
+				{
+					"name": "Robotics",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47502?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Quack-E",
+							"id": 47502,
+							"id_crafted_item": 193572
+						}
+					]
+				},
+				{
+					"name": "Armor",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47514?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Difficult Wrist Protectors",
+							"id": 47514,
+							"id_crafted_item": 198333
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47515?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Complicated Cuffs",
+							"id": 47515,
+							"id_crafted_item": 198332
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47516?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Needlessly Complex Wristguards",
+							"id": 47516,
+							"id_crafted_item": 198327
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47517?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Overengineered Sleeve Extenders",
+							"id": 47517,
+							"id_crafted_item": 198322
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48179?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Gnomish Voicebox",
+							"id": 48179,
+							"id_crafted_item": 203411
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc459f",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/393/skill-tier/2834?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2834,
+			"name": "Dragon Isles Skinning",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Bait Recipes",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47525?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bottled Pheromones",
+							"id": 47525,
+							"id_crafted_item": 198404
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47527?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Elusive Creature Bait",
+							"id": 47527,
+							"id_crafted_item": 193906
+						}
+					]
+				},
+				{
+					"name": "Fishing Lure Recipes",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47528?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Scalebelly Mackerel Lure",
+							"id": 47528,
+							"id_crafted_item": 193893
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47529?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Thousandbite Piranha Lure",
+							"id": 47529,
+							"id_crafted_item": 193894
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47530?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Temporal Dragonhead Lure",
+							"id": 47530,
+							"id_crafted_item": 193895
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47531?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Cerulean Spinefish Lure",
+							"id": 47531,
+							"id_crafted_item": 193896
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47532?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Aileron Seamoth Lure",
+							"id": 47532,
+							"id_crafted_item": 198401
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47533?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Islefin Dorado Lure",
+							"id": 47533,
+							"id_crafted_item": 198403
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a0",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/164/skill-tier/2822?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2822,
+			"name": "Dragon Isles Blacksmithing",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Weapons",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46625?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Warglaive",
+							"id": 46625,
+							"id_crafted_item": 190508
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46644?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Shortblade",
+							"id": 46644,
+							"id_crafted_item": 190505
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46645?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Spellblade",
+							"id": 46645,
+							"id_crafted_item": 190506
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46646?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Greataxe",
+							"id": 46646,
+							"id_crafted_item": 190510
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46693?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Axe",
+							"id": 46693,
+							"id_crafted_item": 190487
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46694?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Sword",
+							"id": 46694,
+							"id_crafted_item": 190484
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46695?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Great Mace",
+							"id": 46695,
+							"id_crafted_item": 190486
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46696?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Stiletto",
+							"id": 46696,
+							"id_crafted_item": 190482
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46697?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Dirk",
+							"id": 46697,
+							"id_crafted_item": 190483
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46698?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Knuckles",
+							"id": 46698,
+							"id_crafted_item": 190485
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46699?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Runeaxe",
+							"id": 46699,
+							"id_crafted_item": 190512
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46700?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Slicer",
+							"id": 46700,
+							"id_crafted_item": 190518
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46701?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Invoker",
+							"id": 46701,
+							"id_crafted_item": 190517
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46702?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Crusher",
+							"id": 46702,
+							"id_crafted_item": 190516
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46703?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Claymore",
+							"id": 46703,
+							"id_crafted_item": 190514
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46704?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Facesmasher",
+							"id": 46704,
+							"id_crafted_item": 190513
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46705?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Halberd",
+							"id": 46705,
+							"id_crafted_item": 190515
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46706?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Obsidian Seared Hexsword",
+							"id": 46706,
+							"id_crafted_item": 190511
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46707?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Mace",
+							"id": 46707,
+							"id_crafted_item": 190509
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46708?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Longsword",
+							"id": 46708,
+							"id_crafted_item": 190507
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47938?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Great Axe",
+							"id": 47938,
+							"id_crafted_item": 201324
+						}
+					]
+				},
+				{
+					"name": "Shields",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46672?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Shield of the Hearth",
+							"id": 46672,
+							"id_crafted_item": 192081
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46673?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Defender",
+							"id": 46673,
+							"id_crafted_item": 190503
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47937?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Defender",
+							"id": 47937,
+							"id_crafted_item": 201322
+						}
+					]
+				},
+				{
+					"name": "Armor",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46674?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Frostfire Legguards of Preparation",
+							"id": 46674,
+							"id_crafted_item": 190523
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46675?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Unstable Frostfire Belt",
+							"id": 46675,
+							"id_crafted_item": 191623
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46676?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Helm of Vengeance",
+							"id": 46676,
+							"id_crafted_item": 190522
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46677?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Warboots of Impunity",
+							"id": 46677,
+							"id_crafted_item": 191985
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46678?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Allied Chestplate of Generosity",
+							"id": 46678,
+							"id_crafted_item": 190519
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46679?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Allied Wristguard of Companionship",
+							"id": 46679,
+							"id_crafted_item": 190526
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46682?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Plate Chestguard",
+							"id": 46682,
+							"id_crafted_item": 189538
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46683?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Plate Boots",
+							"id": 46683,
+							"id_crafted_item": 189537
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46684?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Plate Bracers",
+							"id": 46684,
+							"id_crafted_item": 189539
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46685?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Breastplate",
+							"id": 46685,
+							"id_crafted_item": 190495
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46686?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Sabatons",
+							"id": 46686,
+							"id_crafted_item": 190496
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46687?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Gauntlets",
+							"id": 46687,
+							"id_crafted_item": 190497
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46688?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Helm",
+							"id": 46688,
+							"id_crafted_item": 190498
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46689?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Legplates",
+							"id": 46689,
+							"id_crafted_item": 190499
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46690?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Pauldrons",
+							"id": 46690,
+							"id_crafted_item": 190500
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46691?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Greatbelt",
+							"id": 46691,
+							"id_crafted_item": 190501
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46692?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Primal Molten Vambraces",
+							"id": 46692,
+							"id_crafted_item": 190502
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47208?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Breastplate",
+							"id": 47208,
+							"id_crafted_item": 193602
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47209?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Sabatons",
+							"id": 47209,
+							"id_crafted_item": 193603
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47210?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Gauntlets",
+							"id": 47210,
+							"id_crafted_item": 193604
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47211?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Helm",
+							"id": 47211,
+							"id_crafted_item": 193605
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47212?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Greaves",
+							"id": 47212,
+							"id_crafted_item": 193606
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47213?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Pauldrons",
+							"id": 47213,
+							"id_crafted_item": 193607
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47214?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Waistguard",
+							"id": 47214,
+							"id_crafted_item": 193608
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47215?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Draconium Armguards",
+							"id": 47215,
+							"id_crafted_item": 193609
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47971?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Expert Clasp",
+							"id": 47971,
+							"id_crafted_item": 201955
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47972?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Expert Gauntlets",
+							"id": 47972,
+							"id_crafted_item": 201953
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47973?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Expert Greaves",
+							"id": 47973,
+							"id_crafted_item": 201954
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47974?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Expert Helm",
+							"id": 47974,
+							"id_crafted_item": 201951
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47975?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Explorer's Expert Spaulders",
+							"id": 47975,
+							"id_crafted_item": 201952
+						}
+					]
+				},
+				{
+					"name": "Consumable Tools",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46829?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Serevite Repair Hammer",
+							"id": 46829,
+							"id_crafted_item": 191260
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46859?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Serevite Skeleton Key",
+							"id": 46859,
+							"id_crafted_item": 191256
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47751?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sturdy Expedition Shovel",
+							"id": 47751,
+							"id_crafted_item": 191304
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47946?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Hammer",
+							"id": 47946,
+							"id_crafted_item": 201366
+						}
+					]
+				},
+				{
+					"name": "Profession Tools and Accessories",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46835?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Black Dragon Touched Hammer",
+							"id": 46835,
+							"id_crafted_item": 191228
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46836?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Blacksmith's Hammer",
+							"id": 46836,
+							"id_crafted_item": 191237
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46837?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Blacksmith's Hammer",
+							"id": 46837,
+							"id_crafted_item": 191888
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46840?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Sickle",
+							"id": 46840,
+							"id_crafted_item": 191224
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46841?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Sickle",
+							"id": 46841,
+							"id_crafted_item": 191241
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46842?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Leatherworker's Knife",
+							"id": 46842,
+							"id_crafted_item": 191227
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46843?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Leatherworker's Knife",
+							"id": 46843,
+							"id_crafted_item": 191238
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46844?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Pickaxe",
+							"id": 46844,
+							"id_crafted_item": 191223
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46845?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Pickaxe",
+							"id": 46845,
+							"id_crafted_item": 191242
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46846?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Skinning Knife",
+							"id": 46846,
+							"id_crafted_item": 191225
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46847?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Skinning Knife",
+							"id": 46847,
+							"id_crafted_item": 191240
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46848?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Needle Set",
+							"id": 46848,
+							"id_crafted_item": 191226
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46849?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Needle Set",
+							"id": 46849,
+							"id_crafted_item": 191239
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46851?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Blacksmith's Toolbox",
+							"id": 46851,
+							"id_crafted_item": 191235
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46852?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Blacksmith's Toolbox",
+							"id": 46852,
+							"id_crafted_item": 191230
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46853?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khaz'gorite Leatherworker's Toolset",
+							"id": 46853,
+							"id_crafted_item": 191229
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46854?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconium Leatherworker's Toolset",
+							"id": 46854,
+							"id_crafted_item": 191236
+						}
+					]
+				},
+				{
+					"name": "Pets",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46860?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alvin the Anvil",
+							"id": 46860,
+							"id_crafted_item": 191886
+						}
+					]
+				},
+				{
+					"name": "Dragonriding",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47311?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Prototype Regal Barding Framework",
+							"id": 47311,
+							"id_crafted_item": 194541
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47312?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Prototype Explorer's Barding Framework",
+							"id": 47312,
+							"id_crafted_item": 194542
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48176?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Ancient Ceremonial Trident",
+							"id": 48176,
+							"id_crafted_item": 203408
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a1",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/333/skill-tier/2825?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2825,
+			"name": "Dragon Isles Enchanting",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Rods and Wands",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47807?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Runed Draconium Rod",
+							"id": 47807,
+							"id_crafted_item": 198715
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47808?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Runed Khaz'gorite Rod",
+							"id": 47808,
+							"id_crafted_item": 198716
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47822?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Enchanted Writhebark Wand",
+							"id": 47822,
+							"id_crafted_item": 200641
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47823?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Torch of Primal Awakening",
+							"id": 47823,
+							"id_crafted_item": 200642
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47951?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Runed Serevite Rod",
+							"id": 47951,
+							"id_crafted_item": 201601
+						}
+					]
+				},
+				{
+					"name": "Magical Merchandise",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47809?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sophic Amalgamation",
+							"id": 47809,
+							"id_crafted_item": 200479
+						}
+					]
+				},
+				{
+					"name": "Illusory Goods",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47811?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Khadgar's Disenchanting Rod",
+							"id": 47811,
+							"id_crafted_item": 200469
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48178?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Glowing Crystal Bookmark",
+							"id": 48178,
+							"id_crafted_item": 203410
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a2",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/182/skill-tier/2832?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2832,
+			"name": "Dragon Isles Herbalism",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": []
+		},
+		{
+			"_id": "643049db9fde90a696fc45a3",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/186/skill-tier/2833?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2833,
+			"name": "Dragon Isles Mining",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": []
+		},
+		{
+			"_id": "643049db9fde90a696fc45a4",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/197/skill-tier/2831?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2831,
+			"name": "Dragon Isles Tailoring",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Chronocloth Garments",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47217?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Hood of Surging Time",
+							"id": 47217,
+							"id_crafted_item": 193521
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47220?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Legwraps of Possibility",
+							"id": 47220,
+							"id_crafted_item": 193524
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47222?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Allied Wristguards of Time Dilation",
+							"id": 47222,
+							"id_crafted_item": 193530
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47228?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chronocloth Gloves",
+							"id": 47228,
+							"id_crafted_item": 193527
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47229?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chronocloth Leggings",
+							"id": 47229,
+							"id_crafted_item": 193537
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47230?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chronocloth Sash",
+							"id": 47230,
+							"id_crafted_item": 193512
+						}
+					]
+				},
+				{
+					"name": "Azureweave Garments",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47218?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Amice of the Blue",
+							"id": 47218,
+							"id_crafted_item": 193526
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47219?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Binding of Gesticulation",
+							"id": 47219,
+							"id_crafted_item": 193513
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47221?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Blue Dragon Soles",
+							"id": 47221,
+							"id_crafted_item": 193532
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47225?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Azureweave Robe",
+							"id": 47225,
+							"id_crafted_item": 193536
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47226?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Azureweave Slippers",
+							"id": 47226,
+							"id_crafted_item": 193525
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47227?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Azureweave Mantle",
+							"id": 47227,
+							"id_crafted_item": 193520
+						}
+					]
+				},
+				{
+					"name": "Garments",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47231?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Tailored Cloak",
+							"id": 47231,
+							"id_crafted_item": 193500
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47232?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Cloth Robe",
+							"id": 47232,
+							"id_crafted_item": 193515
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47233?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Cloth Treads",
+							"id": 47233,
+							"id_crafted_item": 193498
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47234?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Cloth Bands",
+							"id": 47234,
+							"id_crafted_item": 193497
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47235?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Shawl",
+							"id": 47235,
+							"id_crafted_item": 193511
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47236?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Vestments",
+							"id": 47236,
+							"id_crafted_item": 193509
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47237?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Slippers",
+							"id": 47237,
+							"id_crafted_item": 193519
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47238?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Handwraps",
+							"id": 47238,
+							"id_crafted_item": 193504
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47239?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Headcover",
+							"id": 47239,
+							"id_crafted_item": 193523
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47240?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Slacks",
+							"id": 47240,
+							"id_crafted_item": 193518
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47241?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Shoulderspikes",
+							"id": 47241,
+							"id_crafted_item": 193508
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47242?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Girdle",
+							"id": 47242,
+							"id_crafted_item": 193516
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47243?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Vibrant Wildercloth Wristwraps",
+							"id": 47243,
+							"id_crafted_item": 193510
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47244?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Cloak",
+							"id": 47244,
+							"id_crafted_item": 193522
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47245?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Tunic",
+							"id": 47245,
+							"id_crafted_item": 193514
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47246?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Treads",
+							"id": 47246,
+							"id_crafted_item": 193503
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47247?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Gloves",
+							"id": 47247,
+							"id_crafted_item": 193507
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47248?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Hood",
+							"id": 47248,
+							"id_crafted_item": 193506
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47249?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Leggings",
+							"id": 47249,
+							"id_crafted_item": 193501
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47250?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Shoulderpads",
+							"id": 47250,
+							"id_crafted_item": 193502
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47251?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Sash",
+							"id": 47251,
+							"id_crafted_item": 193517
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47252?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Wildercloth Bands",
+							"id": 47252,
+							"id_crafted_item": 193505
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47984?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Seasoned Cord",
+							"id": 47984,
+							"id_crafted_item": 201940
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47985?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Seasoned Gloves",
+							"id": 47985,
+							"id_crafted_item": 201938
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47986?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Seasoned Hood",
+							"id": 47986,
+							"id_crafted_item": 201936
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47987?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Seasoned Pants",
+							"id": 47987,
+							"id_crafted_item": 201939
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47988?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Surveyor's Seasoned Shoulders",
+							"id": 47988,
+							"id_crafted_item": 201937
+						}
+					]
+				},
+				{
+					"name": "Embroidered Bags",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47253?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Bag",
+							"id": 47253,
+							"id_crafted_item": 194017
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47254?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Azureweave Expedition Pack",
+							"id": 47254,
+							"id_crafted_item": 194018
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47285?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Simply Stitched Reagent Bag",
+							"id": 47285,
+							"id_crafted_item": 194019
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47286?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chronocloth Reagent Bag",
+							"id": 47286,
+							"id_crafted_item": 194020
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48470?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Paw-Made Winterpelt Reagent Bag",
+							"id": 48470,
+							"id_crafted_item": 202287
+						}
+					]
+				},
+				{
+					"name": "Assorted Embroidery",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47290?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Duck-Stuffed Duck Lovie",
+							"id": 47290,
+							"id_crafted_item": 194056
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47291?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Forlorn Funeral Pall",
+							"id": 47291,
+							"id_crafted_item": 194052
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47292?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Cushion of Time Travel",
+							"id": 47292,
+							"id_crafted_item": 194057
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47293?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Cold Cushion",
+							"id": 47293,
+							"id_crafted_item": 194058
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47294?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Market Tent",
+							"id": 47294,
+							"id_crafted_item": 194059
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47295?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Dragonscale Expedition's Expedition Tent",
+							"id": 47295,
+							"id_crafted_item": 194060
+						}
+					]
+				},
+				{
+					"name": "Profession Garments",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47268?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Alchemist's Robe",
+							"id": 47268,
+							"id_crafted_item": 193528
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47269?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Wildercloth Alchemist's Robe",
+							"id": 47269,
+							"id_crafted_item": 193544
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47270?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Tailor's Coat",
+							"id": 47270,
+							"id_crafted_item": 193541
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47271?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Dragoncloth Tailoring Vestments",
+							"id": 47271,
+							"id_crafted_item": 193540
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47272?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Chef's Hat",
+							"id": 47272,
+							"id_crafted_item": 193534
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47273?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Wildercloth Chef's Hat",
+							"id": 47273,
+							"id_crafted_item": 193545
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47274?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Enchanter's Hat",
+							"id": 47274,
+							"id_crafted_item": 193539
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47275?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Wildercloth Enchanter's Hat",
+							"id": 47275,
+							"id_crafted_item": 193533
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47276?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Fishing Cap",
+							"id": 47276,
+							"id_crafted_item": 193529
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47277?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Wildercloth Fishing Cap",
+							"id": 47277,
+							"id_crafted_item": 193543
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47278?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wildercloth Gardening Hat",
+							"id": 47278,
+							"id_crafted_item": 193538
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47279?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Master's Wildercloth Gardening Hat",
+							"id": 47279,
+							"id_crafted_item": 193542
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48183?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Traditional Morqut Kite",
+							"id": 48183,
+							"id_crafted_item": 203415
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a5",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/773/skill-tier/2828?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2828,
+			"name": "Dragon Isles Inscription",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Weapons",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47562?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Weathered Explorer's Stave",
+							"id": 47562,
+							"id_crafted_item": 194894
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47578?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Writhebark Stave",
+							"id": 47578,
+							"id_crafted_item": 194892
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47579?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Overseer's Writhebark Stave",
+							"id": 47579,
+							"id_crafted_item": 194893
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47581?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Kinetic Pillar of the Isles",
+							"id": 47581,
+							"id_crafted_item": 194897
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47611?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crackling Codex of the Isles",
+							"id": 47611,
+							"id_crafted_item": 194879
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47613?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Core Explorer's Compendium",
+							"id": 47613,
+							"id_crafted_item": 194877
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47667?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Illuminating Pillar of the Isles",
+							"id": 47667,
+							"id_crafted_item": 194898
+						}
+					]
+				},
+				{
+					"name": "Profession Equipment",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47569?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Scribe's Resplendent Quill",
+							"id": 47569,
+							"id_crafted_item": 194875
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47570?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Scribe's Fastened Quill",
+							"id": 47570,
+							"id_crafted_item": 194874
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47573?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alchemist's Brilliant Mixing Rod",
+							"id": 47573,
+							"id_crafted_item": 191231
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47574?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alchemist's Sturdy Mixing Rod",
+							"id": 47574,
+							"id_crafted_item": 191234
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47638?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chef's Splendid Rolling Pin",
+							"id": 47638,
+							"id_crafted_item": 191232
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47639?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chef's Smooth Rolling Pin",
+							"id": 47639,
+							"id_crafted_item": 191233
+						}
+					]
+				},
+				{
+					"name": "Profession Specialization",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47593?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Tailoring",
+							"id": 47593,
+							"id_crafted_item": 194698
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47594?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Mining",
+							"id": 47594,
+							"id_crafted_item": 194708
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47595?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Leatherworking",
+							"id": 47595,
+							"id_crafted_item": 194700
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47596?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Jewelcrafting",
+							"id": 47596,
+							"id_crafted_item": 194703
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47597?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Inscription",
+							"id": 47597,
+							"id_crafted_item": 194699
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47598?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Herbalism",
+							"id": 47598,
+							"id_crafted_item": 194704
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47599?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Enchanting",
+							"id": 47599,
+							"id_crafted_item": 194702
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47600?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Blacksmithing",
+							"id": 47600,
+							"id_crafted_item": 198454
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47601?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Alchemy",
+							"id": 47601,
+							"id_crafted_item": 194697
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47602?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Engineering",
+							"id": 47602,
+							"id_crafted_item": 198510
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47928?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Treatise on Skinning",
+							"id": 47928,
+							"id_crafted_item": 201023
+						}
+					]
+				},
+				{
+					"name": "Trinkets",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48138?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Medallion",
+							"id": 48138,
+							"id_crafted_item": 203375
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48139?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Insignia of Alacrity",
+							"id": 48139,
+							"id_crafted_item": 203376
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48140?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Emblem",
+							"id": 48140,
+							"id_crafted_item": 203377
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48180?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Arcane Dispelling Rune",
+							"id": 48180,
+							"id_crafted_item": 203412
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a6",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/185/skill-tier/2824?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2824,
+			"name": "Dragon Isles Cooking",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Ingredients",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47354?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Ooey-Gooey Chocolate",
+							"id": 47354,
+							"id_crafted_item": 194902
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47361?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pebbled Rock Salts",
+							"id": 47361,
+							"id_crafted_item": 197756
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47362?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Assorted Exotic Spices",
+							"id": 47362,
+							"id_crafted_item": 197757
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47363?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Salad on the Side",
+							"id": 47363,
+							"id_crafted_item": 197764
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47364?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Impossibly Sharp Cutting Knife",
+							"id": 47364,
+							"id_crafted_item": 197765
+						}
+					]
+				},
+				{
+					"name": "Snacks",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47365?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Cheese and Quackers",
+							"id": 47365,
+							"id_crafted_item": 197759
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47366?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Mackerel Snackerel",
+							"id": 47366,
+							"id_crafted_item": 197760
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47367?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Twice-Baked Potato",
+							"id": 47367,
+							"id_crafted_item": 197758
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47368?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Probably Protein",
+							"id": 47368,
+							"id_crafted_item": 197761
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47369?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sweet and Sour Clam Chowder",
+							"id": 47369,
+							"id_crafted_item": 197762
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47370?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Breakfast of Draconic Champions",
+							"id": 47370,
+							"id_crafted_item": 197763
+						}
+					]
+				},
+				{
+					"name": "Desserts",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47371?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Snow in a Cone",
+							"id": 47371,
+							"id_crafted_item": 197766
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47372?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Blubbery Muffin",
+							"id": 47372,
+							"id_crafted_item": 197767
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47373?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Celebratory Cake",
+							"id": 47373,
+							"id_crafted_item": 197768
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47374?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Tasty Hatchling's Treat",
+							"id": 47374,
+							"id_crafted_item": 197769
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48015?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Firewater Sorbet",
+							"id": 48015,
+							"id_crafted_item": 202290
+						}
+					]
+				},
+				{
+					"name": "Beverages",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47376?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Zesty Water",
+							"id": 47376,
+							"id_crafted_item": 197770
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47377?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Delicious Dragon Spittle",
+							"id": 47377,
+							"id_crafted_item": 197771
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47378?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Churnbelly Tea",
+							"id": 47378,
+							"id_crafted_item": 197772
+						}
+					]
+				},
+				{
+					"name": "Meat Meals",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47380?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Charred Hornswog Steaks",
+							"id": 47380,
+							"id_crafted_item": 197774
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47381?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Scrambled Basilisk Eggs",
+							"id": 47381,
+							"id_crafted_item": 197775
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47382?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Thrice-Spiced Mammoth Kabob",
+							"id": 47382,
+							"id_crafted_item": 197776
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47383?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Hopefully Healthy",
+							"id": 47383,
+							"id_crafted_item": 197777
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47384?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Braised Bruffalon Brisket",
+							"id": 47384,
+							"id_crafted_item": 197788
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47385?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Riverside Picnic",
+							"id": 47385,
+							"id_crafted_item": 197789
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47386?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Roast Duck Delight",
+							"id": 47386,
+							"id_crafted_item": 197790
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47387?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Salted Meat Mash",
+							"id": 47387,
+							"id_crafted_item": 197791
+						}
+					]
+				},
+				{
+					"name": "Simple Fish Dishes",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47388?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Timely Demise",
+							"id": 47388,
+							"id_crafted_item": 197778
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47389?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Filet of Fangs",
+							"id": 47389,
+							"id_crafted_item": 197779
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47390?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Seamoth Surprise",
+							"id": 47390,
+							"id_crafted_item": 197780
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47391?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Salt-Baked Fishcake",
+							"id": 47391,
+							"id_crafted_item": 197781
+						}
+					]
+				},
+				{
+					"name": "Deluxe Fish Dishes",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47392?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Feisty Fish Sticks",
+							"id": 47392,
+							"id_crafted_item": 197782
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47393?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Aromatic Seafood Platter",
+							"id": 47393,
+							"id_crafted_item": 197783
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47394?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sizzling Seafood Medley",
+							"id": 47394,
+							"id_crafted_item": 197784
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47396?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Thousandbone Tongueslicer",
+							"id": 47396,
+							"id_crafted_item": 197786
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47397?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Great Cerulean Sea",
+							"id": 47397,
+							"id_crafted_item": 197787
+						}
+					]
+				},
+				{
+					"name": "Delicious and Nutritious",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47398?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Fated Fortune Cookie",
+							"id": 47398,
+							"id_crafted_item": 197792
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48280?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Deviously Deviled Eggs",
+							"id": 48280,
+							"id_crafted_item": 204072
+						}
+					]
+				},
+				{
+					"name": "Great Feasts",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47399?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Yusa's Hearty Stew",
+							"id": 47399,
+							"id_crafted_item": 197793
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47403?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Hoard of Draconic Delicacies",
+							"id": 47403,
+							"id_crafted_item": 197795
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48177?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sparkling Spice Pouch",
+							"id": 48177,
+							"id_crafted_item": 203409
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a7",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/356/skill-tier/2826?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2826,
+			"name": "Dragon Isles Fishing",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": []
+		},
+		{
+			"_id": "643049db9fde90a696fc45a8",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/165/skill-tier/2830?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2830,
+			"name": "Dragon Isles Leatherworking",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Profession Equipment",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47075?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alchemist's Hat",
+							"id": 47075,
+							"id_crafted_item": 193487
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47076?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Expert Alchemist's Hat",
+							"id": 47076,
+							"id_crafted_item": 193493
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47137?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Smithing Apron",
+							"id": 47137,
+							"id_crafted_item": 193612
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47138?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flameproof Apron",
+							"id": 47138,
+							"id_crafted_item": 193613
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47142?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Protective Gloves",
+							"id": 47142,
+							"id_crafted_item": 193485
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47143?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Shockproof Gloves",
+							"id": 47143,
+							"id_crafted_item": 193491
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47146?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Floral Basket",
+							"id": 47146,
+							"id_crafted_item": 193479
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47147?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Lavish Floral Pack",
+							"id": 47147,
+							"id_crafted_item": 193488
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47148?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweler's Cover",
+							"id": 47148,
+							"id_crafted_item": 193615
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47149?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Resplendent Cover",
+							"id": 47149,
+							"id_crafted_item": 193616
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47150?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Resilient Smock",
+							"id": 47150,
+							"id_crafted_item": 193486
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47151?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Masterwork Smock",
+							"id": 47151,
+							"id_crafted_item": 193492
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47160?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Durable Pack",
+							"id": 47160,
+							"id_crafted_item": 193480
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47161?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Reinforced Pack",
+							"id": 47161,
+							"id_crafted_item": 193489
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47162?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Skinner's Cap",
+							"id": 47162,
+							"id_crafted_item": 193482
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47163?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Expert Skinner's Cap",
+							"id": 47163,
+							"id_crafted_item": 193490
+						}
+					]
+				},
+				{
+					"name": "Decayed Patterns",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47077?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Witherrot Tome",
+							"id": 47077,
+							"id_crafted_item": 193496
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47078?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Slimy Expulsion Boots",
+							"id": 47078,
+							"id_crafted_item": 193451
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47079?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Toxic Thorn Footwraps",
+							"id": 47079,
+							"id_crafted_item": 193452
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47106?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Venom-Steeped Stompers",
+							"id": 47106,
+							"id_crafted_item": 193460
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47107?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Acidic Hailstone Treads",
+							"id": 47107,
+							"id_crafted_item": 193466
+						}
+					]
+				},
+				{
+					"name": "Bestial Patterns",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47080?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Footwraps of Indemnity",
+							"id": 47080,
+							"id_crafted_item": 193455
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47081?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Spirit's Hood",
+							"id": 47081,
+							"id_crafted_item": 193456
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47084?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Allied Heartwarming Fur Coat",
+							"id": 47084,
+							"id_crafted_item": 193453
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47086?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Chestpiece",
+							"id": 47086,
+							"id_crafted_item": 193431
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47087?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Boots",
+							"id": 47087,
+							"id_crafted_item": 193430
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47088?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Gloves",
+							"id": 47088,
+							"id_crafted_item": 193436
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47089?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Mask",
+							"id": 47089,
+							"id_crafted_item": 193432
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47090?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Trousers",
+							"id": 47090,
+							"id_crafted_item": 193435
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47091?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Shoulderpads",
+							"id": 47091,
+							"id_crafted_item": 193433
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47092?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Belt",
+							"id": 47092,
+							"id_crafted_item": 193434
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47093?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Resilient Wristwraps",
+							"id": 47093,
+							"id_crafted_item": 193437
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47108?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Boots of Reprieve",
+							"id": 47108,
+							"id_crafted_item": 193461
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47109?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Infurious Chainhelm Protector",
+							"id": 47109,
+							"id_crafted_item": 193462
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47113?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Chainmail",
+							"id": 47113,
+							"id_crafted_item": 193440
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47114?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Treads",
+							"id": 47114,
+							"id_crafted_item": 193439
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47115?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Gauntlets",
+							"id": 47115,
+							"id_crafted_item": 193445
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47116?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Cowl",
+							"id": 47116,
+							"id_crafted_item": 193441
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47117?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Leggings",
+							"id": 47117,
+							"id_crafted_item": 193444
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47118?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Epaulettes",
+							"id": 47118,
+							"id_crafted_item": 193442
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47119?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Girdle",
+							"id": 47119,
+							"id_crafted_item": 193443
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47120?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Adamant Cuffs",
+							"id": 47120,
+							"id_crafted_item": 193446
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47132?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Allied Legguards of Sansok Khan",
+							"id": 47132,
+							"id_crafted_item": 193464
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47170?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bow of the Dragon Hunters",
+							"id": 47170,
+							"id_crafted_item": 193449
+						}
+					]
+				},
+				{
+					"name": "Elemental Patterns",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47082?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "String of Spiritual Knick-Knacks",
+							"id": 47082,
+							"id_crafted_item": 193457
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47083?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Old Spirit's Wristwraps",
+							"id": 47083,
+							"id_crafted_item": 193454
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47085?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Snowball Makers",
+							"id": 47085,
+							"id_crafted_item": 193458
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47094?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flaring Cowl",
+							"id": 47094,
+							"id_crafted_item": 193494
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47110?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Scale Rein Grips",
+							"id": 47110,
+							"id_crafted_item": 193465
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47111?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Wind Spirit's Lasso",
+							"id": 47111,
+							"id_crafted_item": 193463
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47112?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Ancestor's Dew Drippers",
+							"id": 47112,
+							"id_crafted_item": 193459
+						}
+					]
+				},
+				{
+					"name": "Leather Armor",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47095?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Leather Boots",
+							"id": 47095,
+							"id_crafted_item": 193386
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47096?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Leather Tunic",
+							"id": 47096,
+							"id_crafted_item": 193390
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47097?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Leather Wristguards",
+							"id": 47097,
+							"id_crafted_item": 193388
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47098?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Chestpiece",
+							"id": 47098,
+							"id_crafted_item": 193399
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47099?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Boots",
+							"id": 47099,
+							"id_crafted_item": 193398
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47100?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Gloves",
+							"id": 47100,
+							"id_crafted_item": 193418
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47101?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Cap",
+							"id": 47101,
+							"id_crafted_item": 193400
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47102?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Trousers",
+							"id": 47102,
+							"id_crafted_item": 193408
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47103?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Shoulderpads",
+							"id": 47103,
+							"id_crafted_item": 193406
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47104?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Belt",
+							"id": 47104,
+							"id_crafted_item": 193407
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47105?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Life-Bound Bindings",
+							"id": 47105,
+							"id_crafted_item": 193419
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47979?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Practiced Belt",
+							"id": 47979,
+							"id_crafted_item": 201945
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47980?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Practiced Cowl",
+							"id": 47980,
+							"id_crafted_item": 201941
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47981?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Practiced Gloves",
+							"id": 47981,
+							"id_crafted_item": 201943
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47982?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Practiced Leggings",
+							"id": 47982,
+							"id_crafted_item": 201944
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47983?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pioneer's Practiced Shoulderpads",
+							"id": 47983,
+							"id_crafted_item": 201942
+						}
+					]
+				},
+				{
+					"name": "Mail Armor",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47121?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Scale Boots",
+							"id": 47121,
+							"id_crafted_item": 193392
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47122?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Scale Vest",
+							"id": 47122,
+							"id_crafted_item": 193394
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47123?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Scale Bracers",
+							"id": 47123,
+							"id_crafted_item": 193393
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47124?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Chainmail",
+							"id": 47124,
+							"id_crafted_item": 193422
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47125?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Treads",
+							"id": 47125,
+							"id_crafted_item": 193421
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47126?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Handguards",
+							"id": 47126,
+							"id_crafted_item": 193427
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47127?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Helmet",
+							"id": 47127,
+							"id_crafted_item": 193423
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47128?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Legguards",
+							"id": 47128,
+							"id_crafted_item": 193426
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47129?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Spaulders",
+							"id": 47129,
+							"id_crafted_item": 193424
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47130?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Chain",
+							"id": 47130,
+							"id_crafted_item": 193425
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47131?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Flame-Touched Cuffs",
+							"id": 47131,
+							"id_crafted_item": 193428
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47976?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Toughened Chainbelt",
+							"id": 47976,
+							"id_crafted_item": 201950
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47977?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Toughened Coif",
+							"id": 47977,
+							"id_crafted_item": 201946
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47978?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Toughened Spikes",
+							"id": 47978,
+							"id_crafted_item": 201947
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47989?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Toughened Grips",
+							"id": 47989,
+							"id_crafted_item": 201948
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47990?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Trailblazer's Toughened Legguards",
+							"id": 47990,
+							"id_crafted_item": 201949
+						}
+					]
+				},
+				{
+					"name": "Drums",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47140?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Feral Hide Drums",
+							"id": 47140,
+							"id_crafted_item": 193470
+						}
+					]
+				},
+				{
+					"name": "Reagents",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47646?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Finished Prototype Regal Barding",
+							"id": 47646,
+							"id_crafted_item": 197736
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47647?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Finished Prototype Explorer's Barding",
+							"id": 47647,
+							"id_crafted_item": 197735
+						}
+					]
+				},
+				{
+					"name": "Toys",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47167?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Gnoll Tent",
+							"id": 47167,
+							"id_crafted_item": 193476
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47168?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Tuskarr Beanbag",
+							"id": 47168,
+							"id_crafted_item": 193478
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47626?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Artisan's Sign",
+							"id": 47626,
+							"id_crafted_item": 197719
+						}
+					]
+				},
+				{
+					"name": "Weapons",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47172?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bonewrought Crossbow",
+							"id": 47172,
+							"id_crafted_item": 193383
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48182?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Reinforced Pristine Leather",
+							"id": 48182,
+							"id_crafted_item": 203414
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45a9",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/171/skill-tier/2823?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2823,
+			"name": "Dragon Isles Alchemy",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Alchemist Stones",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46794?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sustaining Alchemist Stone",
+							"id": 46794,
+							"id_crafted_item": 191491
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46795?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alacritous Alchemist Stone",
+							"id": 46795,
+							"id_crafted_item": 191492
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48170?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Draconic Suppression Powder",
+							"id": 48170,
+							"id_crafted_item": 203407
+						}
+					]
+				}
+			]
+		},
+		{
+			"_id": "643049db9fde90a696fc45aa",
+			"_links": {
+				"self": {
+					"href": "https://eu.api.blizzard.com/data/wow/profession/755/skill-tier/2829?namespace=static-10.0.7_48520-eu"
+				}
+			},
+			"id": 2829,
+			"name": "Dragon Isles Jewelcrafting",
+			"minimum_skill_level": 1,
+			"maximum_skill_level": 100,
+			"categories": [
+				{
+					"name": "Miscellaneous",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48322?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Unstable Elementium",
+							"id": 48322,
+							"id_crafted_item": 204217
+						}
+					]
+				},
+				{
+					"name": "Reagents",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47902?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Empty Soul Cage",
+							"id": 47902,
+							"id_crafted_item": 200938
+						}
+					]
+				},
+				{
+					"name": "Trinkets",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46971?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Idol of the Life-Binder",
+							"id": 46971,
+							"id_crafted_item": 193003
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46972?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Idol of the Spell-Weaver",
+							"id": 46972,
+							"id_crafted_item": 193004
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46973?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Idol of the Dreamer",
+							"id": 46973,
+							"id_crafted_item": 193005
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46974?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Idol of the Earth-Warder",
+							"id": 46974,
+							"id_crafted_item": 193006
+						}
+					]
+				},
+				{
+					"name": "Jewelry",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46975?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Pendant of Impending Perils",
+							"id": 46975,
+							"id_crafted_item": 192996
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46976?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Jeweled Amulet",
+							"id": 46976,
+							"id_crafted_item": 192998
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46977?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crimson Combatant's Jeweled Signet",
+							"id": 46977,
+							"id_crafted_item": 192997
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46978?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Signet of Titanic Insight",
+							"id": 46978,
+							"id_crafted_item": 192999
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46979?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Ring-Bound Hourglass",
+							"id": 46979,
+							"id_crafted_item": 193000
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46980?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Elemental Lariat",
+							"id": 46980,
+							"id_crafted_item": 193001
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46981?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Choker of Shielding",
+							"id": 46981,
+							"id_crafted_item": 193002
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47192?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Band of New Beginnings",
+							"id": 47192,
+							"id_crafted_item": 194082
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47955?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Torc of Passed Time",
+							"id": 47955,
+							"id_crafted_item": 201759
+						}
+					]
+				},
+				{
+					"name": "Battle Pets",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46986?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Ruby Whelpling",
+							"id": 46986,
+							"id_crafted_item": 193887
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46987?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Emerald Whelpling",
+							"id": 46987,
+							"id_crafted_item": 193888
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46988?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Sapphire Whelpling",
+							"id": 46988,
+							"id_crafted_item": 193886
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46989?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Onyx Whelpling",
+							"id": 46989,
+							"id_crafted_item": 193889
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46990?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Amber Whelpling",
+							"id": 46990,
+							"id_crafted_item": 193885
+						}
+					]
+				},
+				{
+					"name": "Novelties",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46992?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Offering",
+							"id": 46992,
+							"id_crafted_item": 193032
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46993?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Convergent Prism",
+							"id": 46993,
+							"id_crafted_item": 193033
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47031?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "\"Rhinestone\" Sunglasses",
+							"id": 47031,
+							"id_crafted_item": 193371
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47338?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Split-Lens Specs",
+							"id": 47338,
+							"id_crafted_item": 194748
+						}
+					]
+				},
+				{
+					"name": "Profession Equipment",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46996?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Left-Handed Magnifying Glass",
+							"id": 46996,
+							"id_crafted_item": 193036
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46997?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Sundered Onyx Loupe",
+							"id": 46997,
+							"id_crafted_item": 193037
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46998?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Chromatic Focus",
+							"id": 46998,
+							"id_crafted_item": 193038
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/46999?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Fine-Print Trifocals",
+							"id": 46999,
+							"id_crafted_item": 193039
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47000?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Magnificent Margin Magnifier",
+							"id": 47000,
+							"id_crafted_item": 193040
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47001?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Alexstraszite Loupes",
+							"id": 47001,
+							"id_crafted_item": 193041
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47002?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Resonant Focus",
+							"id": 47002,
+							"id_crafted_item": 193042
+						},
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47622?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Bold-Print Bifocals",
+							"id": 47622,
+							"id_crafted_item": 193035
+						}
+					]
+				},
+				{
+					"name": "Extravagant Glasswares",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/47008?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Jeweled Dragon's Heart",
+							"id": 47008,
+							"id_crafted_item": 192893
+						}
+					]
+				},
+				{
+					"name": "Artisan Curios",
+					"recipes": [
+						{
+							"key": {
+								"href": "https://eu.api.blizzard.com/data/wow/recipe/48181?namespace=static-10.0.7_48520-eu"
+							},
+							"name": "Crystal Tuning Fork",
+							"id": 48181,
+							"id_crafted_item": 203413
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+

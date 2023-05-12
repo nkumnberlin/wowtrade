@@ -1,6 +1,6 @@
 ---
-import { professionsToCharacter } from "../../../../../../../api/services/Professions"
-import { getCharacters } from "../../../../../../../api/services/Character"
+import { professionsToCharacter } from "../../../../../../../external/services/Professions"
+import { getCharacters } from "../../../../../../../external/services/Character"
 import Layout from "../../../../../../../components/global/Layout/Layout.astro"
 import Characters from "../../../../../../../features/characters"
 import Professions from "../../../../../../../features/professions"
@@ -14,6 +14,8 @@ try {
 } catch (e) {
 	console.log("fetch failed", e)
 }
+
+console.log("___ ", professions)
 ---
 
 <!-- WoWHead -->

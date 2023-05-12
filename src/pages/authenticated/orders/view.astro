@@ -1,9 +1,12 @@
 ---
-import { deleteOrder } from "../../../api/services/Order"
+import { deleteOrder } from "../../../external/services/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import { ViewOrder } from "../../../features/orders/view/public"
 import OrdersToAccount from "../../../features/orders/view/auth"
-import { getLast5Orders, getOrdersToUser } from "../../../api/services/Order"
+import {
+	getLast5Orders,
+	getOrdersToUser
+} from "../../../external/services/Order"
 let ordersToUser
 try {
 	const cookie = Astro.cookies.get("wow-trade-session").value

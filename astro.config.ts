@@ -8,8 +8,6 @@ import { VitePWA } from "vite-plugin-pwa" // Helper imports
 import { manifest, seoConfig } from "./utils/seoConfig"
 import react from "@astrojs/react"
 import vercel from "@astrojs/vercel/serverless" // https://astro.build/config
-// import vercelStatic from "@astrojs/vercel/static"
-import node from "@astrojs/node"
 
 // https://astro.build/config
 export default defineConfig({
