@@ -15,7 +15,8 @@ import { initializeDatabase, killConnection } from "./src/api/services/database"
 export default defineConfig({
 	site: seoConfig.baseURL,
 	experimental: {
-		assets: true
+		assets: true,
+		middleware: true
 	},
 	output: "server",
 	server: {

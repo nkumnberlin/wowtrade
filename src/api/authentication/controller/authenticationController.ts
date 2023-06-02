@@ -1,5 +1,5 @@
 import { FastifyPluginCallback, FastifyReply } from "fastify"
-import { authenticator } from "../../oauth/bnetPassport"
+// import {} from "../../oauth/bnetPassport"
 import { env } from "../../utils/env"
 
 const COOKIE_Name = "wow-trade-session"
@@ -31,15 +31,15 @@ export const authenticationController: FastifyPluginCallback = (
 			.redirect("/")
 	})
 
-	app.get("/login/oauth/battlenet", authenticator.authenticate("bnet"))
+	// app.get("/login/oauth/battlenet", authenticator.authenticate("bnet"))
 	const maxAge = 1000 * 60 * 30
 
 	app.get(
 		"/redirect",
 		{
-			preValidation: authenticator.authenticate("bnet", {
-				failureRedirect: "/"
-			})
+			// preValidation: authenticator.authenticate("bnet", {
+			// 	failureRedirect: "/"
+			// })
 		},
 		(req, res) => {
 			console.log(

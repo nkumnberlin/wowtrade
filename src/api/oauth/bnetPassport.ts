@@ -1,7 +1,6 @@
-import { Authenticator } from "@fastify/passport"
+import passport from "passport"
 import strategies, { StrategyOptions } from "passport-bnet"
-import { env } from "../utils/env"
-
+const env = import.meta.env
 const BnetStrategy = strategies.Strategy
 
 const passportCallback = (
@@ -34,15 +33,18 @@ export interface BnetUser {
 	token: string
 }
 
-const authenticator = new Authenticator()
-authenticator.registerUserSerializer(async (user: BnetUser, request) => {
-	return user
-})
+passport.use(new BnetStrategy(passportOptions, passportCallback))
 
-authenticator.registerUserDeserializer(async (user: BnetUser, request) => {
-	return user
-})
-
-authenticator.use(new BnetStrategy(passportOptions, passportCallback))
-
-export { authenticator }
+export { passport }
+//
+// authenticator.registerUserSerializer(async (user: BnetUser, request) => {
+// 	return user
+// })
+//
+// authenticator.registerUserDeserializer(async (user: BnetUser, request) => {
+// 	return user
+// })
+//
+// authenticator.use(new BnetStrategy(passportOptions, passportCallback))
+//
+// export { authenticator }
