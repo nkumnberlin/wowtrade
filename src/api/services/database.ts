@@ -9,7 +9,7 @@ import {
 } from "../profession/CraftedItemsService"
 import { ICraftingData, ProfessionSkillTree } from "../profession/types"
 
-import { ListingData } from "../order/types"
+import { Order } from "../order/types"
 import { Db, MongoClient } from "mongodb"
 
 console.log("_++++_ env meter", env, process.env.ACC)
@@ -24,7 +24,7 @@ let db: Db
 export const getCraftedItemsCollection = () =>
 	db.collection<ICraftingData>(craftedItemsCollectionName)
 export const getListingsCollection = () =>
-	db.collection<ListingData>(listingsCollectionName)
+	db.collection<Order>(listingsCollectionName)
 export const getProfessionsCollection = () =>
 	db.collection<ProfessionSkillTree>(listingsProfessionsName)
 export const killConnection = async () => {

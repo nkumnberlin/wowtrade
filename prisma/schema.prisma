@@ -9,3 +9,84 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+// Crafting
+model CraftingData {
+  id              Int    @unique
+  id_crafted_item Int    @unique
+  item_name       String @unique
+  id_recipe       Int    @unique
+}
+
+// Order
+enum OrderDuration {
+  SIX_HOURS
+  TWELVE_HOURS
+  ONE_DAY
+  THREE_DAYS
+  SEVEN_DAYS
+}
+
+model OrderComission {
+  comissionId Int     @id @default(autoincrement())
+  silver      Int
+  gold        Int
+  Order       Order[]
+}
+
+model OrderItem {
+  id              Int     @id @default(autoincrement())
+  id_crafted_item Int
+  item_name       String
+  Order           Order[]
+}
+
+model Order {
+  id                        Int            @id @default(autoincrement())
+  difficulty                Int
+  quality                   String
+  qualifiedCharacterName    String
+  creatorAccountId          Int
+  profession                String
+  currentSkill              Int
+  commission                OrderComission @relation(fields: [orderComissionComissionId], references: [comissionId])
+  OrderDuration             OrderDuration
+  expiredAt                 DateTime
+  createdAt                 DateTime       @default(now())
+  item                      OrderItem      @relation(fields: [orderItemId], references: [id])
+  qualityProcChance         Int
+  multicraftPercentage      Int
+  orderComissionComissionId Int
+  orderItemId               Int
+}
+
+// Professions Skill Tree
+model KnownRecipe {
+	// this was an object before, saves the string here directly now
+  key             String
+  name            String
+  id              Int       @id @default(autoincrement())
+  id_crafted_item Int
+  keyId           Int
+  Category        Category? @relation(fields: [categoryId], references: [id])
+  categoryId      Int?
+}
+
+model Category {
+  id                    Int                  @id @default(autoincrement())
+  name                  String
+  recipes               KnownRecipe[]
+  ProfessionSkillTree   ProfessionSkillTree? @relation(fields: [professionSkillTreeId], references: [id])
+  professionSkillTreeId Int?
+}
+
+model ProfessionSkillTree {
+  // this was named _links
+	// this has not an object with href anymore, but saves the string directly
+  links               String
+  id                  Int        @id @default(autoincrement())
+  name                String
+  minimum_skill_level Int
+  maximum_skill_level Int
+  categories          Category[]
+}

@@ -1,3 +1,4 @@
+export type { CraftingData, PrismaPromise } from '@prisma/client'
 export interface DragonFlightProfessions {
   profession: Profession;
   tiers: Tiers;

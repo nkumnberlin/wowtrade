@@ -1,4 +1,6 @@
 import { ObjectId } from "mongodb"
+export type { Order, PrismaPromise } from '@prisma/client'
+
 
 const DAY_IN_SECONDS = 86_400
 
@@ -10,7 +12,7 @@ export enum ListingDuration {
 	SEVEN_DAYS = DAY_IN_SECONDS * 7
 }
 
-export interface ListingData {
+export interface OrderData {
 	_id?: ObjectId
 	difficulty: number
 	quality: string
@@ -48,7 +50,7 @@ export interface ExpectingListingData {
 }
 
 export interface FrontendListingData
-	extends Omit<ListingData, "creatorAccountId"> {}
+	extends Omit<Order, "creatorAccountId"> {}
 
 export type OrderFetchRequest = {
 	Querystring: {

@@ -7,7 +7,7 @@ import {
   findByItemID,
   findLastFiveCreatedListings,
   saveListing,
-} from '../ListingService';
+} from '../OrderService';
 
 export const orderController: FastifyPluginCallback = (app, opts, done) => {
   app.post(
