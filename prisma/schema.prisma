@@ -50,7 +50,7 @@ model Order {
   profession                String
   currentSkill              Int
   commission                OrderComission @relation(fields: [orderComissionComissionId], references: [comissionId])
-  OrderDuration             OrderDuration
+  orderDuration             OrderDuration
   expiredAt                 DateTime
   createdAt                 DateTime       @default(now())
   item                      OrderItem      @relation(fields: [orderItemId], references: [id])

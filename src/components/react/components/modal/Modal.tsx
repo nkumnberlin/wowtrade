@@ -20,7 +20,7 @@ const Modal = forwardRef(
 				tabIndex={-1}
 				aria-hidden="true"
 				ref={ref}
-				className="fixed top-0 left-0 right-0 z-50 hidden h-[calc(100%-1rem)] w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full"
+				className="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full"
 			>
 				<div className="relative h-full w-full max-w-2xl md:h-auto">
 					<div className="relative rounded-lg bg-white shadow dark:bg-gray-700">

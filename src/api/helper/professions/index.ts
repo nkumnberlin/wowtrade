@@ -1,1 +1,1 @@
-export { matchUserToProfessions } from './professionMatcher';
+export { matchUserToProfessions } from "./professionMatcher"

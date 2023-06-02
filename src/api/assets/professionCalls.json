@@ -1,54 +1,54 @@
 [
-  {
-    "professionId": 202,
-    "skillTierId": 2827
-  },
-  {
-    "professionId": 393,
-    "skillTierId": 2834
-  },
-  {
-    "professionId": 164,
-    "skillTierId": 2822
-  },
-  {
-    "professionId": 333,
-    "skillTierId": 2825
-  },
-  {
-    "professionId": 182,
-    "skillTierId": 2832
-  },
-  {
-    "professionId": 186,
-    "skillTierId": 2833
-  },
-  {
-    "professionId": 197,
-    "skillTierId": 2831
-  },
-  {
-    "professionId": 773,
-    "skillTierId": 2828
-  },
-  {
-    "professionId": 185,
-    "skillTierId": 2824
-  },
-  {
-    "professionId": 356,
-    "skillTierId": 2826
-  },
-  {
-    "professionId": 165,
-    "skillTierId": 2830
-  },
-  {
-    "professionId": 171,
-    "skillTierId": 2823
-  },
-  {
-    "professionId": 755,
-    "skillTierId": 2829
-  }
+	{
+		"professionId": 202,
+		"skillTierId": 2827
+	},
+	{
+		"professionId": 393,
+		"skillTierId": 2834
+	},
+	{
+		"professionId": 164,
+		"skillTierId": 2822
+	},
+	{
+		"professionId": 333,
+		"skillTierId": 2825
+	},
+	{
+		"professionId": 182,
+		"skillTierId": 2832
+	},
+	{
+		"professionId": 186,
+		"skillTierId": 2833
+	},
+	{
+		"professionId": 197,
+		"skillTierId": 2831
+	},
+	{
+		"professionId": 773,
+		"skillTierId": 2828
+	},
+	{
+		"professionId": 185,
+		"skillTierId": 2824
+	},
+	{
+		"professionId": 356,
+		"skillTierId": 2826
+	},
+	{
+		"professionId": 165,
+		"skillTierId": 2830
+	},
+	{
+		"professionId": 171,
+		"skillTierId": 2823
+	},
+	{
+		"professionId": 755,
+		"skillTierId": 2829
+	}
 ]
