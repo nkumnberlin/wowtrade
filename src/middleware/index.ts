@@ -5,6 +5,7 @@ import { isAuthenticated } from "./astroPassport/authentication/isAuthenticated"
 import { isUnauthenticated } from "./astroPassport/authentication/isUnAuthenticated"
 import { AstroGlobal, MiddlewareNext } from "astro"
 import passport from "passport"
+import {log} from "astro/dist/core/logger/core";
 
 interface PassportResponse extends Response {
 	redirect?: (val: any) => void
@@ -53,7 +54,7 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	context,
 	next
 ) => {
-	const { url, request } = context
+	const { url, request,  } = context
 
 	if (url.pathname === "/authenticate/login") {
 		console.log("passport... take it away")
@@ -64,8 +65,6 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 		context.response.setHeader = (key, val) =>
 			context.response.headers.set(key, val)
 		context.response.headers.set("pee", "poo")
-		context.response.end = (props) =>
-			console.log("this is the end nananan", props)
 		console.log("peepo", context.response.headers.set)
 		console.log("peep22o", context.response.headers)
 		request.passport = BNetPassport
@@ -75,12 +74,20 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 		request.logOut = logOut
 		request.isAuthenticated = isAuthenticated
 		request.isUnauthenticated = isUnauthenticated
-		return await BNetPassport.authenticate("bnet", { failureRedirect: "/" })(
+		context.response.end = () =>
+			console.log("fff");
+		await BNetPassport.authenticate("bnet", { failureRedirect: "/" })(
 			request,
 			context.response,
 			next
 		)
-
+		console.log("RESP", context.response)
+		if(!context.response.headers.get("location")){
+			return new Response(JSON.stringify({error: "Redirect Location not set!.",}), {
+				status: 400,
+			})
+		}
+		return context.redirect(context.response.headers.get("location"), 302);
 		// console.log(context.response.headers)
 	}
 	return await next()
