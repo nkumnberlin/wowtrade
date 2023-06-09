@@ -25,6 +25,7 @@ export interface PassportRequest extends Request {
 	user?: PassportUser
 	authInfo?: Record<string, any>
 	account?: PassportUser
+	query: {[key: string]: string}
 }
 interface ExtendContext extends AstroGlobal {
 	request: PassportRequest
@@ -54,34 +55,34 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	context,
 	next
 ) => {
+
 	const { url, request,  } = context
 
+	request.passport = BNetPassport
+	request.logIn = logIn
+	request.login = logIn
+	request.logout = logOut
+	request.logOut = logOut
+	request.isAuthenticated = isAuthenticated
+	request.isUnauthenticated = isUnauthenticated
+
+
 	if (url.pathname === "/authenticate/login") {
-		console.log("passport... take it away")
 		if (!context.response) {
 			context.response = await next()
 			context.response.redirect = context.redirect
+			context.response.setHeader = (key, val) =>
+				context.response.headers.set(key, val)
+			context.response.end = () =>
+				console.log("fff");
 		}
-		context.response.setHeader = (key, val) =>
-			context.response.headers.set(key, val)
-		context.response.headers.set("pee", "poo")
-		console.log("peepo", context.response.headers.set)
-		console.log("peep22o", context.response.headers)
-		request.passport = BNetPassport
-		request.logIn = logIn
-		request.login = logIn
-		request.logout = logOut
-		request.logOut = logOut
-		request.isAuthenticated = isAuthenticated
-		request.isUnauthenticated = isUnauthenticated
-		context.response.end = () =>
-			console.log("fff");
+		console.log("passport... take it away")
+
 		await BNetPassport.authenticate("bnet", { failureRedirect: "/" })(
 			request,
 			context.response,
 			next
 		)
-		console.log("RESP", context.response)
 		if(!context.response.headers.get("location")){
 			return new Response(JSON.stringify({error: "Redirect Location not set!.",}), {
 				status: 400,
@@ -89,6 +90,29 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 		}
 		return context.redirect(context.response.headers.get("location"), 302);
 		// console.log(context.response.headers)
+	}
+	if (url.pathname.includes("/callback")) {
+		if (!context.response) {
+			context.response = await next()
+			context.response.redirect = context.redirect
+			context.response.setHeader = (key, val) =>
+				context.response.headers.set(key, val)
+			context.response.end = () =>
+				console.log("fff");
+		}
+		const urlSearchParams = new URLSearchParams(request.url.split("?")[1]);
+		const params = Object.fromEntries(urlSearchParams.entries());
+		request.query = params;
+		await BNetPassport.authorize("bnet", (err, user, info, status) => {
+			console.log(err)
+			console.log(user)
+			console.log(info)
+			console.log(status)
+		})(
+			request,
+			context.response,
+			next,
+		);
 	}
 	return await next()
 }

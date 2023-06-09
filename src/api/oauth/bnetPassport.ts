@@ -32,19 +32,21 @@ export interface BnetUser {
 	provider: string
 	token: string
 }
+passport.serializeUser(async (user: BnetUser, request) => {
+	console.log("LÖCKCHEBN")
+	return user
+ })
 
-passport.use(new BnetStrategy(passportOptions, passportCallback))
+passport.deserializeUser(async (user: BnetUser, request) => {
+	console.log("LÖCKCHEBN2")
 
+	return user
+ })
+
+try {
+	passport.use(new BnetStrategy(passportOptions, passportCallback))
+
+} catch (e) {
+	console.log(e)
+}
 export { passport }
-//
-// authenticator.registerUserSerializer(async (user: BnetUser, request) => {
-// 	return user
-// })
-//
-// authenticator.registerUserDeserializer(async (user: BnetUser, request) => {
-// 	return user
-// })
-//
-// authenticator.use(new BnetStrategy(passportOptions, passportCallback))
-//
-// export { authenticator }

@@ -10,10 +10,11 @@ export async function logIn<T = unknown>(
 	}
 
 	const session = options.session === undefined ? true : options.session
-	console.log("session ", session)
+	console.log("session ", session, user)
 	if (session) {
 		try {
-			await request.logIn(request, user)
+			// @ts-ignore
+			await request.passport.serializeUser(user);
 		} catch (e) {
 			request.user = null
 			throw e
