@@ -5,7 +5,7 @@ import { isAuthenticated } from "./astroPassport/authentication/isAuthenticated"
 import { isUnauthenticated } from "./astroPassport/authentication/isUnAuthenticated"
 import { AstroGlobal, MiddlewareNext } from "astro"
 import passport from "passport"
-import {log} from "astro/dist/core/logger/core";
+import { log } from "astro/dist/core/logger/core"
 
 interface PassportResponse extends Response {
 	redirect?: (val: any) => void
@@ -25,7 +25,7 @@ export interface PassportRequest extends Request {
 	user?: PassportUser
 	authInfo?: Record<string, any>
 	account?: PassportUser
-	query: {[key: string]: string}
+	query: { [key: string]: string }
 }
 interface ExtendContext extends AstroGlobal {
 	request: PassportRequest
@@ -36,6 +36,10 @@ type MiddlewareRequestHandler<r> = (
 	context: ExtendContext,
 	next: MiddlewareNext<r>
 ) => Promise<r> | Promise<void> | void
+
+// todo set in headers cookie and maintain it in the app
+// sign cookie
+// find out how
 
 export interface BnetUser {
 	sub: string
@@ -55,8 +59,7 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	context,
 	next
 ) => {
-
-	const { url, request,  } = context
+	const { url, request } = context
 
 	request.passport = BNetPassport
 	request.logIn = logIn
@@ -66,15 +69,13 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	request.isAuthenticated = isAuthenticated
 	request.isUnauthenticated = isUnauthenticated
 
-
 	if (url.pathname === "/authenticate/login") {
 		if (!context.response) {
 			context.response = await next()
 			context.response.redirect = context.redirect
 			context.response.setHeader = (key, val) =>
 				context.response.headers.set(key, val)
-			context.response.end = () =>
-				console.log("fff");
+			context.response.end = () => console.log("fff")
 		}
 		console.log("passport... take it away")
 
@@ -83,12 +84,15 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 			context.response,
 			next
 		)
-		if(!context.response.headers.get("location")){
-			return new Response(JSON.stringify({error: "Redirect Location not set!.",}), {
-				status: 400,
-			})
+		if (!context.response.headers.get("location")) {
+			return new Response(
+				JSON.stringify({ error: "Redirect Location not set!." }),
+				{
+					status: 400
+				}
+			)
 		}
-		return context.redirect(context.response.headers.get("location"), 302);
+		return context.redirect(context.response.headers.get("location"), 302)
 		// console.log(context.response.headers)
 	}
 	if (url.pathname.includes("/callback")) {
@@ -97,22 +101,17 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 			context.response.redirect = context.redirect
 			context.response.setHeader = (key, val) =>
 				context.response.headers.set(key, val)
-			context.response.end = () =>
-				console.log("fff");
+			context.response.end = () => console.log("fff")
 		}
-		const urlSearchParams = new URLSearchParams(request.url.split("?")[1]);
-		const params = Object.fromEntries(urlSearchParams.entries());
-		request.query = params;
+		const urlSearchParams = new URLSearchParams(request.url.split("?")[1])
+		const params = Object.fromEntries(urlSearchParams.entries())
+		request.query = params
 		await BNetPassport.authorize("bnet", (err, user, info, status) => {
 			console.log(err)
 			console.log(user)
 			console.log(info)
 			console.log(status)
-		})(
-			request,
-			context.response,
-			next,
-		);
+		})(request, context.response, next)
 	}
 	return await next()
 }
