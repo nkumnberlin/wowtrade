@@ -14,7 +14,7 @@ export async function logIn<T = unknown>(
 	if (session) {
 		try {
 			// @ts-ignore
-			await request.passport.serializeUser(user);
+			await request.passport._sm._serializeUser(user);
 		} catch (e) {
 			request.user = null
 			throw e

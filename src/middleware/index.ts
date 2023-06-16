@@ -60,6 +60,13 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	next
 ) => {
 	const { url, request } = context
+	if (!context.response) {
+		context.response = await next()
+		context.response.redirect = context.redirect
+		context.response.setHeader = (key, val) =>
+			context.response.headers.set(key, val)
+		context.response.end = () => console.log("fff")
+	}
 
 	request.passport = BNetPassport
 	request.logIn = logIn
@@ -70,15 +77,6 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	request.isUnauthenticated = isUnauthenticated
 
 	if (url.pathname === "/authenticate/login") {
-		if (!context.response) {
-			context.response = await next()
-			context.response.redirect = context.redirect
-			context.response.setHeader = (key, val) =>
-				context.response.headers.set(key, val)
-			context.response.end = () => console.log("fff")
-		}
-		console.log("passport... take it away")
-
 		await BNetPassport.authenticate("bnet", { failureRedirect: "/" })(
 			request,
 			context.response,
@@ -96,22 +94,21 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 		// console.log(context.response.headers)
 	}
 	if (url.pathname.includes("/callback")) {
-		if (!context.response) {
-			context.response = await next()
-			context.response.redirect = context.redirect
-			context.response.setHeader = (key, val) =>
-				context.response.headers.set(key, val)
-			context.response.end = () => console.log("fff")
-		}
 		const urlSearchParams = new URLSearchParams(request.url.split("?")[1])
 		const params = Object.fromEntries(urlSearchParams.entries())
-		request.query = params
-		await BNetPassport.authorize("bnet", (err, user, info, status) => {
-			console.log(err)
-			console.log(user)
-			console.log(info)
-			console.log(status)
-		})(request, context.response, next)
+		request.query = params;
+		const token = await new Promise<string>((resolve, reject) => BNetPassport.authorize("bnet", (user, info, err, status) => {
+			console.log("err", err)
+			console.log("user", user)
+			console.log("info", info)
+			console.log("status", status)
+			resolve(user.token);
+		})(request, context.response, next));
+		if(!token){
+			return context.response;
+		}
+		context.cookies.set("wow-trade-session", token);
+		return context.response;
 	}
 	return await next()
 }
