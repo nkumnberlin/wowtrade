@@ -63,13 +63,13 @@ export const getUserProfessionsToCharacter = async (
 	characterName: string,
 	realmSlug: string
 ) => {
-	const decodedCharacterName = decodeURIComponent(characterName)
+	const decodedCharacterName = encodeURIComponent(characterName).toLowerCase();
 	const region: REGIONS = "eu"
 	try {
 		// https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
 		// if there are primaries, there are also secondaries. need to keep that in mind
 		const { primaries } = await rp.get({
-			uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug}/${decodedCharacterName}/professions?namespace=profile-${region}&locale=en_US`,
+			uri: `https://eu.api.blizzard.com/profile/wow/character/${realmSlug.toLowerCase()}/${decodedCharacterName}/professions?namespace=profile-${region}&locale=en_US`,
 			json: true,
 			headers: {
 				Authorization: `Bearer ${usersAccessToken}`
