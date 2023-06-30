@@ -1,6 +1,5 @@
 ---
-import { professionsToCharacter } from "../../../../../../../external/services/Professions"
-import { getCharacters } from "../../../../../../../external/services/Character"
+import { getUsersCharactersList, getUserProfessionsToCharacter } from "@/character"
 import Layout from "../../../../../../../components/global/Layout/Layout.astro"
 import Characters from "../../../../../../../features/characters"
 import Professions from "../../../../../../../features/professions"
@@ -9,8 +8,12 @@ const cookie = Astro.cookies.get("wow-trade-session").value
 // global abgespeichert werden ? view reused from previous render? :thinking:
 let characters, professions
 try {
-	characters = await getCharacters(cookie)
-	professions = await professionsToCharacter(cookie, name, server, "eu")
+	characters = await getUsersCharactersList(cookie)
+	professions = await getUserProfessionsToCharacter(
+		cookie,
+		name,
+		server
+	);
 } catch (e) {
 	console.log("fetch failed", e)
 }

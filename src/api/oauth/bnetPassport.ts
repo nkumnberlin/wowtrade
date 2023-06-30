@@ -14,7 +14,7 @@ const passportCallback = (
 		accessToken,
 		refreshToken,
 		profile,
-		 done
+		done
 	)
 	return done(profile, profile)
 }
@@ -23,7 +23,7 @@ const passportOptions: StrategyOptions = {
 	clientID: env.OAUTH_CLIENT_ID,
 	clientSecret: env.OAUTH_CLIENT_SECRET,
 	callbackURL: env.OAUTH_CALLBACK_URL,
-	scope: "wow.profile",
+	scope: "wow.profile"
 }
 
 export interface BnetUser {
@@ -33,17 +33,17 @@ export interface BnetUser {
 	provider: string
 	token: string
 }
-passport.serializeUser( (user: BnetUser, done) => {
+passport.serializeUser((user: BnetUser, done) => {
 	console.log("LÖCKCHEBN")
 	done(null, user)
 	return user
- })
+})
 
-passport.deserializeUser( (user: BnetUser, done) => {
+passport.deserializeUser((user: BnetUser, done) => {
 	console.log("LÖCKCHEBN2")
 	done(null, user)
 	return user
- })
+})
 
 passport.use(new BnetStrategy(passportOptions, passportCallback))
 

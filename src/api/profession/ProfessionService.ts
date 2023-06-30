@@ -1,89 +1,103 @@
-import { getProfessionsCollection } from "../services/database"
 import { getAllCraftedItems } from "./CraftedItemsService"
 import { transformRecipeNameLower } from "./RecipeService"
-import { Category, ICraftingData, ProfessionSkillTree } from "./types"
+import {
+	Category,
+	ICraftingData,
+	ProfessionSkillTree,
+	ProfessionSkillTreeResponse
+} from "./types"
+import { PrismaPromise } from "@prisma/client"
+import { prisma } from "../utils/db"
+import { OAuthClient } from "../oauth/client"
 
-// const OAuthClient = require("../oauth/client")
+const oauthClient = new OAuthClient()
 
-// const oauthClient = new OAuthClient()
+const BASE_URL = "https:eu.api.blizzard.com"
 
-// const BASE_URL = "https://eu.api.blizzard.com"
+import professionMap from "../assets/professionCalls.json"
 
-const professionMap: {
-	professionId: number
+const PROFESSION_SKILL_TIER_URL = (professionId: number, skillTierId: number) =>
+	`${BASE_URL}/data/wow/profession/${professionId}/skill-tier/${skillTierId}?namespace=static-eu&locale=en_US&region=eu`
+
+const getProfessionSkillTree = async (
+	professionId: number,
 	skillTierId: number
-}[] = require("../assets/professionCalls.json")
+) => {
+	const authToken = await oauthClient.getToken()
 
-// const PROFESSION_SKILL_TIER_URL = (professionId: number, skillTierId: number) =>
-// 	`${BASE_URL}/data/wow/profession/${professionId}/skill-tier/${skillTierId}?namespace=static-eu&locale=en_US&region=eu`
+	return (await fetch(PROFESSION_SKILL_TIER_URL(professionId, skillTierId), {
+		method: "GET",
+		headers: {
+			Authorization: `Bearer ${authToken.token.access_token}`
+		}
+	}).then((res) => res.json())) as ProfessionSkillTreeResponse
+}
 
-// const getProfessionSkillTree = async (
-// 	professionId: number,
-// 	skillTierId: number
-// ) => {
-// 	const authToken = await oauthClient.getToken()
+const saveAllProfessions = async () => {
+	const allProfessionsResponses = await Promise.all(
+		professionMap.map(({ professionId, skillTierId }) =>
+			getProfessionSkillTree(professionId, skillTierId)
+		)
+	)
+	const allProfessions = allProfessionsResponses.map<ProfessionSkillTree>(
+		(professionResponse) => ({
+			id: professionResponse.id,
+			links: professionResponse._links.self.href,
+			name: professionResponse.name,
+			maximum_skill_level: professionResponse.maximum_skill_level,
+			minimum_skill_level: professionResponse.minimum_skill_level,
+			categories: professionResponse.categories
+		})
+	)
+	const allCraftedItems = await getAllCraftedItems()
+	const allCraftedItemsMap = allCraftedItems.reduce(
+		(acc, curr) => ({
+			...acc,
+			[curr.item_name]: curr
+		}),
+		{} as { [key: string]: ICraftingData }
+	)
+	const allProfessionsWithMappedRecipes = allProfessions.map(
+		(professionSkillTree) => {
+			const mappedProfessionSkillTreeCategories =
+				professionSkillTree.categories.map<Category>((category) => {
+					const mappedRecipes = category.recipes
+						.map((recipe) => ({
+							...recipe,
+							id_crafted_item:
+								allCraftedItemsMap[transformRecipeNameLower(recipe)]
+									?.id_crafted_item
+						}))
+						.filter((recipe) => recipe.id_crafted_item)
+					return {
+						...category,
+						recipes: mappedRecipes
+					} satisfies Category
+				})
 
-// return (await fetch(PROFESSION_SKILL_TIER_URL(professionId, skillTierId), {
-// 	method: "GET",
-// 	headers: {
-// 		Authorization: `Bearer ${authToken.token.access_token}`
-// 	}
-// }).then((res) => res.json())) as ProfessionSkillTree
-// }
+			return {
+				...professionSkillTree,
+				categories: mappedProfessionSkillTreeCategories.filter(
+					(category) => category.recipes.length
+				)
+			} satisfies ProfessionSkillTree
+		}
+	)
+	return prisma.professionSkillTree.createMany({
+		data: allProfessionsWithMappedRecipes
+	}) as PrismaPromise<{
+		count: number
+	}>
+}
 
-// const saveAllProfessions = async () => {
-// 	const allProfessions = await Promise.all(
-// 		professionMap.map(({ professionId, skillTierId }) =>
-// 			getProfessionSkillTree(professionId, skillTierId)
-// 		)
-// 	)
-// 	const allCraftedItems = await getAllCraftedItems()
-// 	const allCraftedItemsMap = allCraftedItems.reduce(
-// 		(acc, curr) => ({
-// 			...acc,
-// 			[curr.item_name]: curr
-// 		}),
-// 		{} as { [key: string]: ICraftingData }
-// 	)
-// 	const allProfessionsWithMappedRecipes = allProfessions.map(
-// 		(professionSkillTree) => {
-// 			const mappedProfessionSkillTreeCategories =
-// 				professionSkillTree.categories.map((category) => {
-// 					const mappedRecipes = category.recipes
-// 						.map((recipe) => ({
-// 							...recipe,
-// 							id_crafted_item:
-// 								allCraftedItemsMap[transformRecipeNameLower(recipe)]
-// 									?.id_crafted_item
-// 						}))
-// 						.filter((recipe) => recipe.id_crafted_item)
-// 					return {
-// 						...category,
-// 						recipes: mappedRecipes
-// 					} as Category
-// 				})
-//
-// 			return {
-// 				...professionSkillTree,
-// 				categories: mappedProfessionSkillTreeCategories.filter(
-// 					(category) => category.recipes.length
-// 				)
-// 			} as ProfessionSkillTree
-// 		}
-// 	)
-// 	const professionCollection = getProfessionsCollection()
-// 	return professionCollection.insertMany(allProfessionsWithMappedRecipes)
-// }
+export const getAllProfessionSkillTrees = async () =>
+	prisma.professionSkillTree.findMany() as PrismaPromise<
+		Array<ProfessionSkillTree>
+	>
 
-// export const saveAllProfessionsIfNotExist = async () => {
-// 	const professionCollection = getProfessionsCollection()
-// 	const professions = await professionCollection.find().toArray()
-// 	if (!professions.length) {
-// 		return saveAllProfessions()
-// 	}
-// }
-
-export const getAllProfessionSkillTrees = async () => {
-	const professions = await getProfessionsCollection()
-	return professions.find().toArray()
+export const saveAllProfessionsIfNotExist = async () => {
+	const professions = await getAllProfessionSkillTrees()
+	if (!professions.length) {
+		return saveAllProfessions()
+	}
 }

@@ -1,4 +1,4 @@
-import oauth2, { AccessToken } from "simple-oauth2"
+import { ClientCredentials, AccessToken } from "simple-oauth2"
 import { env } from "../utils/env"
 
 const credentials = {
@@ -17,7 +17,7 @@ class OAuthClient {
 	client: any
 
 	constructor() {
-		this.client = (oauth2 as any).create(credentials)
+		this.client = new ClientCredentials(credentials)
 		this.token = null
 	}
 
@@ -31,5 +31,4 @@ class OAuthClient {
 	}
 }
 
-module.exports = OAuthClient
 export { OAuthClient }

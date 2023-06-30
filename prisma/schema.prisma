@@ -6,8 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 // Crafting
@@ -62,7 +63,7 @@ model Order {
 
 // Professions Skill Tree
 model KnownRecipe {
-	// this was an object before, saves the string here directly now
+  // this was an object before, saves the string here directly now
   key             String
   name            String
   id              Int       @id @default(autoincrement())
@@ -82,7 +83,7 @@ model Category {
 
 model ProfessionSkillTree {
   // this was named _links
-	// this has not an object with href anymore, but saves the string directly
+  // this has not an object with href anymore, but saves the string directly
   links               String
   id                  Int        @id @default(autoincrement())
   name                String
