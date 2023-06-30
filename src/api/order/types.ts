@@ -60,7 +60,8 @@ export interface ExpectingListingData {
 	multicraftPercentage: string
 }
 
-export interface FrontendListingData extends Omit<OrderData, "creatorAccountId"> {}
+export interface FrontendListingData
+	extends Omit<OrderData, "creatorAccountId"> {}
 
 export type OrderFetchRequest = {
 	Querystring: {

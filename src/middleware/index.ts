@@ -96,19 +96,21 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 	if (url.pathname.includes("/callback")) {
 		const urlSearchParams = new URLSearchParams(request.url.split("?")[1])
 		const params = Object.fromEntries(urlSearchParams.entries())
-		request.query = params;
-		const token = await new Promise<string>((resolve, reject) => BNetPassport.authorize("bnet", (user, info, err, status) => {
-			console.log("err", err)
-			console.log("user", user)
-			console.log("info", info)
-			console.log("status", status)
-			resolve(user.token);
-		})(request, context.response, next));
-		if(!token){
-			return context.response;
+		request.query = params
+		const token = await new Promise<string>((resolve, reject) =>
+			BNetPassport.authorize("bnet", (user, info, err, status) => {
+				console.log("err", err)
+				console.log("user", user)
+				console.log("info", info)
+				console.log("status", status)
+				resolve(user.token)
+			})(request, context.response, next)
+		)
+		if (!token) {
+			return context.response
 		}
-		context.cookies.set("wow-trade-session", token);
-		return context.response;
+		context.cookies.set("wow-trade-session", token)
+		return context.response
 	}
 	return await next()
 }

@@ -10,7 +10,7 @@ import {
 	KnownRecipeWithItemId,
 	ICraftingData
 } from "../profession/types"
-import rp from 'request-promise';
+import rp from "request-promise"
 
 export const getUsersCharactersList = async (usersAccessToken: string) => {
 	console.log("RETCH", usersAccessToken)
@@ -51,8 +51,8 @@ export const mapKnownRecipesWithItemId = (
 			return {
 				...knownRecipe,
 				itemId:
-				keyedCraftingData[transformRecipeNameLower(knownRecipe)]
-					.id_crafted_item
+					keyedCraftingData[transformRecipeNameLower(knownRecipe)]
+						.id_crafted_item
 			}
 		})
 		.filter((recipe) => recipe) as KnownRecipeWithItemId[]
@@ -63,7 +63,7 @@ export const getUserProfessionsToCharacter = async (
 	characterName: string,
 	realmSlug: string
 ) => {
-	const decodedCharacterName = encodeURIComponent(characterName).toLowerCase();
+	const decodedCharacterName = encodeURIComponent(characterName).toLowerCase()
 	const region: REGIONS = "eu"
 	try {
 		// https://eu.api.blizzard.com/profile/wow/character/tichondrius/charactername/professions?namespace=profile-us&locale=en_US&access_token=EUUOWPuWDHb7toaa0972sLtvjzxwvwfMCT
@@ -75,32 +75,31 @@ export const getUserProfessionsToCharacter = async (
 				Authorization: `Bearer ${usersAccessToken}`
 			}
 		})
-		const dragonFlightProfessions: DragonFlightProfessions[] =
-			primaries.reduce(
-				(prev: DragonFlightProfessions[], curr: IProfession) => {
-					const tiers = curr.tiers.find(({ tier }) =>
-						tier.name.toLowerCase().includes("dragon")
-					)
-					if (!tiers) return prev
-					// todo: felix nico mal wieder zu dumm dumm
-					if (!Object.keys(prev).length) {
-						return [
-							{
-								profession: curr.profession,
-								tiers
-							}
-						]
-					}
+		const dragonFlightProfessions: DragonFlightProfessions[] = primaries.reduce(
+			(prev: DragonFlightProfessions[], curr: IProfession) => {
+				const tiers = curr.tiers.find(({ tier }) =>
+					tier.name.toLowerCase().includes("dragon")
+				)
+				if (!tiers) return prev
+				// todo: felix nico mal wieder zu dumm dumm
+				if (!Object.keys(prev).length) {
 					return [
 						{
 							profession: curr.profession,
 							tiers
-						},
-						...(prev || [{}])
+						}
 					]
-				},
-				{} as DragonFlightProfessions[]
-			)
+				}
+				return [
+					{
+						profession: curr.profession,
+						tiers
+					},
+					...(prev || [{}])
+				]
+			},
+			{} as DragonFlightProfessions[]
+		)
 		// hier will ich mongo db results alle? und dann mappen auf die professions vom nutzer.
 		// query: mongodb.item.name === dragonFlightProfessions.tiers.known_recipes[].name
 		// result:
@@ -142,9 +141,5 @@ export const _mapCharacter = (account: any, character: any) => {
 
 export const _mapWowAccount = (account: any) => {
 	const { characters } = account
-	return characters.map((character: any) =>
-		_mapCharacter(account, character)
-	)
+	return characters.map((character: any) => _mapCharacter(account, character))
 }
-
-

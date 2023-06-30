@@ -53,7 +53,7 @@ export const updateCraftedItemsWithRecipeId = async (
 				})
 			)
 		)
-		.reduce((acc, current) => [...acc, ...current]);
+		.reduce((acc, current) => [...acc, ...current])
 }
 
 export const removeAllCraftedItemsWithEmptyId = () =>

@@ -1,4 +1,4 @@
-import {ExpectingListingData, OrderData, OrderDuration} from "./types"
+import { ExpectingListingData, OrderData, OrderDuration } from "./types"
 
 export function orderDuration(duration: string) {
 	if (duration === "6") return OrderDuration.SIX_HOURS

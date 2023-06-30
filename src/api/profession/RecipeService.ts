@@ -12,9 +12,7 @@ export const transformRecipeNameLower = (knownRecipe: KnownRecipe) =>
 export const transformRecipesNameLower = (knownRecipes: KnownRecipe[]) =>
 	knownRecipes.map(transformRecipeNameLower)
 
-export const fetchProfessionsForRecipes = (
-	knownRecipes: KnownRecipe[]
-) => {
+export const fetchProfessionsForRecipes = (knownRecipes: KnownRecipe[]) => {
 	const recipeNames = transformRecipesNameLower(knownRecipes)
 	return fetchProfessionsByRecipeNames(recipeNames)
 }
