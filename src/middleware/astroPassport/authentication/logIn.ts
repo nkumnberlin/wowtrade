@@ -1,4 +1,4 @@
-import { PassportRequest } from "../../index"
+import { PassportRequest } from "../../interfaces"
 
 export async function logIn<T = unknown>(
 	request: PassportRequest,
@@ -10,11 +10,10 @@ export async function logIn<T = unknown>(
 	}
 
 	const session = options.session === undefined ? true : options.session
-	console.log("session ", session, user)
 	if (session) {
 		try {
 			// @ts-ignore
-			await request.passport._sm._serializeUser(user);
+			await request.passport._sm._serializeUser(user)
 		} catch (e) {
 			request.user = null
 			throw e

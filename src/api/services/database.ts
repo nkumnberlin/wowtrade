@@ -1,12 +1,4 @@
 const env = import.meta.env
-import {
-	getAllProfessionSkillTrees
-	// saveAllProfessionsIfNotExist
-} from "../profession/TmpProfessionService"
-import {
-	removeAllCraftedItemsWithEmptyId,
-	updateCraftedItemsWithRecipeId
-} from "../profession/CraftedItemsService"
 import { ICraftingData, ProfessionSkillTree } from "../profession/types"
 
 import { Order } from "../order/types"

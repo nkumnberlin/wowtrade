@@ -16,6 +16,9 @@ dependencies:
   '@prisma/client':
     specifier: 4.14.1
     version: 4.14.1(prisma@4.14.1)
+  cookie-signature:
+    specifier: ^1.2.1
+    version: 1.2.1
   envalid:
     specifier: 7.3.1
     version: 7.3.1
@@ -57,6 +60,9 @@ devDependencies:
   '@astrojs/tailwind':
     specifier: ^3.1.3
     version: 3.1.3(astro@2.6.1)(tailwindcss@3.3.2)
+  '@types/cookie-signature':
+    specifier: ^1.1.0
+    version: 1.1.0
   '@types/passport':
     specifier: ^1.0.12
     version: 1.0.12
@@ -2792,6 +2798,12 @@ packages:
       '@types/node': 20.2.5
     dev: true
 
+  /@types/cookie-signature@1.1.0:
+    resolution: {integrity: sha512-6/OwJHoeGW5taC2vWq1sz8X7/T2rAPVXj3zQds+rM4b5VrW8lgpYjpDVjTJmkRB1IODBCAiuPXNk092CjYlryQ==}
+    dependencies:
+      '@types/node': 20.2.5
+    dev: true
+
   /@types/cookie@0.4.1:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
     dev: false
@@ -4414,6 +4426,11 @@ packages:
 
   /cookie-signature@1.0.6:
     resolution: {integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==}
+    dev: false
+
+  /cookie-signature@1.2.1:
+    resolution: {integrity: sha512-78KWk9T26NhzXtuL26cIJ8/qNHANyJ/ZYrmEXFzUmhZdjpBv+DlWlOANRTGBt48YcyslsLrj0bMLFTmXvLRCOw==}
+    engines: {node: '>=6.6.0'}
     dev: false
 
   /cookie@0.4.2:
