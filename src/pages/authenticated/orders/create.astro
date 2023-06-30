@@ -2,32 +2,36 @@
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Error from "./error.astro"
 const cookie = Astro.cookies.get("wow-trade-session").value
-import { createOrder } from "../../../external/services/Order"
-const createListingData = {
+import { createOrder } from "@/order"
+import { orderDuration } from "../../../api/order/createOrderMapper";
+import {OrderData} from "../../../api/order/types";
+
+const getSearchParamString = (param: string) => Astro.url.searchParams.get(param)
+const getSearchParamNumber = (param: string) => parseInt(getSearchParamString(param), 10)
+
+const createListingData: OrderData = {
+	difficulty: getSearchParamNumber("difficulty"),
+	quality: getSearchParamString("quality"),
+	qualifiedCharacterName: getSearchParamString("qualifiedCharacterName"),
+	creatorAccountId: 0,
+	profession: getSearchParamString("profession"),
+	currentSkill: getSearchParamNumber("currentSkill"),
 	commission: {
-		gold: Astro.url.searchParams.get("gold"),
-		silver: Astro.url.searchParams.get("silver")
+		gold: getSearchParamNumber("gold"),
+		silver: getSearchParamNumber("silver"),
 	},
+	orderDuration: orderDuration(getSearchParamString("duration")),
 	item: {
-		id_crafted_item: Astro.url.searchParams.get("id_crafted_item"),
-		item_name: Astro.url.searchParams.get("item_name")
+		id_crafted_item: getSearchParamNumber("id_crafted_item"),
+		item_name: getSearchParamString("item_name")
 	},
-	listingDuration: Astro.url.searchParams.get("duration"),
-	multicraftPercentage: Astro.url.searchParams.get("multicraftPercentage"),
-	quality: Astro.url.searchParams.get("quality"),
-	difficulty: Astro.url.searchParams.get("difficulty"),
-	qualityProcChance: Astro.url.searchParams.get("qualityProcChance"),
-	qualifiedCharacterName: Astro.url.searchParams.get("qualifiedCharacterName"),
-	profession: Astro.url.searchParams.get("profession"),
-	currentSkill: Astro.url.searchParams.get("currentSkill")
+	qualityProcChance: getSearchParamNumber("qualityProcChance"),
+	multicraftPercentage: getSearchParamNumber("multicraftPercentage"),
 }
 let response = null
 try {
 	console.log("es geht ab create order")
-	response = await createOrder({
-		cookie,
-		data: createListingData
-	})
+	response = await createOrder(createListingData)
 } catch (e) {
 	console.log("fetch failed", e)
 }

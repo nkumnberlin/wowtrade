@@ -40,7 +40,7 @@ export const updateCraftedItemsWithRecipeId = async (
 		}
 	)
 
-	const writeOperationsByProfession = recipesByProfession
+	return recipesByProfession
 		.map((professionRecipes) =>
 			professionRecipes.map((recipe) =>
 				prisma.craftingData.update({
@@ -53,9 +53,7 @@ export const updateCraftedItemsWithRecipeId = async (
 				})
 			)
 		)
-		.reduce((acc, current) => [...acc, ...current])
-
-	return Promise.all(writeOperationsByProfession)
+		.reduce((acc, current) => [...acc, ...current]);
 }
 
 export const removeAllCraftedItemsWithEmptyId = () =>

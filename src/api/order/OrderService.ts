@@ -1,5 +1,3 @@
-import { getListingsCollection } from "../services/database"
-
 import {
 	Order,
 	OrderData,
@@ -17,7 +15,7 @@ const getOrderDurationInSeconds = (orderDuration: OrderDuration) => {
 	return OrderDurationInSeconds[orderDuration]
 }
 
-export const saveListing = async (order: OrderData) => {
+export const createOrder = async (order: OrderData) => {
 	if (
 		!order.item.id_crafted_item ||
 		!order.qualifiedCharacterName ||

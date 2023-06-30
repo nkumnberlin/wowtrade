@@ -1,4 +1,4 @@
-import { getAllProfessionSkillTrees } from "../../../api/profession/TmpProfessionService"
+import { getAllProfessionSkillTrees } from "@/profession"
 
 export async function getProfessionSkillTrees() {
 	const allProfessions = await getAllProfessionSkillTrees()

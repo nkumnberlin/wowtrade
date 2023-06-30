@@ -12,9 +12,9 @@ export const transformRecipeNameLower = (knownRecipe: KnownRecipe) =>
 export const transformRecipesNameLower = (knownRecipes: KnownRecipe[]) =>
 	knownRecipes.map(transformRecipeNameLower)
 
-export const fetchProfessionsForRecipes = async (
+export const fetchProfessionsForRecipes = (
 	knownRecipes: KnownRecipe[]
 ) => {
 	const recipeNames = transformRecipesNameLower(knownRecipes)
-	return await fetchProfessionsByRecipeNames(recipeNames)
+	return fetchProfessionsByRecipeNames(recipeNames)
 }

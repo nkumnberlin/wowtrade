@@ -1,12 +1,12 @@
 ---
-import { getLast5Orders } from "../external/services/Order"
+import { findLastFiveCreatedListings } from "@/order"
 import Layout from "../components/global/Layout/Layout.astro"
 import ViewOrder from "../features/orders/view/public/ViewOrder"
 import Label from "../components/react/components/label"
 let orders
 
 try {
-	orders = await getLast5Orders()
+	orders = await findLastFiveCreatedListings()
 } catch (e) {
 	console.log("error while fetching data")
 }

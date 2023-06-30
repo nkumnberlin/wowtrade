@@ -36,6 +36,24 @@
 			],
 			"@icon/*": [
 				"src/assets/svg/icon/*"
+			],
+			"@/character": [
+				"src/api/character/characterService"
+			],
+			"@/order": [
+				"src/api/order/orderService"
+			],
+			"@/profession": [
+				"src/api/profession/professionService"
+			],
+			"@/craftedItem": [
+				"src/api/profession/craftedItemService"
+			],
+			"@/recipe": [
+				"src/api/profession/recipeService"
+			],
+			"@/*": [
+				"src/"
 			]
 		},
 		"jsx": "react-jsx",

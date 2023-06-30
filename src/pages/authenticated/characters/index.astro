@@ -1,12 +1,12 @@
 ---
 import Layout from "../../../components/global/Layout/Layout.astro"
-import { getCharacters } from "../../../external/services/Character"
+import { getUsersCharactersList } from "@/character"
 import Characters from "../../../features/characters"
 const cookie = Astro.cookies.get("wow-trade-session").value
 const { pathname } = Astro.url
 let characters
 try {
-	characters = await getCharacters(cookie)
+	characters = await getUsersCharactersList(cookie)
 } catch (e) {
 	console.log("e", e)
 }

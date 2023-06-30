@@ -42,7 +42,16 @@ export interface KnownRecipeWithItemId extends KnownRecipe {
 	itemId: number
 }
 
-export interface ProfessionSkillTree {
+export type ProfessionSkillTree = {
+	links: string
+	id: number
+	name: string
+	minimum_skill_level: number
+	maximum_skill_level: number
+	categories: Category[]
+}
+
+export interface ProfessionSkillTreeResponse {
 	_links: Links
 	id: number
 	name: string

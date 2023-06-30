@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb"
 export type { Order, PrismaPromise } from "@prisma/client"
 
 const DAY_IN_SECONDS = 86_400
@@ -26,7 +25,6 @@ export const OrderDuration: {
 export type OrderDuration = (typeof OrderDuration)[keyof typeof OrderDuration]
 
 export interface OrderData {
-	_id?: ObjectId
 	difficulty: number
 	quality: string
 	qualifiedCharacterName: string
@@ -38,8 +36,8 @@ export interface OrderData {
 		gold: number
 	}
 	orderDuration: OrderDuration
-	expiredAt: Date
-	createdAt: Date
+	expiredAt?: Date
+	createdAt?: Date
 	item: { id_crafted_item: number; item_name: string }
 	qualityProcChance: number
 	multicraftPercentage: number
