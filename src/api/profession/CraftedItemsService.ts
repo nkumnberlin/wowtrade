@@ -1,10 +1,10 @@
-import { ProfessionSkillTree, CraftingData, PrismaPromise } from "./types"
+import { ProfessionSkillTree, Iwow_trade_webscraper, PrismaPromise } from "./types"
 import { transformRecipeNameLower } from "./RecipeService"
 import { prisma } from "../utils/db"
 
 // Prisma.PrismaPromise<Array<CraftingDataGetPayload<T>>>
 export const fetchProfessionsByRecipeNames = (recipeNames: string[]) =>
-	prisma.craftingData.findMany({
+	prisma.wow_trade_webscraper.findMany({
 		where: {
 			item_name: {
 				in: recipeNames
@@ -15,15 +15,17 @@ export const fetchProfessionsByRecipeNames = (recipeNames: string[]) =>
 			id_crafted_item: true,
 			item_name: true
 		}
-	}) as PrismaPromise<Array<CraftingData>>
+	}) as PrismaPromise<Array<Iwow_trade_webscraper>>
 
-export const getAllCraftedItems = () =>
-	prisma.craftingData.findMany() as PrismaPromise<Array<CraftingData>>
+export const getAllCraftedItems = () => {
+	console.log(prisma);
+	return prisma.wow_trade_webscraper.findMany() as PrismaPromise<Array<Iwow_trade_webscraper>>
+}
 
 export const updateCraftedItemsWithRecipeId = async (
 	professionSkillTrees: ProfessionSkillTree[]
 ) => {
-	const craftedItem = await prisma.craftingData.findFirst()
+	const craftedItem = await prisma.wow_trade_webscraper.findFirst()
 	if (craftedItem?.id_recipe) {
 		return
 	}
@@ -43,9 +45,9 @@ export const updateCraftedItemsWithRecipeId = async (
 	return recipesByProfession
 		.map((professionRecipes) =>
 			professionRecipes.map((recipe) =>
-				prisma.craftingData.update({
+				prisma.wow_trade_webscraper.update({
 					where: {
-						item_name: recipe.name
+						id: recipe.id
 					},
 					data: {
 						id_recipe: recipe.id
@@ -57,7 +59,7 @@ export const updateCraftedItemsWithRecipeId = async (
 }
 
 export const removeAllCraftedItemsWithEmptyId = () =>
-	prisma.craftingData.deleteMany({
+	prisma.wow_trade_webscraper.deleteMany({
 		where: {
 			id_crafted_item: undefined
 		}

@@ -8,7 +8,7 @@ import {
 	IProfession,
 	KnownRecipe,
 	KnownRecipeWithItemId,
-	ICraftingData
+	Iwow_trade_webscraper
 } from "../profession/types"
 import rp from "request-promise"
 
@@ -29,7 +29,7 @@ export const getUsersCharactersList = async (usersAccessToken: string) => {
 }
 
 export const mapKnownRecipesWithItemId = (
-	craftingData: ICraftingData[],
+	craftingData: Iwow_trade_webscraper[],
 	knownRecipes: KnownRecipe[]
 ) => {
 	const keyedCraftingData = craftingData.reduce(
@@ -37,7 +37,7 @@ export const mapKnownRecipesWithItemId = (
 			...acc,
 			[current.item_name]: current
 		}),
-		{} as { [name: string]: ICraftingData }
+		{} as { [name: string]: Iwow_trade_webscraper }
 	)
 	return knownRecipes
 		.map<KnownRecipeWithItemId | null>((knownRecipe) => {

@@ -1,4 +1,4 @@
-export type { CraftingData, PrismaPromise } from "@prisma/client"
+export type { wow_trade_webscraper, PrismaPromise } from "@prisma/client"
 export interface DragonFlightProfessions {
 	profession: Profession
 	tiers: Tiers
@@ -32,17 +32,21 @@ export interface Tier {
 }
 
 export interface KnownRecipe {
-	key: Key
+	key: string
 	name: string
 	id: number
-	id_crafted_item?: number
+	id_crafted_item: number
+}
+
+export interface KnownRecipeWithKey extends Omit<KnownRecipe, 'key'> {
+	key: Key
 }
 
 export interface KnownRecipeWithItemId extends KnownRecipe {
 	itemId: number
 }
 
-export type ProfessionSkillTree = {
+export interface ProfessionSkillTree {
 	links: string
 	id: number
 	name: string
@@ -51,13 +55,17 @@ export type ProfessionSkillTree = {
 	categories: Category[]
 }
 
+export interface ProfessionalSkillTreeResponse extends Omit<ProfessionSkillTree, 'categories'> {
+	categories: CategoryWithKey[];
+}
+
 export interface ProfessionSkillTreeResponse {
 	_links: Links
 	id: number
 	name: string
 	minimum_skill_level: number
 	maximum_skill_level: number
-	categories: Category[]
+	categories: CategoryWithKey[]
 }
 
 export interface Links {
@@ -73,7 +81,16 @@ export interface Category {
 	recipes: KnownRecipe[]
 }
 
-export interface ICraftingData {
+export interface CategoryCreate {
+	name: string
+	recipes: { create: KnownRecipe[] }
+}
+
+export interface CategoryWithKey extends Omit<Category, 'recipes'> {
+	recipes: KnownRecipeWithKey[]
+}
+
+export interface Iwow_trade_webscraper {
 	id: number
 	id_crafted_item: number
 	item_name: string
