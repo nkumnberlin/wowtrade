@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap"
 import compress from "astro-compress"
 import { VitePWA } from "vite-plugin-pwa" // Helper imports
 
-import { manifest, seoConfig } from "@util/seoConfig"
+import { manifest, seoConfig } from "./utils/seoConfig"
 import react from "@astrojs/react"
 import vercel from "@astrojs/vercel/serverless"
 
