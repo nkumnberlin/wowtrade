@@ -12,11 +12,11 @@ datasource db {
 }
 
 // Crafting
-model CraftingData {
+model wow_trade_webscraper {
   id              Int    @unique
-  id_crafted_item Int    @unique
-  item_name       String @unique
-  id_recipe       Int    @unique
+  id_crafted_item Int
+  item_name       String
+  id_recipe       Int
 }
 
 // Order
@@ -68,7 +68,6 @@ model KnownRecipe {
   name            String
   id              Int       @id @default(autoincrement())
   id_crafted_item Int
-  keyId           Int
   Category        Category? @relation(fields: [categoryId], references: [id])
   categoryId      Int?
 }

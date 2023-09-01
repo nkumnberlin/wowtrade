@@ -4,6 +4,7 @@ import {getAllProfessionSkillTrees, saveAllProfessionsIfNotExist} from "@/profes
 export const migrateSources = async () => {
 	await saveAllProfessionsIfNotExist();
 	const allProfessionSkillTrees = await getAllProfessionSkillTrees();
+	console.log("ALL PROFESSIONAL SKILL TRESS", allProfessionSkillTrees)
 	await updateCraftedItemsWithRecipeId(allProfessionSkillTrees);
 	await removeAllCraftedItemsWithEmptyId();
 }

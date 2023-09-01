@@ -1,8 +1,8 @@
 import { getAllCraftedItems } from "./CraftedItemsService"
 import { transformRecipeNameLower } from "./RecipeService"
 import {
-	Category,
-	ICraftingData,
+	Category, CategoryCreate,
+	Iwow_trade_webscraper,
 	ProfessionSkillTree,
 	ProfessionSkillTreeResponse
 } from "./types"
@@ -25,13 +25,20 @@ const getProfessionSkillTree = async (
 ) => {
 	console.log("OAUTH",  oauthClient.client);
 	const authToken = await oauthClient.getToken()
-
+	console.log(authToken)
 	return (await fetch(PROFESSION_SKILL_TIER_URL(professionId, skillTierId), {
 		method: "GET",
 		headers: {
-			Authorization: `Bearer ${authToken.token.access_token}`
+			Authorization: `Bearer ${authToken}`
 		}
-	}).then((res) => res.json())) as ProfessionSkillTreeResponse
+	}).catch((e) => {
+		console.error(e)
+		throw e;
+	}).then((res) => {
+		console.log(res.statusText)
+		console.log(res.status)
+		return res.json();
+	})) as ProfessionSkillTreeResponse
 }
 
 const saveAllProfessions = async () => {
@@ -40,6 +47,16 @@ const saveAllProfessions = async () => {
 			getProfessionSkillTree(professionId, skillTierId)
 		)
 	)
+	const allCraftedItems = await getAllCraftedItems()
+	const allCraftedItemsMap = allCraftedItems.reduce(
+		(acc, curr) => ({
+			...acc,
+			[curr.item_name]: curr
+		}),
+		{} as { [key: string]: Iwow_trade_webscraper }
+	)
+
+	console.log("all crafted items", allCraftedItemsMap)
 	const allProfessions = allProfessionsResponses.map<ProfessionSkillTree>(
 		(professionResponse) => ({
 			id: professionResponse.id,
@@ -47,36 +64,37 @@ const saveAllProfessions = async () => {
 			name: professionResponse.name,
 			maximum_skill_level: professionResponse.maximum_skill_level,
 			minimum_skill_level: professionResponse.minimum_skill_level,
-			categories: professionResponse.categories
+			categories: professionResponse.categories.map((category) => ({
+				...category,
+				recipes: category.recipes.map((recipe) => ({
+					...recipe,
+					key: recipe.key.href,
+				}))
+			}))
 		})
 	)
-	const allCraftedItems = await getAllCraftedItems()
-	const allCraftedItemsMap = allCraftedItems.reduce(
-		(acc, curr) => ({
-			...acc,
-			[curr.item_name]: curr
-		}),
-		{} as { [key: string]: ICraftingData }
-	)
+
 	const allProfessionsWithMappedRecipes = allProfessions.map<Omit<ProfessionSkillTree, 'categories'> & {
 		categories: {
-			create: Category[],
+			create: CategoryCreate[],
 		}
 	}>(
 		(professionSkillTree) => {
 			const mappedProfessionSkillTreeCategoriesCreateInput =
-				professionSkillTree.categories.map<Category>((category) => {
+				professionSkillTree.categories.map<CategoryCreate>((category) => {
 					const mappedRecipes = category.recipes
 						.map((recipe) => ({
 							...recipe,
 							id_crafted_item:
 								allCraftedItemsMap[transformRecipeNameLower(recipe)]
-									?.id_crafted_item
+									?.id_crafted_item,
+							keyId: 1
 						}))
 						.filter((recipe) => recipe.id_crafted_item)
+
 					return {
 						...category,
-						recipes: mappedRecipes
+						recipes: { create: mappedRecipes }
 					};
 				})
 
@@ -84,7 +102,7 @@ const saveAllProfessions = async () => {
 				...professionSkillTree,
 				categories: {
 					create: mappedProfessionSkillTreeCategoriesCreateInput.filter(
-						(category) => category.recipes.length
+						(category) => category.recipes?.create.length
 					)
 				}
 			};
@@ -93,21 +111,31 @@ const saveAllProfessions = async () => {
 	console.log("ALL PROFESSIONS", allProfessionsWithMappedRecipes);
 	return  await Promise.all(
 		allProfessionsWithMappedRecipes.map((professionSkillTree) => prisma.professionSkillTree.create({data: professionSkillTree, include: {
-			categories: true
+			categories: {
+				include: {
+					recipes: true
+				}
+			}
 			}}))
 	)
 
 }
 
 export const getAllProfessionSkillTrees = async () =>
-	prisma.professionSkillTree.findMany() as PrismaPromise<
+	prisma.professionSkillTree.findMany({
+		include: {
+			categories: {
+				include: {
+					recipes: true
+				}
+			},
+		}
+	}) as PrismaPromise<
 		Array<ProfessionSkillTree>
 	>
 
 export const saveAllProfessionsIfNotExist = async () => {
 	const professions = await getAllProfessionSkillTrees()
 	console.log("PROFESSIONS", professions)
-	if (!professions.length) {
-		return saveAllProfessions()
-	}
+	return saveAllProfessions()
 }
