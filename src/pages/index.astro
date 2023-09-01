@@ -22,9 +22,9 @@ console.log("______INDEX", Astro.cookies)
 				<h1 class="text-4xl font-semibold">WoW Trade</h1>
 			</div>
 			<Label>Last 5 created Listings</Label>
-			<ViewOrder orders={orders} />
+			<ViewOrder orders={orders} client:load />
 			<div>
-				<ul class="grid md:grid-cols-2 gap-4 place-items-center">
+				<ul class="grid md:grid-cols-2 gap-4 place-itemxs-center">
 					<li>
 						<a
 							href="/orders/browse"
