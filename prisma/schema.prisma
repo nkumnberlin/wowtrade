@@ -85,7 +85,7 @@ model ProfessionSkillTree {
   // this was named _links
   // this has not an object with href anymore, but saves the string directly
   links               String
-  id                  Int        @id @default(autoincrement())
+  id                  Int        @id
   name                String
   minimum_skill_level Int
   maximum_skill_level Int
