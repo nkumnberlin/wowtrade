@@ -10,7 +10,7 @@ const WoWHeadLink = ({ itemId, children }: Props) => {
 	return (
 		<a
 			href={`https://wowhead.com/item=${itemId}`}
-			className={Styles.wowHeadItem}
+			className={`pointer-events-none`}
 		>
 			{children}
 		</a>

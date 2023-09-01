@@ -18,5 +18,6 @@ export interface ProfessionSkillTree {
 
 export interface Category {
 	name: string
+	parent: string
 	recipes: KnownRecipe[]
 }

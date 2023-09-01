@@ -1,0 +1,1 @@
+export { matchUserToProfessions } from "./professionMatcher"

@@ -1,19 +1,31 @@
 ---
+import { getProfessionSkillTrees } from "./index.json"
 import Browse from "../../../components/global/Layout/Browse.astro"
 import BrowseProfessions from "../../../features/professions/browse"
-import { browseProfessions } from "../../../api/services/Professions"
-const itemID = Astro.url.searchParams.get("itemID")
+
 let professions = null
-console.log("ITEM ID ", itemID, Astro.url.searchParams.get("itemID"))
 try {
-	professions = await browseProfessions()
+	professions = await getProfessionSkillTrees()
 } catch (e) {
 	console.log("error while fetching item to recipe")
 }
 ---
 
+<!-- WoWHead -->
+<script id="header" is:inline>
+	{
+		;("const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true}")
+	}
+</script>
+<script
+	id="headerscript"
+	src="https://wow.zamimg.com/widgets/power.js"
+	strategy="lazyOnload"
+	is:inline
+></script>
+
 <Browse title="See Listing">
-	<BrowseProfessions professions={professions?.data} client:only="react" />
+	<BrowseProfessions professions={professions} client:only="react" />
 </Browse>
 
 <script is:inline>

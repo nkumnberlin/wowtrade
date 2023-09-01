@@ -1,15 +1,16 @@
 ---
-import { getLast5Orders } from "../api/services/Order"
+import { findLastFiveCreatedListings } from "@/order"
 import Layout from "../components/global/Layout/Layout.astro"
 import ViewOrder from "../features/orders/view/public/ViewOrder"
 import Label from "../components/react/components/label"
 let orders
 
 try {
-	orders = await getLast5Orders()
+	orders = await findLastFiveCreatedListings()
 } catch (e) {
 	console.log("error while fetching data")
 }
+console.log("______INDEX", Astro.cookies)
 ---
 
 <Layout title="WoW Trade - Dragonflight">
@@ -21,9 +22,9 @@ try {
 				<h1 class="text-4xl font-semibold">WoW Trade</h1>
 			</div>
 			<Label>Last 5 created Listings</Label>
-			<ViewOrder orders={orders} />
+			<ViewOrder orders={orders} client:load />
 			<div>
-				<ul class="grid md:grid-cols-2 gap-4 place-items-center">
+				<ul class="grid md:grid-cols-2 gap-4 place-itemxs-center">
 					<li>
 						<a
 							href="/orders/browse"

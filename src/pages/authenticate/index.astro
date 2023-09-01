@@ -1,10 +1,10 @@
 ---
-import Layout from "../components/global/Layout/Layout.astro"
-import isAuthenticated from "../../utils/isAuthenticated"
+import Layout from "../../components/global/Layout/Layout.astro"
+import isAuthenticated from "../../../utils/isAuthenticated"
 const validSession = isAuthenticated(Astro.request.headers.get("cookie"))
-if (validSession) return Astro.redirect("authenticated/orders/view")
-const env = import.meta.env
-const publicAPIEndpoint = env.PUBLIC_API_ENDPOINT
+if (validSession) {
+	return Astro.redirect("authenticated/orders/view")
+}
 ---
 
 <Layout title="Authenticate your Account">
@@ -16,7 +16,7 @@ const publicAPIEndpoint = env.PUBLIC_API_ENDPOINT
 				<h1 class="text-4xl font-semibold">Authenticate</h1>
 			</div>
 			<a
-				href={`${publicAPIEndpoint}/login`}
+				href={"authenticate/login"}
 				class="flex flex-col rounded-2xl border border-gray-500 p-6 text-center transition duration-300 ease-in-out hover:border-blue-500 hover:bg-blue-500 hover:text-white focus:border-blue-500 focus:bg-blue-500"
 			>
 				<span class="text-xl font-medium">📖 Authenticate</span>

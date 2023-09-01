@@ -1,16 +1,16 @@
 ---
 import Layout from "../../components/global/Layout/Layout.astro"
-const env = import.meta.env
-const publicAPIEndpoint = env.PUBLIC_API_ENDPOINT
-const logout = await fetch(`${publicAPIEndpoint}/logout`)
 let message = "Something went wrong while logout!"
-console.log("logout", logout)
-if (logout.status === 201) {
-	Astro.request.headers.delete("cookie")
-	console.log(Astro.request.headers)
+Astro.cookies.delete(import.meta.env.TOKEN_NAME)
 
-	message = "Goodbye! Until later :)"
-}
+Astro.response.headers.append(
+	"set-cookie",
+	"wow-trade-session=null; Max-Age=0; path=/"
+)
+Astro.response.headers.set(
+	"cookie",
+	"wow-trade-session=null; Max-Age=0; path=/"
+)
 ---
 
 <Layout title="See Listing">

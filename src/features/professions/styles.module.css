@@ -1,17 +1,17 @@
-.selectButton{
+.selectButton {
 	border: 1px solid black;
 	border-radius: 2px;
 	padding: 2px;
 	width: fit-content;
-	margin:0.5rem 0 0 0;
+	margin: 0.5rem 0 0 0;
 }
 
-.itemContainer{
+.itemContainer {
 	margin: 1rem;
 	padding: 0.5rem;
 }
 
-.item{
+.item {
 	-webkit-box-shadow: 3px 3px 10px 3px #dddddd;
 	-moz-box-shadow: 3px 3px 10px 3px #dddddd;
 	box-shadow: 3px 3px 10px 3px #dddddd;
@@ -19,20 +19,20 @@
 	padding: 0.25rem;
 }
 
-.tableHeading{
+.tableHeading {
 	text-align: left;
 }
 
-.modalItem{
+.modalItem {
 	width: 100%;
 	margin: 0.5rem 0 0 0;
 }
 
-.modalContainer{
+.modalContainer {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.modalContainer > div{
-	flex: 50%
+.modalContainer > div {
+	flex: 50%;
 }
