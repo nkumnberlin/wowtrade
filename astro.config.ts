@@ -5,26 +5,21 @@ import sitemap from "@astrojs/sitemap"
 import compress from "astro-compress"
 import { VitePWA } from "vite-plugin-pwa" // Helper imports
 
-import { manifest, seoConfig } from "./utils/seoConfig"
+import { manifest, seoConfig } from "@util/seoConfig"
 import react from "@astrojs/react"
 import vercel from "@astrojs/vercel/serverless"
 
 // https://astro.build/config
 export default defineConfig({
 	site: seoConfig.baseURL,
-	experimental: {
-		assets: true
-	},
 	output: "server",
 	server: {
 		port: 3005
 	},
 	integrations: [
 		tailwind({
-			config: {
-				applyBaseStyles: false,
-				path: "./tailwind.config.js"
-			}
+			applyBaseStyles: false,
+			configFile: "./tailwind.config.js"
 		}),
 		sitemap(),
 		compress(),

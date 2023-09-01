@@ -22,14 +22,10 @@ export const getUsersCharactersList = async (usersAccessToken: string) => {
 		}
 	})
 	const { wow_accounts } = response
-	console.log("hier brickt doch was!")
-	const x = wow_accounts
+	return wow_accounts
 		.map(_mapWowAccount)
 		.flat()
-		.filter((character: { level: number }) => character.level > 60)
-	// todo
-	console.log("____ ", x)
-	return x
+		.filter((character: { level: number }) => character.level > 60);
 }
 
 export const mapKnownRecipesWithItemId = (

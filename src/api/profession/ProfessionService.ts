@@ -23,6 +23,7 @@ const getProfessionSkillTree = async (
 	professionId: number,
 	skillTierId: number
 ) => {
+	console.log("OAUTH",  oauthClient.client);
 	const authToken = await oauthClient.getToken()
 
 	return (await fetch(PROFESSION_SKILL_TIER_URL(professionId, skillTierId), {
@@ -57,9 +58,13 @@ const saveAllProfessions = async () => {
 		}),
 		{} as { [key: string]: ICraftingData }
 	)
-	const allProfessionsWithMappedRecipes = allProfessions.map(
+	const allProfessionsWithMappedRecipes = allProfessions.map<Omit<ProfessionSkillTree, 'categories'> & {
+		categories: {
+			create: Category[],
+		}
+	}>(
 		(professionSkillTree) => {
-			const mappedProfessionSkillTreeCategories =
+			const mappedProfessionSkillTreeCategoriesCreateInput =
 				professionSkillTree.categories.map<Category>((category) => {
 					const mappedRecipes = category.recipes
 						.map((recipe) => ({
@@ -72,22 +77,26 @@ const saveAllProfessions = async () => {
 					return {
 						...category,
 						recipes: mappedRecipes
-					} satisfies Category
+					};
 				})
 
 			return {
 				...professionSkillTree,
-				categories: mappedProfessionSkillTreeCategories.filter(
-					(category) => category.recipes.length
-				)
-			} satisfies ProfessionSkillTree
+				categories: {
+					create: mappedProfessionSkillTreeCategoriesCreateInput.filter(
+						(category) => category.recipes.length
+					)
+				}
+			};
 		}
 	)
-	return prisma.professionSkillTree.createMany({
-		data: allProfessionsWithMappedRecipes
-	}) as PrismaPromise<{
-		count: number
-	}>
+	console.log("ALL PROFESSIONS", allProfessionsWithMappedRecipes);
+	return  await Promise.all(
+		allProfessionsWithMappedRecipes.map((professionSkillTree) => prisma.professionSkillTree.create({data: professionSkillTree, include: {
+			categories: true
+			}}))
+	)
+
 }
 
 export const getAllProfessionSkillTrees = async () =>
@@ -97,6 +106,7 @@ export const getAllProfessionSkillTrees = async () =>
 
 export const saveAllProfessionsIfNotExist = async () => {
 	const professions = await getAllProfessionSkillTrees()
+	console.log("PROFESSIONS", professions)
 	if (!professions.length) {
 		return saveAllProfessions()
 	}

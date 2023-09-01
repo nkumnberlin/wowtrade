@@ -23,8 +23,8 @@ class OAuthClient {
 
 	async getToken() {
 		if (this.token === null || this.token.expired()) {
-			const token = await this.client.clientCredentials.getToken()
-			this.token = this.client.accessToken.create(token)
+			console.log("HTIS CLIENT", this.client)
+			this.token = await this.client.getToken()
 			return this.token
 		}
 		return this.token.token.access_token
