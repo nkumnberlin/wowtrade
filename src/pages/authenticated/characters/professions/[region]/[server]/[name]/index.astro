@@ -1,4 +1,5 @@
 ---
+import resolveCookie from "../../../../../../../../utils/resolveCookie"
 import {
 	getUsersCharactersList,
 	getUserProfessionsToCharacter
@@ -7,7 +8,7 @@ import Layout from "../../../../../../../components/global/Layout/Layout.astro"
 import Characters from "../../../../../../../features/characters"
 import Professions from "../../../../../../../features/professions"
 const { server, name } = Astro.params
-const cookie = Astro.cookies.get("wow-trade-session").value
+const cookie = resolveCookie(Astro.cookies.get("wow-trade-session").value)
 // global abgespeichert werden ? view reused from previous render? :thinking:
 let characters, professions
 try {
@@ -16,7 +17,6 @@ try {
 } catch (e) {
 	console.log("fetch failed", e)
 }
-
 ---
 
 <!-- WoWHead -->

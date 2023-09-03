@@ -2,13 +2,16 @@
 import Layout from "../../../components/global/Layout/Layout.astro"
 import { getUsersCharactersList } from "@/character"
 import Characters from "../../../features/characters"
-const cookie = Astro.cookies.get("wow-trade-session").value
+import resolveCookie from "../../../../utils/resolveCookie"
+
 const { pathname } = Astro.url
 let characters
 try {
-	characters = await getUsersCharactersList(cookie)
+	characters = await getUsersCharactersList(
+		resolveCookie(Astro.cookies.get("wow-trade-session").value)
+	)
 } catch (e) {
-	console.log("e", e)
+	console.log("e")
 }
 ---
 

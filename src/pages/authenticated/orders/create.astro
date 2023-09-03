@@ -1,13 +1,16 @@
 ---
+import resolveCookie from "../../../../utils/resolveCookie"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import Error from "./error.astro"
-const cookie = Astro.cookies.get("wow-trade-session").value
+const cookie = resolveCookie(Astro.cookies.get("wow-trade-session").value)
 import { createOrder } from "@/order"
-import { orderDuration } from "../../../api/order/createOrderMapper";
-import {OrderData} from "../../../api/order/types";
+import { orderDuration } from "../../../api/order/createOrderMapper"
+import { OrderData } from "../../../api/order/types"
 
-const getSearchParamString = (param: string) => Astro.url.searchParams.get(param)
-const getSearchParamNumber = (param: string) => parseInt(getSearchParamString(param), 10)
+const getSearchParamString = (param: string) =>
+	Astro.url.searchParams.get(param)
+const getSearchParamNumber = (param: string) =>
+	parseInt(getSearchParamString(param), 10)
 
 const createListingData: OrderData = {
 	difficulty: getSearchParamNumber("difficulty"),
@@ -18,7 +21,7 @@ const createListingData: OrderData = {
 	currentSkill: getSearchParamNumber("currentSkill"),
 	commission: {
 		gold: getSearchParamNumber("gold"),
-		silver: getSearchParamNumber("silver"),
+		silver: getSearchParamNumber("silver")
 	},
 	orderDuration: orderDuration(getSearchParamString("duration")),
 	item: {
@@ -26,7 +29,7 @@ const createListingData: OrderData = {
 		item_name: getSearchParamString("item_name")
 	},
 	qualityProcChance: getSearchParamNumber("qualityProcChance"),
-	multicraftPercentage: getSearchParamNumber("multicraftPercentage"),
+	multicraftPercentage: getSearchParamNumber("multicraftPercentage")
 }
 let response = null
 try {
@@ -46,7 +49,7 @@ if (response?.acknowledged) {
 		<div
 			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
 		>
-			{response.message ?? <Error message={response.message} />}
+			{response?.message ?? <Error message={response?.message} />}
 		</div>
 	</section>
 </Layout>

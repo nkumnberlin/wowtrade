@@ -1,4 +1,5 @@
 ---
+import resolveCookie from "../../../../utils/resolveCookie"
 import { deleteOrder } from "../../../external/services/Order"
 import Layout from "../../../components/global/Layout/Layout.astro"
 import { ViewOrder } from "../../../features/orders/view/public"
@@ -9,7 +10,7 @@ import {
 } from "../../../external/services/Order"
 let ordersToUser
 try {
-	const cookie = Astro.cookies.get("wow-trade-session").value
+	const cookie = resolveCookie(Astro.cookies.get("wow-trade-session").value)
 	ordersToUser = await getOrdersToUser({ cookie })
 
 	const id = Astro.url.searchParams.get("id")

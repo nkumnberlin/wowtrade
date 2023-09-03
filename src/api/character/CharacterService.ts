@@ -13,7 +13,6 @@ import {
 import rp from "request-promise"
 
 export const getUsersCharactersList = async (usersAccessToken: string) => {
-	console.log("RETCH", usersAccessToken)
 	const response = await rp.get({
 		uri: `https://eu.api.blizzard.com/profile/user/wow?namespace=profile-eu`,
 		json: true,
@@ -25,7 +24,7 @@ export const getUsersCharactersList = async (usersAccessToken: string) => {
 	return wow_accounts
 		.map(_mapWowAccount)
 		.flat()
-		.filter((character: { level: number }) => character.level > 60);
+		.filter((character: { level: number }) => character.level > 60)
 }
 
 export const mapKnownRecipesWithItemId = (

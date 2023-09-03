@@ -57,6 +57,7 @@ export const onRequest: MiddlewareRequestHandler<Response> = async (
 		if (!token) {
 			return context.response
 		}
+		console.log("token", token)
 		const cookieToken = cookie.sign(token, env.SECRET)
 		context.cookies.set(env.TOKEN_NAME, cookieToken)
 		return context.response
